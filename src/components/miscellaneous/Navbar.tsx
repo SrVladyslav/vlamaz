@@ -6,6 +6,7 @@ import {LIGHT_BUTTON_PROPS} from '@/config/styles'
 import { motion, AnimatePresence } from "framer-motion"
 import Image from 'next/image'
 import ToggleTheme from '@/components/buttons/ToggleTheme'
+import LanguageSelector from '@/components/buttons/LanguageSelector'
 import { useRouter, usePathname } from 'next/navigation'
 import {useAllowScrollWithBackup} from '@/hooks/useAllowScrollWithBackup'
 
@@ -13,14 +14,19 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RxCross1, RxHamburgerMenu} from "react-icons/rx";
 import { FaAngleRight } from "react-icons/fa6";
 
+import { useTranslation } from 'react-i18next';
+
 const Navbar =()=>{
-    const {isScrollable, activateScroll, deactivateScroll} = useAllowScrollWithBackup(true)
+    // Translation
+    const { t } = useTranslation();
+    // The rest
+    const {activateScroll, deactivateScroll} = useAllowScrollWithBackup(true)
     const links = [
-        { path:'/', text: 'Home' },
-        { path:'/blog', text: 'Blog' },
-        { path:'/projects', text: 'Projects' },
-        { path:'/about', text: 'About' },
-        { path:'/contact', text: 'Service' },
+        { path:'/', text: 'navbar:home', paths: ['/', '/en','/es','/ua'] },
+        { path:'/blog', text: 'navbar:blog', paths: ['/blog', '/en/blog','/es/blog','/ua/blog'] },
+        { path:'/background', text: 'navbar:projects', paths: ['/background', '/en/background','/es/background','/ua/background'] },
+        // { path:'/about', text: 'navbar:about', paths: ['/about', '/en/about','/es/about','/ua/about'] },
+        { path:'/contact', text: 'navbar:contact', paths: ['/contact', '/en/contact','/es/contact','/ua/contact'] },
     ]
     const router = useRouter()
     const currentPath = usePathname()
@@ -81,16 +87,19 @@ const Navbar =()=>{
         <div className={`
             fixed top-0 left-0 flex justify-center
             h-fit w-full backdrop-blur-3xl bg-[color:var(--background)/.9] px-5 py-2 sm:py-3
-            border-b-1 duration-75
+            border-b-1 duration-75 h-[56px] sm:h-[65px] min-h-[56px] sm:h-[65px]
             ${navbarActive?"border-[var(--background-2)]":"border-transparent"}
         `}>
             <div className='grid grid-cols-2 md:grid-cols-[150px_1fr_150px] 
                 w-full max-w-screen-xl items-center'>
-            {/* <div className='w-full max-w-screen-xl flex flex-row justify-between items-center'> */}
-                {/* <div className='relative w-full flex flex-row justify-left gap-2'> */}
-                    <div className='relative h-[40px] w-[40px] min-h-[40px] min-w-[40px] 
-                    p-[2px] border-[2px] border-[var(--background-2)] rounded-full flex 
-                    items-center justify-center'>
+                    {/* <Button 
+                        className='relative h-[40px] w-fit min-h-[40px] min-w-[40px] 
+                            p-[2px] border-[2px] border-[var(--background-2)] rounded-full flex 
+                            items-center justify-center
+                        '
+                        variant='light'
+                        onPress={()=>{router.push('/')}}
+                    >
                         <Image
                             alt="Logo"
                             src={'/logo.webp'}
@@ -98,15 +107,41 @@ const Navbar =()=>{
                             height={32}
                             className="relative"
                         />
-                    </div>
+                    </Button> */}
+                        {/* h-[32px] w-fit min-h-[32px] min-w-[32px]  */}
+                    <Button 
+                        className='relative 
+                            h-[40px] w-fit min-h-[40px] min-w-[40px] 
+                            flex p-0 pr-2 pl-0.5 rounded-full gap-1
+                            items-center justify-center
+                            border-[0px] border-[var(--background-2)]
+                        '
+                        variant='light'
+                        onPress={()=>{router.push('/')}}
+                    >
+                        {/* h-[32px] w-[32px] min-h-[32px] min-w-[32px] */}
+                        <div className='relative 
+                            relative h-[40px] w-[40px] min-h-[40px] min-w-[40px]  
+                            rounded-full pt-[2px]'>
+                            <Image
+                                alt="Logo"
+                                src={'/icons/logo.webp'}
+                                fill
+                                className="absolute w-full h-full object-fit"
+                            />
+                        </div>
+                        <span className='secondary-font relative'>Vlamaz</span>
+                    </Button>
+
                     {/* Links */}
                     <div className='relative h-full hidden md:flex justify-center'>
                         {links?.map((link, key)=>{
                             return <Button {...LIGHT_BUTTON_PROPS} key={key}
                                 className={`data-[hover=true]:text-[var(--foreground-2)] font-medium
                                     data-[hover=true]:bg-[var(--background-2)]
-                                    ${currentPath == link?.path
+                                    ${link?.paths.includes(currentPath)
                                         ?"text-[var(--foreground-2)]"
+                                        // ?"text-[var(--foreground-2)]"
                                         :"text-[var(--foreground-3)] bg-transparent"
                                     }
                                 `}
@@ -114,7 +149,9 @@ const Navbar =()=>{
                                     activateScroll();
                                     router.push(link?.path)
                                 }}
-                            >{link?.text}</Button>
+                            // >{t('about',{ns: 'navbar'})}</Button>
+                            // >{link?.text}</Button>
+                            >{t(link?.text)}</Button>
                         })}
                     </div>
                 {/* </div> */}
@@ -124,6 +161,7 @@ const Navbar =()=>{
                         <FaGithub className='icon' tabIndex={0}/>
                         <FaLinkedin className='icon' tabIndex={0}/>
                     </div>
+                    <LanguageSelector/>
                     <ToggleTheme/>
                     <div className='flex md:hidden'>
                         <Burger/>
@@ -149,9 +187,9 @@ const Navbar =()=>{
                 <motion.div 
                     key='2'
                     tabIndex={-1}
-                    initial={{ opacity: 0, x: "105%" }}
-                    animate={{ opacity: 1, x: "0%" }}
-                    exit={{ opacity: 0, x: "105%" }}
+                    initial={{ x: "105%" }}
+                    animate={{ x: "0%" }}
+                    exit={{ x: "105%" }}
                     transition={{
                         duration: 0.3,
                         ease: "linear"
@@ -161,13 +199,16 @@ const Navbar =()=>{
                     '
                 >
                     <div className='relative w-full flex justify-between items-center py-3 sm:py-4 px-5'>
-                        <ToggleTheme/>
+                        <div className='relative flex flex-row items-center gap-2'>
+                            {/* <LanguageSelector/> */}
+                            {/* <ToggleTheme/> */}
+                        </div>
                         <Burger/>
                     </div>
                     {/* Links */}
                     <div className='relative overflow-x-hidden overflow-y-auto px-5 py-2 grow'>
                         <div className='absolute top-0 left-0 w-full h-[2px] bg-[var(--background-2)]'/>
-                        <div className='relative w-full flex flex-col gap-3 pt-3 sm:pt-4'>
+                        <div className='relative w-full flex flex-col gap-3 pt-10'>
                             {links?.map((link, key)=>{
                                 return <Button 
                                     key={key}
@@ -179,7 +220,7 @@ const Navbar =()=>{
                                     className={`data-[hover=true]:text-[var(--foreground-2)] font-medium
                                         data-[hover=true]:bg-[var(--background-2)] py-5
 
-                                        ${currentPath == link?.path
+                                        ${link?.paths.includes(currentPath)
                                             ?"text-[var(--foreground-2)]"
                                             :"text-[var(--foreground-3)] bg-transparent"
                                         }
@@ -190,7 +231,7 @@ const Navbar =()=>{
                                 >
                                     <div className='relative w-full py-2 md:py-3 items-center
                                         flex flex-row justify-between'>
-                                        <span>{link?.text}</span>
+                                        <span>{t(link?.text)}</span>
                                         <FaAngleRight/>
                                     </div>
                                 </Button>
@@ -199,7 +240,7 @@ const Navbar =()=>{
                         </div>
                     </div>
                     {/* Social networks */}
-                    <div className='relative w-full pt-3 sm:pt-5 px-5 pb-8 flex justify-center items-center gap-3'>
+                    <div className='relative w-full pt-10 px-5 pb-14 flex justify-center items-center gap-3'>
                         <div className='absolute top-0 left-0 w-full
                             h-[2px] bg-[var(--background-2)]'
                         />

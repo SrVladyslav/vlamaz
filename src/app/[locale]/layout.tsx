@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rubik, UnifrakturMaguntia, Mea_Culpa, Great_Vibes} from "next/font/google";
 import "./globals.css";
 import {Providers} from "./providers";
 // import {Providers} from '@/app/[locale]/providers';
 
-const inter = Inter({ subsets: ["latin"] });
+const rubik = Rubik({
+  subsets: ['latin','latin-ext'],
+  // display: 'swap',
+  variable: '--font-rubik',
+})
+
+const greatVibes = Great_Vibes({
+  subsets: ['latin'],
+  weight: '400',
+  // display: 'swap',
+  variable: "--font-great-vibes",
+})
 
 export const metadata: Metadata = {
   title: "Vlamaz | Home",
@@ -17,10 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning
+      className={`${rubik.className} ${greatVibes.variable}`}
+    >
+      <body>
         <Providers>
-          {children}
+            {children}
         </Providers>
       </body>
     </html>

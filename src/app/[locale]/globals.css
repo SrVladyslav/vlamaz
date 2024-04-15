@@ -6,15 +6,19 @@
   /* color-scheme: dark; */
   --foreground: #2B2E36;
   --foreground-2: #131313;
-  --foreground-3: #575757; /*696969; gray*/
+  --foreground-3: #595959; /*696969; gray*/
+  /*--foreground-3: #575757; /*696969; gray*/
   --background: white;
   --background-2: #f2f2f2;
   --semitransparent-bg: rgba(0,0,0,0.6);
   --btn-cta: #F9AD05;
   --btn-cta-2: #131313;
   --yellow: #F9AD05;
+  --yellow-2: rgb(249, 173, 5, 0.6);
   --violet: #32004f;
   --violet-2: #4b0077;
+  --blue: #0055ff;
+  --blue-2: #21d6ef;
   /* --foreground: black!important; 
   --foreground-2: #2B2E36;
   --background: white;
@@ -28,7 +32,7 @@
 [data-theme='dark'] {
   --foreground: #CECECE;
   --foreground-2: #F9AD05;
-  --foreground-3: #CECECE; /*gray*/
+  --foreground-3: #cecece; /*gray*/
   --background: #1F1F21;
   --background-2: #131313; /*Backgrounnd buttons*/
   --semitransparent-bg: rgba(0,0,0,0.3);
@@ -36,8 +40,11 @@
   --btn-cta: #F9AD05;
   --btn-cta-2: #131313!important;
   --yellow: #F9AD05;
+  --yellow-2: rgb(249, 173, 5, 0.6);
   --violet: #32004f;
   --violet-2: #4b0077;
+  --blue: #0055ff;
+  --blue-2: #21d6ef;
   /* --foreground: white!important; 
   --foreground-2: #CECECE;
   --background: #121314;
@@ -48,6 +55,9 @@
   --pink-secondary: #9850F2; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   /* color: rgb(var(--foreground-rgb)); */
@@ -55,6 +65,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: var(--font-rubik);
 }
 
 @layer utilities {
@@ -63,6 +74,9 @@ body {
   }
 }
 
+.secondary-font {
+  font-family: var(--font-great-vibes);
+}
 .no-bg-scroll {
   /* overflow-x: hidden; */
   /* overflow-y: scroll !important; */

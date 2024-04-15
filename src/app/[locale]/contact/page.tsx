@@ -1,16 +1,18 @@
 import React from 'react'
+import type { Metadata } from "next";
+
 import Navbar from '@/components/miscellaneous/Navbar'
 import Footer from '@/components/miscellaneous/Footer'
 
 // Translations
 import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/providers/TranslationsProvider'
-const i18nNamespaces = ['blog', 'navbar'];
+const i18nNamespaces = ['contact', 'navbar'];
 
 const metadatas:any = {
-    'en': 'Blog',
-    'es': 'Blog',
-    'ua': 'Блог'
+    'en': 'Contact',
+    'es': 'Contacto',
+    'ua': 'Контакт'
 }
 export async function generateMetadata({ params }:{params:any}) {
     return {
@@ -18,7 +20,7 @@ export async function generateMetadata({ params }:{params:any}) {
     }
 }
 
-const Blog = async ({
+const Contact = async ({
     params: {locale}
   }:{params: {locale:any}}) => {
     const {t, resources} = await initTranslations(locale, i18nNamespaces)
@@ -39,4 +41,4 @@ const Blog = async ({
     );
   }
 
-export default Blog
+export default Contact

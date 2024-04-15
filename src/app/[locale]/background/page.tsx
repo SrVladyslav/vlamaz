@@ -1,16 +1,20 @@
 import React from 'react'
 import Navbar from '@/components/miscellaneous/Navbar'
 import Footer from '@/components/miscellaneous/Footer'
+import BackgroundLanding from '@/app/[locale]/background/_components/BackgroundLanding'
+import BiographySection from '@/app/[locale]/background/_components/BiographySection'
+import CronologhySection from '@/app/[locale]/background/_components/CronologhySection'
+
 
 // Translations
 import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/providers/TranslationsProvider'
-const i18nNamespaces = ['blog', 'navbar'];
+const i18nNamespaces = ['background', 'navbar'];
 
 const metadatas:any = {
-    'en': 'Blog',
-    'es': 'Blog',
-    'ua': 'Блог'
+    'en': 'Background',
+    'es': 'Proyectos',
+    'ua': 'Проекти'
 }
 export async function generateMetadata({ params }:{params:any}) {
     return {
@@ -18,7 +22,7 @@ export async function generateMetadata({ params }:{params:any}) {
     }
 }
 
-const Blog = async ({
+const Background = async ({
     params: {locale}
   }:{params: {locale:any}}) => {
     const {t, resources} = await initTranslations(locale, i18nNamespaces)
@@ -28,10 +32,15 @@ const Blog = async ({
             namespaces={i18nNamespaces}
             locale={locale}
             resources={resources}>
-            <div className='relative'>
+            <div className='relative duration-100'>
                 <Navbar/>
+                <BackgroundLanding/>
+                <BiographySection/>
+                <CronologhySection/>
+                <div id="biography" className='bg-[gray] h-[140vh]'>
+                    Holaaaaa
+                </div>
                 <div className='relative flex flex-col gap-10 w-full h-full'>
-                    <div>{t('hello-title')}</div>
                     <Footer/>
                 </div>
             </div>
@@ -39,4 +48,4 @@ const Blog = async ({
     );
   }
 
-export default Blog
+export default Background

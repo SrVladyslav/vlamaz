@@ -24,6 +24,6 @@ export const BUTTON_PROPS:any = {
 
 export const SWITCH_PROPS:any = {
     classNames: {
-        wrapper: 'bg-[var(--background-2)] group-data-[selected=true]:bg-[var(--background-2)]'
+        wrapper: 'mr-0 bg-[var(--background-2)] group-data-[selected=true]:bg-[var(--background-2)]'
     }
 }
