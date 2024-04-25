@@ -2,5 +2,20 @@
     "phrase-1":"Technological progress displaces skills, ",
     "phrase-2":"continuous learning",
     "phrase-3":" with a global vision allows you to ",
-    "phrase-4":"adapt"
+    "phrase-4":"adapt",
+
+    "timeline-t-1":"My ",
+    "timeline-t-2":"experience",
+
+    "timeline-1-t":"Google DSC Core Team/Lead",
+    "timeline-1-d":"Google Developer Student Clubs (GDSC) is a university club program created by Google Developers driven forward by students itself, where they do projects, workshops and do talks about some Google technologies to attendees.",
+    
+    "timeline-2-t":"Jr. Data Scientist",
+    "timeline-2-d":"Datamaran develops an AI platform to obtain ESG insights for your company.",
+    
+    "timeline-3-t":"Founder at Grifenix",
+    "timeline-3-d":"Grifenix started as a no-code smart contract builder on Ethereum ecosystem, then pivoted to blockchain based interlinked loyalty network platform with the intention of improving local commerce.",
+    
+    "timeline-4-t":"Founder at Essenfy",
+    "timeline-4-d":"Essenfy, which was accelerated in Lanzadera Accelerator, is an app/platform to reduce food waste in medium-sized businesses, prioritizing the health and experience of vulnerable consumers. Ended due to lack of cash."
 }

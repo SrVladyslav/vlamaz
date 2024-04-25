@@ -2,5 +2,14 @@
     "phrase-1":"Технологічний прогрес витісняє навички, ",
     "phrase-2":"постійне навчання",
     "phrase-3":" з глобальним баченням дозволяє ",
-    "phrase-4":"адаптуватися"
+    "phrase-4":"адаптуватися",
+
+    "timeline-t-1":"M",
+    "timeline-t-2":"-",
+    "timeline-1-t":"1t",
+    "timeline-1-d":"1d",
+    "timeline-2-t":"2t",
+    "timeline-2-d":"2d",
+    "timeline-3-t":"3t",
+    "timeline-3-d":"3d"
 }

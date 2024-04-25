@@ -21,6 +21,7 @@ const config: Config = {
         'readable50': '50ch',
         'readable65': '65ch',
         'readable75': '75ch',
+        'readable100': '100ch',
       },
     },
   },

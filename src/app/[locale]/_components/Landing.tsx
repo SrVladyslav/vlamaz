@@ -7,12 +7,10 @@ import Image from 'next/image';
 import VioletLabel from '@/app/[locale]/_components/Label';
 
 import { useTranslation } from 'react-i18next';
-import { useRouter } from 'next/navigation';
-import { scrollToHashWithOffset } from '@/lib/helpers';
 
 const Landing =()=>{
     const { t } = useTranslation();
-    const router = useRouter()
+
 
     return <div className='relative w-full flex justify-center px-5'>
         <div className='relative grid grid-cols-1 md:grid-cols-2 
@@ -33,15 +31,15 @@ const Landing =()=>{
                 </div>
             </div>
             <div className='relative flex justify-center md:justify-start'>
-                <div className='flex flex-col items-left justify-center
-                    gap-5 items-center md:items-start
-                '>
+                <div 
+                    className='flex flex-col items-left justify-center
+                        gap-5 items-center md:items-start
+                    '
+                >
                     <VioletLabel/>
                     <h1 className='text-6xl md:text-7xl lg:text-8xl font-extrabold duration-100
                         text-center md:text-left'
                     >{t('title-1',{ns:'home'})} <span className='text-nowrap text-[var(--yellow)]'>{t('title-2',{ns:'home'})}</span>!</h1>
-                    {/* >{t('title-1',{ns:'home'})}</h1> */}
-                    {/* >{t('title-1',{ns:'home'})} <span className='text-nowrap'>{t('title-2',{ns:'home'})}</span></h1> */}
                     <h2 className='text-center md:text-left text-[var(--foreground-3)]
                         max-w-readable50 tracking-wider
                     '>{t('subtitle',{ns:'home'})}</h2>
