@@ -33,7 +33,7 @@ const Background = async ({
             namespaces={i18nNamespaces}
             locale={locale}
             resources={resources}>
-            <div className='relative duration-100'>
+            <div className='relative duration-100 overflow-hidden'>
                 <Navbar/>
                 <BackgroundLanding/>
                 <BiographySection/>

@@ -53,6 +53,7 @@ const Card =({
             ()=>(<div>Hola</div>), // children
         )
     }
+    const {t} = useTranslation()
     return <div ref={cardRef} className='relative h-full w-full'>
         <motion.div
             variants={{
@@ -127,7 +128,7 @@ const Card =({
                         onPress={()=>{openModal(item?.title, item?.more_info)}}
                     >
                         <div className='relative flex flex-row gap-2 items-center'>
-                            <span>Saber más</span>
+                            <span>{t('my-contrib',{ns:"background"})}</span>
                             <FaArrowRight/>
                         </div>
                     </Button>
