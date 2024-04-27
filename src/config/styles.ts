@@ -6,6 +6,16 @@ export const LIGHT_BUTTON_PROPS:any = {
     // className: 'text-[var(--foreground)] font-medium bg-[red] hover:bg-gray-100'
 }
 
+export const SOLID_BUTTON_PROPS:any = {
+    radius: 'full',
+    color: 'primary',
+    variant: 'solid',
+    size: 'md',
+    // text-[var(--foreground-2)] font-medium bg-transparent 
+    // data-[hover=true]:bg-[var(--background-2)]
+    // data-[hover=true]:text-[var(--foreground-2)]
+}
+
 export const CTA_BUTTON_PROPS:any = {
     radius: 'full',
     color: 'primary',

@@ -158,6 +158,7 @@ const Timeline =({timedata}:{timedata:any})=>{
             {timedata?.map((item:any)=>{
                 return (
                     <Fragment
+                        key={item?.id}
                         item={item}
                         side={item?.id}
                     />

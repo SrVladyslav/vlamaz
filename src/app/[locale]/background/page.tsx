@@ -4,6 +4,7 @@ import Footer from '@/components/miscellaneous/Footer'
 import BackgroundLanding from '@/app/[locale]/background/_components/BackgroundLanding'
 import BiographySection from '@/app/[locale]/background/_components/BiographySection'
 import CronologhySection from '@/app/[locale]/background/_components/CronologhySection'
+import LetsTalk from '@/components/sections/LetsTalk'
 
 
 // Translations
@@ -35,8 +36,9 @@ const Background = async ({
             <div className='relative duration-100'>
                 <Navbar/>
                 <BackgroundLanding/>
-                <CronologhySection/>
                 <BiographySection/>
+                <CronologhySection/>
+                <LetsTalk/>
                 <div className='relative flex flex-col gap-10 w-full h-full'>
                     <Footer/>
                 </div>

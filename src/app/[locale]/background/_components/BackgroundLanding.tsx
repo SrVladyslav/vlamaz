@@ -41,7 +41,7 @@ const BackgroundLanding =()=>{
                     h-[47px] w-[47px] min-h-[47px] min-w-[47px] opacity-[0.2]
                 '/>
                 <h1 className='text-2xl md:text-2xl lg:text-4xl font-medium 
-                    duration-100 text-center text-[var(--foreground)]
+                    duration-100 text-center text-[var(--foreground-5)]
                 '>
                     {t("phrase-1",{ns:"background"})}<span className="text-[var(--yellow)] font-semibold">{t("phrase-2",{ns:"background"})}</span>{t("phrase-3",{ns:"background"})}<span className="text-[var(--yellow)] font-semibold">{t("phrase-4",{ns:"background"})}</span>.
                 </h1>

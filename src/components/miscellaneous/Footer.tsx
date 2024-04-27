@@ -8,7 +8,7 @@ const Footer =()=>{
 
     return <div className='relative w-full flex justify-center 
         bg-[var(--background-2)] pb-12'>
-        <div className='relative w-full max-w-screen-xl px-5 py-10 flex
+        <div className='relative w-full max-w-screen-xl px-5 py-20 flex
             items-center justify-center flex-col gap-10
         '>
             <div className='relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[2fr_1fr_1fr]

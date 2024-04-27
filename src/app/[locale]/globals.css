@@ -7,10 +7,14 @@
   --foreground: #2B2E36;
   --foreground-2: #131313;
   --foreground-3: #595959; /*696969; gray*/
-  --foreground-4: #595959; /*696969; gray*/
+  --foreground-4: #2B2E36; /*696969; gray*/
+  --foreground-5: #131313;
+  --gray: #aeaeb3;
+  --gray-2: #fafafa;
   /*--foreground-3: #575757; /*696969; gray*/
   --background: white;
   --background-2: #f2f2f2;
+  --background-3: #fafafa;
   --semitransparent-bg: rgba(0,0,0,0.6);
   --semitransparent-bg-2: rgba(0,0,0,0.10);
   --semitransparent-bg-3: rgba(0,0,0,0.3);
@@ -22,6 +26,7 @@
   --violet-2: #4b0077;
   --blue: #0055ff;
   --blue-2: #21d6ef;
+  --red: #D61F2C;
   /* --foreground: black!important; 
   --foreground-2: #2B2E36;
   --background: white;
@@ -33,12 +38,15 @@
 }
 
 [data-theme='dark'] {
-  --foreground: #CECECE;
+  /* --foreground: #CECECE; */
+  --foreground: #fcfcfc;
   --foreground-2: #F9AD05;
   --foreground-3: #cecece; /*gray*/
   --foreground-4: white; /*gray*/
+  --foreground-5: #ffffff; /*gray*/
   --background: #1F1F21;
   --background-2: #131313; /*Backgrounnd buttons*/
+  --background-3: #131313; /*Backgrounnd buttons*/
   --semitransparent-bg: rgba(0,0,0,0.3);
   --semitransparent-bg-2: rgba(249,173,5,0.07);
   --semitransparent-bg-3: rgba(33,214,239,0.4);
@@ -98,4 +106,10 @@ body {
   min-height: 24px;
   min-width: 24px;
   cursor: pointer;
+}
+.icon-mini {
+  height: 16px;
+  width: 16px;
+  min-height: 16px;
+  min-width: 16px;
 }

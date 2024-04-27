@@ -4,18 +4,63 @@
     "phrase-3":" with a global vision allows you to ",
     "phrase-4":"adapt",
 
+    "about-t-1":"About me",
+    "my-contrib": "Mi contributions",
+
+    "bio-1": "My full name is Vladyslav Mazurkevych. I was born in Ukraine and graduated in Computer Engineering from the ",
+    "bio-2": "Universitat Politècnica de València",
+    "bio-3": " with a specialization in ",
+    "bio-4": "artificial intelligence",
+    "bio-5": ". The area where I am most trained and experienced is in Natural Language Processing (NLP) and Data Analysis, but this does not diminish my interest in other areas of AI.",
+    "bio-6": "During my time at university, I enjoyed working on personal projects, which led me to participate in various student groups as a web developer where I could learn several technologies. In the last two years, I was part of the Google Developer Students Club as a core team member and later as a Lead, where I delivered talks on generative AI and organized events with my colleagues. Thanks to my DSC peers, I became interested in the world of Blockchain and had my first attempt at a startup based on this technology.",
+    "bio-7": "Subsequently, I participated in an acceleration and incubation program at Lanzadera, where I acquired crucial business skills, including team management, business strategies, and problem-solving.",
+    "bio-8": "In summary, I have a hybrid profile as a full-stack computer scientist specialized in Machine Learning, with skills in business, management, marketing, and sales.",
+    "bio-9": "Some key lessons I have learned along this journey include:",
+    "bio-10": "When you need a team for your startup, hire the best you can. Otherwise, continue on your own until you can afford them.",
+    "bio-11": "Giving too much freedom to the team will cost you dearly; be humane, but not overly friendly.",
+    "bio-12": "There is nothing free in this world, especially in business.",
+
     "timeline-t-1":"My ",
     "timeline-t-2":"experience",
 
-    "timeline-1-t":"Google DSC Core Team/Lead",
+    "timeline-1-t":"Google DSC UPV Core Team/Lead",
     "timeline-1-d":"Google Developer Student Clubs (GDSC) is a university club program created by Google Developers driven forward by students itself, where they do projects, workshops and do talks about some Google technologies to attendees.",
     
+    "more-info-1-1":"I gave an 'Introduction to Machine Learning talk' and 'Transfer Learning with Keras workshop' to about 50 attendees each.",
+    "more-info-1-2":"I led a team of 5 where we organized a series of talks given by differents CEOs and CTOs from companies like Telefonica, Google, IBM, Uniswap, Mercadona and others.",
+
+
     "timeline-2-t":"Jr. Data Scientist",
-    "timeline-2-d":"Datamaran develops an AI platform to obtain ESG insights for your company.",
-    
+    "timeline-2-d":"Datamaran is an AI platform that empowers business leaders to confidently navigate the complex ESG landscape by transforming vast amounts of information into actionable insights.",
+    "more-info-2-1":"I improved one AI model by using text preprocessing techniques and feature engineering.",
+    "more-info-2-2":"Research on new TOC extractions techniques.",
+    "more-info-2-3":"I helped with test coverage for a company project.",
+
+
     "timeline-3-t":"Founder at Grifenix",
     "timeline-3-d":"Grifenix started as a no-code smart contract builder on Ethereum ecosystem, then pivoted to blockchain based interlinked loyalty network platform with the intention of improving local commerce.",
-    
+    "more-info-3-1":"I developed a personalized user-owned ERC-721 smart contracts (mainly for goods traceability) on Ethereum ecosystem (Polygon and Gnosis) with Solidity.",
+    "more-info-3-2":"Handled a team of 2 (1 Developer and 1 Marketer) under Agile methodology using ClickUp.",
+    "more-info-3-3":"Co-Developed the backend and frontend from scratch using Django REST, VueJS and AWS.",
+
+
+    "timeline-6-t":"Lanzadera acceleration program",
+    "timeline-6-d":"The Lanzadera startup accelerator and incubator is driven by the startups that are in the building, their mentors, project directors, partners and large corporations that work hand in hand with the entrepreneurs. This is a completely private capital project promoted by Juan Roig (President of Mercadona).",
+    "more-info-6-1":"Trained in the Mercadona's 'Total quality model'.",
+    "more-info-6-2":"I trained in company management and how to handle people.",
+    "more-info-6-3":"Deep dive into how to build a solid startup (problems to avoid, validate ideas, organization...).",
+    "more-info-6-4":"Networking with people from all kind of companies.",
+
+
     "timeline-4-t":"Founder at Essenfy",
-    "timeline-4-d":"Essenfy, which was accelerated in Lanzadera Accelerator, is an app/platform to reduce food waste in medium-sized businesses, prioritizing the health and experience of vulnerable consumers. Ended due to lack of cash."
+    "timeline-4-d":"Essenfy, which was accelerated in Lanzadera Accelerator, is an app/platform to reduce food waste in medium-sized businesses, prioritizing the health and experience of vulnerable consumers. Ended due to lack of cash.",
+    "more-info-4-1":"Developed the backend and frontend from scratch using Django REST, NextJS and AWS.",
+    "more-info-4-2":"Researching ways to implement a custom food recipe generator with PyTorch (Transformer model)",
+    "more-info-4-3":"Handled a team of 2 under Agile-Lean methodology using ClickUp.",
+    "more-info-4-4":"Managed cold sales and marketing.",
+
+
+    "timeline-5-tr":"Present",
+    "timeline-5-t":"Soon 🤭",
+    "timeline-5-d":"In continuous learning on Data Science, Sales and Marketing."
 }
