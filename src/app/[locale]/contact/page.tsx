@@ -23,8 +23,13 @@ export async function generateMetadata({ params }:{params:any}) {
 }
 
 const Contact = async ({
-    params: {locale}
-  }:{params: {locale:any}}) => {
+    params
+  }:{params:any}) => {
+    
+// const Contact = async ({
+//     params: {locale}
+//   }:{params: {locale:any}}) => {
+    const {locale} = params
     const {t, resources} = await initTranslations(locale, i18nNamespaces)
   
     return (

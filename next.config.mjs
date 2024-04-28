@@ -11,7 +11,6 @@ const nextConfig = {
           }
         ]
     },
-    // output: 'export',
     reactStrictMode: true,
     // transpilePackages: ['three'],
 };

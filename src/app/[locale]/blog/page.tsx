@@ -19,9 +19,15 @@ export async function generateMetadata({ params }:{params:any}) {
     }
 }
 
+// const Blog = async ({
+//     params: {locale}
+//   }:{params: {locale:any}}) => {
+
 const Blog = async ({
-    params: {locale}
-  }:{params: {locale:any}}) => {
+    params
+  }:{params:any}) => {
+    
+    const {locale} = params
     const {t, resources} = await initTranslations(locale, i18nNamespaces)
   
     return (
@@ -38,6 +44,6 @@ const Blog = async ({
             </div>
         </TranslationsProvider>
     );
-  }
+}
 
 export default Blog
