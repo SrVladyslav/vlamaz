@@ -4,5 +4,22 @@
     "title-2":"I'm Vlad",
     "subtitle":"Graduated in computer science with a special love for machine learning and startups.",
     "meeting":"Book a meeting",
-    "my-projects": "My background"
+    "my-projects": "My background",
+
+    "a-title-1":"Full-Stack Developer",
+    "a-desc-1":"I'm graduated in CS specialized in DS/ML and I love to code things from scratch with clean design.",
+    "a-title-2":"Languages I speak:",
+    "a-title-3":"Dev technologies:",
+
+    "b-title-1": "Data Science",
+    "b-desc-1": "As a data scientist, I am used to work with text and image data, from its analysis to model training.",
+    "b-title-2": "Things I love the most:",
+    "b-desc-2":"Exploratory Data Análisis, Generative models",
+    "b-title-3": "Tools & libraries:",
+    
+    "c-title-1": "Entrepreneurship",
+    "c-desc-1": "I started two startups accelerated by Lanzadera, taking many powerful lessons along the way.",
+    "c-title-2": "Experiences I can contribute:",
+    "c-desc-2":"Marketing, Cold sales, Management, Lean/Agile Methodology.",
+    "c-title-3": "Tools:"
 }

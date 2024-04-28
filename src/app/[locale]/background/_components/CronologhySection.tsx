@@ -8,7 +8,7 @@ import {useModalStore} from '@/store/useModalStore'
 import { useTranslation } from 'react-i18next';
 
 const CronologhySection =()=>{
-    const { updateIsOpen, isOpen, hideWindow, title, children, endContent} = useModalStore()
+    const {isOpen, hideWindow, title, children, endContent} = useModalStore()
     const {t} = useTranslation()
     const timedata = [
         {
@@ -163,13 +163,11 @@ const CronologhySection =()=>{
                 isOpen={isOpen}
                 onClose={hideWindow}
                 title={title}
-                children={children}
                 endContent={endContent}
                 isCloseBtnDefault
                 isCloseBtn 
                 isMobileVersion
-                isDismissable
-            />
+            >{children}</Modal>
         </div>
     )
 }

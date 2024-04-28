@@ -5,24 +5,13 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 import NextSectionBtn from '@/components/buttons/NextSectionBtn'
 import { useTranslation } from 'react-i18next';
 import { motion, useInView, useAnimation } from "framer-motion"
+import PointsBackground from '@/components/miscellaneous/PointsBackground';
 
 const BackgroundLanding =()=>{
     const { t } = useTranslation();
-    
-    const ref = useRef(null)
-    const isInView = useInView(ref, {once:true})
-    const textControls = useAnimation()
-
-    useEffect(()=>{
-        if(isInView) {
-            textControls.start('visible')
-        }
-    },[isInView])
 
     return <div className='relative w-full flex justify-center px-5'>
-        <div 
-            ref={ref}
-            className='relative flex flex-col gap-5 items-center justify-center
+        <div className='relative flex flex-col gap-5 items-center justify-center
                 min-h-[70vh] min-h-[70dvh] md:min-h-[100vh] md:min-h-[100dvh]
                 pt-[70px] pb-[110px] md:pb-[80px] w-full max-w-screen-xl
             '
@@ -32,8 +21,9 @@ const BackgroundLanding =()=>{
                     hidden: {opacity: 0, scale: 0.80},
                     visible: {opacity: 1, scale: 1}
                 }}
-                initial="hidden"
-                animate={textControls}
+                initial={{opacity: 0, scale: 0.80}}
+                whileInView={{opacity: 1, scale: 1}}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.75, delay: 0.25}}
                 className='relative mt-10 rounded-2xl px-5 pt-5 max-w-readable75'
             >
@@ -46,7 +36,7 @@ const BackgroundLanding =()=>{
                     {t("phrase-1",{ns:"background"})}<span className="text-[var(--yellow)] font-semibold">{t("phrase-2",{ns:"background"})}</span>{t("phrase-3",{ns:"background"})}<span className="text-[var(--yellow)] font-semibold">{t("phrase-4",{ns:"background"})}</span>.
                 </h1>
             </motion.div>
-            <div className='absolute bottom-0 left-0 w-full h-[80px]
+            <div className='absolute bottom-0 left-0 w-full h-[160px]
                 flex items-center justify-center 
             '>
                 <NextSectionBtn

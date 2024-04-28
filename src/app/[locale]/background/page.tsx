@@ -10,7 +10,7 @@ import LetsTalk from '@/components/sections/LetsTalk'
 // Translations
 import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/providers/TranslationsProvider'
-const i18nNamespaces = ['background', 'navbar'];
+const i18nNamespaces = ['background', 'navbar', 'misc'];
 
 const metadatas:any = {
     'en': 'Background',
@@ -33,7 +33,7 @@ const Background = async ({
             namespaces={i18nNamespaces}
             locale={locale}
             resources={resources}>
-            <div className='relative duration-100 overflow-hidden'>
+            <div className='relative duration-100'>
                 <Navbar/>
                 <BackgroundLanding/>
                 <BiographySection/>

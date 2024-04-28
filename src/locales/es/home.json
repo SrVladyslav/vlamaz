@@ -4,5 +4,22 @@
     "title-2":"soy Vlad",
     "subtitle":"Graduado en informática con especial amor por el aprendizaje automático y el mundo de las startups.",
     "meeting":"¿Hablamos?",
-    "my-projects": "Mi trayectoria"
+    "my-projects": "Mi trayectoria",
+
+    "a-title-1": "Desarrollador Full-Stack",
+    "a-desc-1": "Me gradué en Ciencias de la Computación especializado en CD/AA y me encanta programar cosas desde cero con un diseño limpio.",
+    "a-title-2": "Lenguajes que hablo:",
+    "a-title-3": "Tecnologías de desarrollo:",
+    
+    "b-title-1": "Ciencia de Datos",
+    "b-desc-1": "Como científico de datos, estoy acostumbrado a trabajar con datos de texto e imágenes, desde su análisis hasta el entrenamiento de modelos.",
+    "b-title-2": "Cosas que más me gustan:",
+    "b-desc-2": "Análisis Exploratorio de Datos, Modelos Generativos",
+    "b-title-3": "Herramientas y bibliotecas:",
+    
+    "c-title-1": "Emprendimiento",
+    "c-desc-1": "He iniciado dos startups, las cuales fueron aceleradas por Lanzadera, con ellas aprendí valiosas lecciones en el camino.",
+    "c-title-2": "Experiencias en las que puedo contribuir:",
+    "c-desc-2": "Marketing, Ventas en frío, Gestión, Metodología Lean/Agile.",
+    "c-title-3": "Herramientas:"
 }

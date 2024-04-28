@@ -10,7 +10,7 @@ import { OrbitControls } from '@react-three/drei';
 import * as random from 'maath/random/dist/maath-random.esm'
 
 
-const particlesCount = 3000;
+const particlesCount = 5000;
 const particlePositions = new Float32Array(particlesCount * 3);
 
 const randomRange =(min, max)=>{
@@ -23,14 +23,14 @@ for (let i = 0; i < particlesCount; i++) {
   particlePositions[i3 + 2] = randomRange(-1, 1) //Math.random();
 }
 
-export const Particles = (color) => {
+export const Particles = ({size,color, deltaX, deltaY}) => {
 
     const mesh = useRef(null)
     // Animar puntos
     useFrame((state, delta) => {
       // puedes añadir animaciones aquí si quieres
-        mesh.current.rotation.x -= delta / 10
-        mesh.current.rotation.y -= delta / 15
+        mesh.current.rotation.x -= delta / deltaX
+        mesh.current.rotation.y -= delta / deltaY
     });
 
     return (
@@ -44,8 +44,8 @@ export const Particles = (color) => {
             />
         </bufferGeometry>
         <pointsMaterial
-            size={0.007}
-            color={color}
+            size={size}
+            color={color} //== 'blue'? '#0055ff':'#F9AD05'}
             transparent
             sizeAttenuation={true}
             dethWrite={false}
@@ -54,14 +54,14 @@ export const Particles = (color) => {
     );
 };
 
-const PointsBackground = (color) => {
+const PointsBackground = ({size=0.007,deltaX=30, deltaY=25,color}) => {
     return (
-        <div className='w-full h-auto absolute inset-0 z-[20]'>
-            <Canvas camera={{position:[0,0,0],fov:25}}>
+        <div className='w-full h-auto absolute inset-0 z-1'>
+            <Canvas camera={{position:[0,0,0],fov:30}}>
                 <ambientLight intensity={2} />
                 <directionalLight position={[2,1,1]}/>
                 {/* <Points /> */}
-                <Particles color={color}/>
+                <Particles color={color} size={size} deltaX={deltaX} deltaY={deltaY}/>
                 {/* <OrbitControls target={[0, 0, 0]} enableZoom={true} /> */}
             </Canvas>
         </div>

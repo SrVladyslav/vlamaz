@@ -32,7 +32,7 @@ const BiographySection =()=>{
             >
                 <motion.div 
                     variants={{
-                        hidden: {opacity: 0, x:-30},
+                        hidden: {opacity: 0, x:-20},
                         visible: {opacity: 1, x:0}
                     }}
                     initial="hidden"
@@ -50,7 +50,7 @@ const BiographySection =()=>{
                 </motion.div>
                 <motion.div
                     variants={{
-                        hidden: {opacity: 0, x:30},
+                        hidden: {opacity: 0, x:20},
                         visible: {opacity: 1, x:0}
                     }}
                     initial="hidden"

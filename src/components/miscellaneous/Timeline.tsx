@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useRef, useEffect}from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { Button, Link } from '@nextui-org/react';
 import {LIGHT_BUTTON_PROPS} from '@/config/styles'
@@ -10,7 +10,7 @@ import LinkedinIcon from '@/components/icons/LinkedinIcon';
 import LinkIcon from '@/components/icons/LinkIcon';
 import InstagramIcon from '@/components/icons/InstagramIcon';
 
-import { motion, useInView, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 import { useTranslation } from 'react-i18next';
 import { useModalStore } from '@/store/useModalStore';
 
@@ -34,17 +34,8 @@ const Card =({
     item:any,
     delay?:number
 })=>{
-    const cardRef = useRef(null)
-    const isInView = useInView(cardRef, {once:true})
-    const cardControls = useAnimation()
 
-    useEffect(()=>{
-        if(isInView) {
-            cardControls.start('visible')
-        }
-    },[isInView])
-
-    const { updateIsOpen, isOpen, hideWindow, openFullModal } = useModalStore()
+    const {openFullModal } = useModalStore()
     const openModal =(title:string, moreInfo:any)=>{
         console.log('hola')
         openFullModal(
@@ -54,15 +45,13 @@ const Card =({
         )
     }
     const {t} = useTranslation()
-    return <div ref={cardRef} className='relative h-full w-full'>
+    return <div className='relative h-full w-full'>
         <motion.div
-            variants={{
-                hidden: {opacity: 0, x:-20},
-                visible: {opacity: 1, x:0}
-            }}
-            initial="hidden"
-            animate={cardControls}
-            transition={{ duration: 0.5, delay: delay? delay+0.25: 0.25}}
+            initial={{opacity: 0, x:-20}}
+            whileInView={{opacity: 1, x:0}}
+            viewport={{ once: true, amount: 0.4 }}            
+            transition={{ duration: 0.5, delay: 0.25}}
+            // transition={{ duration: 0.5, delay: delay? delay+0.25: 0.25}}
             className='relative flex flex-col gap-6 overflow-hidden'
         >
             <span className='relative border border-[var(--foreground)]
@@ -144,32 +133,19 @@ const Line =({
     delay?:number,
     isTop?:boolean
 })=>{
-    const lineRef = useRef(null)
-    const isInView = useInView(lineRef, {once:true})
-    const lineControls = useAnimation()
-
-    useEffect(()=>{
-        if(isInView) {
-            // Fire the animation
-            lineControls.start('visible')
-        }
-    },[isInView])
-    
-    return <div ref={lineRef}
+    return <div
         className={`relative w-[4px] h-full overflow-hidden 
             ${isTop?"rounded-b-[2px]":"rounded-[2px]"}
             ${isLong?"min-h-20":"min-h-0"}
         `}>
         <motion.div 
-            variants={{
-                hidden: {height:"0"},
-                visible: {height: "100%"}
-            }}
-            initial="hidden"
-            animate={lineControls}
+            initial={{height:"0"}}
+            whileInView={{height: "100%"}}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ 
                 duration: 0.5, 
-                delay: delay? delay + 0.25 : 0.25, 
+                delay: 0.25, 
+                // delay: delay? delay + 0.25 : 0.25, 
                 ease: "easeIn"
             }}
             className={`
@@ -186,25 +162,12 @@ const Circle =({
     logo:string|any, 
     isStart?:boolean
 })=>{
-    const cicleRef = useRef(null)
-    const isInView = useInView(cicleRef, {once:true})
-    const cicleControls = useAnimation()
 
-    useEffect(()=>{
-        if(isInView) {
-            // Fire the animation
-            cicleControls.start('visible')
-        }
-    },[isInView])
-
-    return <div className='relative' ref={cicleRef}>
+    return <div className='relative'>
         <motion.div 
-            variants={{
-                hidden: {opacity: 0, y:15},
-                visible: {opacity: 1, y:0}
-            }}
-            initial="hidden"
-            animate={cicleControls}
+            initial={{opacity: 0, y:15}}
+            whileInView={{opacity: 1, y:0}}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: 0.25}}
             className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1'
         >

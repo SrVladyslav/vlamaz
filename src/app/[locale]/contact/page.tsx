@@ -3,11 +3,12 @@ import type { Metadata } from "next";
 
 import Navbar from '@/components/miscellaneous/Navbar'
 import Footer from '@/components/miscellaneous/Footer'
+import ContactLanding from '@/app/[locale]/contact/_components/ContactLanding'
 
 // Translations
 import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/providers/TranslationsProvider'
-const i18nNamespaces = ['contact', 'navbar'];
+const i18nNamespaces = ['contact', 'navbar', 'misc'];
 
 const metadatas:any = {
     'en': 'Contact',
@@ -33,7 +34,7 @@ const Contact = async ({
             <div className='relative'>
                 <Navbar/>
                 <div className='relative flex flex-col gap-10 w-full h-full'>
-                    <div>{t('hello-title')}</div>
+                    <ContactLanding/>
                     <Footer/>
                 </div>
             </div>

@@ -9,8 +9,10 @@
   --foreground-3: #595959; /*696969; gray*/
   --foreground-4: #2B2E36; /*696969; gray*/
   --foreground-5: #131313;
+  --foreground-6: #0055ff;
   --gray: #aeaeb3;
   --gray-2: #fafafa;
+  --gray-3: #f2f2f2;
   /*--foreground-3: #575757; /*696969; gray*/
   --background: white;
   --background-2: #f2f2f2;
@@ -24,17 +26,10 @@
   --yellow-2: rgb(249, 173, 5, 0.6);
   --violet: #32004f;
   --violet-2: #4b0077;
+  --violet-3: #7427A0;
   --blue: #0055ff;
   --blue-2: #21d6ef;
   --red: #D61F2C;
-  /* --foreground: black!important; 
-  --foreground-2: #2B2E36;
-  --background: white;
-  --background-2: #f2f2f2;
-  --background-3: rgba(255,255,255, .3);
-  --pink-primary: #9365B1;
-  --pink-secondary: #9365b180;
-  --blue:#104FFF; */
 }
 
 [data-theme='dark'] {
@@ -44,6 +39,8 @@
   --foreground-3: #cecece; /*gray*/
   --foreground-4: white; /*gray*/
   --foreground-5: #ffffff; /*gray*/
+  --foreground-6: #F9AD05;
+  --gray-3: #1F1F21;
   --background: #1F1F21;
   --background-2: #131313; /*Backgrounnd buttons*/
   --background-3: #131313; /*Backgrounnd buttons*/
@@ -112,4 +109,10 @@ body {
   width: 16px;
   min-height: 16px;
   min-width: 16px;
+}
+.icon-big {
+  height: 40px;
+  width: 40px;
+  min-height: 40px;
+  min-width: 40px;
 }

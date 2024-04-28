@@ -7,6 +7,7 @@ import Image from 'next/image';
 import VioletLabel from '@/app/[locale]/_components/Label';
 
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion'
 
 const Landing =()=>{
     const { t } = useTranslation();
@@ -20,7 +21,13 @@ const Landing =()=>{
             <div className='relative px-5 pb-5 flex items-center justify-center
                 h-[250px] md:h-full w-full
             '>
-                <div className='relative w-full h-full'>
+                <motion.div 
+                    initial={{opacity: 0, scale:0.5}}
+                    whileInView={{opacity: 1, scale:1}}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.25, delay: 0.25}}
+                    className='relative w-full h-full'
+                >
                     <Image alt="Landing Vlad"
                         src={'/images/landing.webp'}
                         fill 
@@ -28,7 +35,7 @@ const Landing =()=>{
                             drop-shadow-[0_35px_35px_rgba(249,173,5,0.1)]
                         '
                     />
-                </div>
+                </motion.div>
             </div>
             <div className='relative flex justify-center md:justify-start'>
                 <div 
@@ -36,7 +43,79 @@ const Landing =()=>{
                         gap-5 items-center md:items-start
                     '
                 >
-                    <VioletLabel/>
+                    <motion.div
+                        initial={{opacity: 0, y:-30}}
+                        whileInView={{opacity: 1, y:0}}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.25, delay: 1.5}}
+                    >
+                        <VioletLabel/>
+                    </motion.div>
+                    <div className='relative'>
+                        <motion.h1 
+                            initial={{opacity: 0, y:30}}
+                            whileInView={{opacity: 1, y:0}}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.75, delay: 0.25}}
+                            className='text-6xl md:text-7xl lg:text-8xl font-extrabold duration-100
+                            text-center md:text-left text-[var(--foreground-5)]'
+                        >
+                            {t('title-1',{ns:'home'})}
+                        </motion.h1>
+                        <motion.h1 
+                            initial={{opacity: 0, y:30}}
+                            whileInView={{opacity: 1, y:0}}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.75, delay: 0.5}}
+                            className='text-6xl md:text-7xl lg:text-8xl font-extrabold duration-100
+                            text-center md:text-left text-[var(--yellow)]'
+                        >
+                            {t('title-2',{ns:'home'})}<span className='text-[var(--foreground-5)]'>!</span>
+                        </motion.h1>
+                    </div>
+                    
+                    <motion.h2 
+                        initial={{opacity: 0, y:30}}
+                        whileInView={{opacity: 1, y:0}}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.75, delay: 0.75}}
+                        className='text-center md:text-left text-[var(--foreground-3)]
+                        max-w-readable50 tracking-wider
+                    '>{t('subtitle',{ns:'home'})}</motion.h2>
+
+                    <div className='relative flex flex-row gap-3 sm:gap-5'>
+                        <motion.div 
+                            initial={{opacity: 0, y:20}}
+                            whileInView={{opacity: 1, y:0}}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.25, delay: 1.5}}
+                            className='relative w-full flex justify-center'
+                        >
+                            <Button 
+                                as={Link}
+                                href='/contact'
+                                {...CTA_BUTTON_PROPS}
+                                className='text-white bg-[var(--btn-cta)] tracking-wide font-medium'
+                            >{t('meeting',{ns:'home'})}</Button>
+                        </motion.div>
+                        <motion.div 
+                            initial={{opacity: 0, y:20}}
+                            whileInView={{opacity: 1, y:0}}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.25, delay: 1.25}}
+                            className='relative w-full flex justify-center'
+                        >
+                            <Button 
+                                scrollSmooth
+                                href={'/background#background'}
+                                as={Link}
+                                {...BUTTON_PROPS}
+                                className='text-white bg-[var(--btn-cta-2)] tracking-wide font-medium data-[hover=true]:text-[var(--yellow)]'
+                            >{t("my-projects", {ns:"home"})}</Button>
+                        </motion.div>
+                    </div>
+
+                    {/* <VioletLabel/>
                     <h1 className='text-6xl md:text-7xl lg:text-8xl font-extrabold duration-100
                         text-center md:text-left'
                     >{t('title-1',{ns:'home'})} <span className='text-nowrap text-[var(--yellow)]'>{t('title-2',{ns:'home'})}</span>!</h1>
@@ -60,7 +139,7 @@ const Landing =()=>{
                             {...BUTTON_PROPS}
                             className='text-white bg-[var(--btn-cta-2)] tracking-wide font-medium'
                         >{t("my-projects", {ns:"home"})}</Button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
