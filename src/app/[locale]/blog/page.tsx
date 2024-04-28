@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '@/components/miscellaneous/Navbar'
 import Footer from '@/components/miscellaneous/Footer'
+import type { Metadata } from "next";
 
 // Translations
 import initTranslations from '@/app/i18n'

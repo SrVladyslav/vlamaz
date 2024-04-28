@@ -71,7 +71,7 @@ const Popup = ({
     //                             on the bottom
     // children <Components>: Basically the body of the poput 
     const isMobileScreen = useMediaQuery(640)
-    const {isScrollable, activateScroll, deactivateScroll} = useAllowScrollWithBackup(true)
+    const {activateScroll, deactivateScroll} = useAllowScrollWithBackup(true)
 
     function handleClose(){
         try{
