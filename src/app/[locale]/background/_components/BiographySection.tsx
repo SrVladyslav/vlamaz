@@ -1,24 +1,12 @@
 'use client'
 
-import React, {useRef, useEffect} from 'react'
+import React from 'react'
 import { FaArrowRight } from "react-icons/fa6";
 import { useTranslation } from 'react-i18next';
-import { motion, useInView, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 
 const BiographySection =()=>{
     const { t } = useTranslation();
-
-    const viewRef = useRef(null)
-    const isInView = useInView(viewRef, {once:true})
-    const titleControls = useAnimation()
-    const descrControls = useAnimation()
-
-    useEffect(()=>{
-        if(isInView) {
-            titleControls.start('visible')
-            descrControls.start('visible')
-        }
-    },[isInView])
 
     return (
         <div
@@ -28,15 +16,11 @@ const BiographySection =()=>{
         '>
             <div className='relative gap-10 w-full max-w-screen-xl duration-100
                 grid grid-cols-[1fr] sm:grid-cols-[250px_1fr] lg:grid-cols-[400px_1fr]'
-                ref={viewRef}
             >
                 <motion.div 
-                    variants={{
-                        hidden: {opacity: 0, x:-20},
-                        visible: {opacity: 1, x:0}
-                    }}
-                    initial="hidden"
-                    animate={titleControls}
+                    initial={{opacity: 0, x:-20}}
+                    whileInView={{opacity: 1, x:0}}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.5, delay: 0.25 }}
                     className='z-[666] left-0 sm:relative h-fit sm:h-auto duration-75'
                 >
@@ -49,12 +33,9 @@ const BiographySection =()=>{
                     </div>
                 </motion.div>
                 <motion.div
-                    variants={{
-                        hidden: {opacity: 0, x:20},
-                        visible: {opacity: 1, x:0}
-                    }}
-                    initial="hidden"
-                    animate={titleControls}
+                    initial={{opacity: 0, x:20}}
+                    whileInView={{opacity: 1, x:0}}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.5, delay: 0.75 }} 
                     className='relative flex flex-col gap-6 max-w-readable75'
                 >
