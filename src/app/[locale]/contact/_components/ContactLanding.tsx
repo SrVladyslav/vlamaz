@@ -14,9 +14,9 @@ const ContactLanding =()=>{
                 text-center md:text-right
             '>
                 <div className='relative max-w-readable40'>
-                    <h2 className='relative text-[var(--foreground-5)] text-4xl md:text-5xl font-medium'>I'm <span className='text-[var(--yellow)]'>exited</span> to learn <span className='text-[var(--yellow)]'>about your project</span>. Ready to get <span className='text-[var(--yellow)]'>started</span>?</h2>
+                    <h2 className='relative text-[var(--foreground-5)] text-4xl md:text-5xl font-medium'>I&apos;m <span className='text-[var(--yellow)]'>exited</span> to learn <span className='text-[var(--yellow)]'>about your project</span>. Ready to get <span className='text-[var(--yellow)]'>started</span>?</h2>
                 </div>
-                <p className='max-w-readable40 relative tracking-wider text-[var(--foreground-4)]'>I'll text you back ASAP!</p>
+                <p className='max-w-readable40 relative tracking-wider text-[var(--foreground-4)]'>I&apos;ll text you back ASAP!</p>
                 <div className='relative flex flex-row gap-3 justify-center md:justify-end'>
                     <FaGithub className='icon'/>
                     <FaLinkedin className='icon'/>
