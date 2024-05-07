@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/miscellaneous/Background3D.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/miscellaneous/Background3D.jsx", "src/app/api/contact/route.jsx"],
   "exclude": ["node_modules"]
 }

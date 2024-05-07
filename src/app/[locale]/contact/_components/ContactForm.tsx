@@ -5,60 +5,141 @@ import { Input, Select, SelectItem, Textarea, Button} from "@nextui-org/react";
 import { BUTTON_PROPS } from '@/config/styles';
 
 import { useTranslation } from 'react-i18next';
+import { sendContactForm } from '@/lib/api';
 
+import { useForm, Controller } from "react-hook-form";
+import {zodResolver} from '@hookform/resolvers/zod'
+import { toast } from 'sonner';
+import {z} from 'zod'
+
+const serviceTypes = [
+    {label:"I want a meeting", value:"JUST_MEETING", key:"0"},
+    {label:"I wanna hire you", value:"HIRING", key:"1"},
+    {label:"Mentoring session ", value:"MENTORING", key:"2"}
+]
+const projectTypes = [
+    {label:"Startup", value:"STARTUP-FT", key:"0"},
+    {label:"Company", value:"COMPANY-FT", key:"1"},
+    {label:"Startup [Part-time]", value:"STARTUP-PT", key:"2"},
+    {label:"Company [Part-time]", value:"COMPANY-PT", key:"3"}
+]
+const subjectTypes = [
+    {label:"Machine Learning", value:"ML", key:"0"},
+    {label:"Data Analytics", value:"ML", key:"1"},
+    {label:"Backend Development", value:"BACK-DEV", key:"2"},
+    {label:"Frontend Development", value:"FRONT-DEV", key:"3"},
+    {label:"Sales & Marketing from startup perspective", value:"SALES-MARK", key:"4"},
+]
 
 const ContactForm =()=>{
     const {t} = useTranslation()
     const [serType, setSerType]:any = useState(null)
     const [projType, setProjType]:any = useState(null)
     const [subjectType, setSubjectType]:any = useState(null)
+    const [isLoadingBtn, setIsLoadingBtn] = useState(false)
 
-    const serviceTypes = [
-        {label:"I want a meeting", value:"JUST_MEETING", key:"0"},
-        {label:"I wanna hire you", value:"HIRING", key:"1"},
-        {label:"Mentoring session ", value:"MENTORING", key:"2"}
-    ]
-    const projectTypes = [
-        {label:"Startup", value:"STARTUP-FT", key:"0"},
-        {label:"Company", value:"COMPANY-FT", key:"1"},
-        {label:"Startup [Part-time]", value:"STARTUP-PT", key:"2"},
-        {label:"Company [Part-time]", value:"COMPANY-PT", key:"3"}
-    ]
-    const subjectTypes = [
-        {label:"Machine Learning", value:"ML", key:"0"},
-        {label:"Data Analytics", value:"ML", key:"1"},
-        {label:"Backend Development", value:"BACK-DEV", key:"2"},
-        {label:"Frontend Development", value:"FRONT-DEV", key:"3"},
-        {label:"Sales & Marketing from startup perspective", value:"SALES-MARK", key:"4"},
-    ]
+    const sendContactMail =async (data:any)=>{
+        await sendContactForm(data)
+    }
 
-    return <div className='relative grid grid-cols-2 gap-5 w-full md:max-w-[450px] duration-100'>
-        <Input type="text" variant={'flat'} label={t('name',{ns:"misc"})} className='col-span-2 sm:col-span-1'/>
-        
-        <Select label={t("service-type", {ns:"misc"})} 
+    const contactSchema = z.object({
+        name: z.string().min(3),
+        email: z.string().email().min(1),
+        service_type: z.string(),
+        project_type: z.string().optional(),
+        description: z.string().max(500, {message:"Max 500 Ch."}).optional(),
+        budget: z.string().optional()
+    })
+    const {register, control, handleSubmit, formState, getValues, watch} = useForm({
+        resolver: zodResolver(contactSchema)
+    })
+    const serviceTypeWatch = watch('service_type')
+    const {errors} = formState
+    const onError =(e:any)=>{
+        toast.error('¡Hubo un fallo a la hora de conectarse!', e);
+    }
+    const valueByKey =(array:any, key:any)=>{
+        return array.filter((v:any)=> v.key == key)[0]?.label || '-'
+    }
+    const handleContact = async (formInfo:any)=>{
+        setIsLoadingBtn(true)
+        const {email, name, service_type, project_type, description, budget} = formInfo
+        console.log("DATA: ", valueByKey(serviceTypes, service_type))
+
+        const data = {
+            name: name,
+            email: email,
+            budget: budget, 
+            description: description,
+            service_type: valueByKey(serviceTypes, service_type),
+            project_type: valueByKey(projectTypes, project_type),
+        }
+
+        await sendContactMail(data).then(()=>{
+            setIsLoadingBtn(false)
+        }).catch(()=>{
+            setIsLoadingBtn(false)
+        })
+        setIsLoadingBtn(false)
+    }
+
+    return <form className='relative grid grid-cols-2 gap-5 w-full md:max-w-[450px] duration-100'
+        onSubmit={handleSubmit(handleContact)}
+    >
+        <Input type="text" variant={'flat'} label={t('name',{ns:"misc"})} 
             className='col-span-2 sm:col-span-1'
-            selectedKeys={serType}
-            onSelectionChange={setSerType}
-        >
-            {serviceTypes.map((sType:any, key:any) => (
-                <SelectItem key={key} value={sType.value}>
-                    {sType.label}
-                </SelectItem>
-            ))}
-        </Select>
-        {serType?.currentKey == '1'
-            ?<>
-                <Select label={t("project-type", {ns:"misc"})} 
+            isDisabled={isLoadingBtn}
+            {...register("name")}
+            errorMessage={errors.name?.message}
+            isRequired
+        />
+        <Controller
+            render={({ field }) => (
+                <Select label={t("service-type", {ns:"misc"})} 
+                    {...field}
                     className='col-span-2 sm:col-span-1'
-                    selectedKeys={projType}
-                    onSelectionChange={setProjType}
+                    selectedKeys={serType}
+                    selectedKeys={[field.value]}
+                    onSelectionChange={field.onChange}
+                    // onSelectionChange={setSerType}
+                    errorMessage={errors.service_type?.message}
+                    isRequired
                 >
-                    {projectTypes.map((pType:any, key:any) => (
-                        <SelectItem key={key} value={pType.value}>
-                            {pType.label}
+                    {serviceTypes.map((sType:any, key:any) => (
+                        <SelectItem key={key} value={sType.value}>
+                            {sType.label}
                         </SelectItem>
                     ))}
                 </Select>
+            )}
+            control={control}
+            name="service_type"
+            defaultValue={'0'}
+        />
+        {serviceTypeWatch == '1'
+            ?<>
+                <Controller
+                    render={({ field }) => (
+                        <Select label={t("project-type", {ns:"misc"})} 
+                            {...field}
+                            className='col-span-2 sm:col-span-1'
+                            selectedKeys={serType}
+                            selectedKeys={[field.value]}
+                            onSelectionChange={field.onChange}
+                            errorMessage={errors.project_type?.message}
+                            isRequired
+                        >
+                            {projectTypes.map((pType:any, key:any) => (
+                                <SelectItem key={key} value={pType.value}>
+                                    {pType.label}
+                                </SelectItem>
+                            ))}
+                        </Select>
+                    )}
+                    control={control}
+                    name="project_type"
+                    defaultValue={'0'}
+                />
                 <Input
                     type="text"
                     label="Budget"
@@ -68,14 +149,18 @@ const ContactForm =()=>{
                             <span className="text-default-400 text-small">€</span>
                         </div>
                     }
+                    isDisabled={isLoadingBtn}
+                    {...register("budget")}
+                    errorMessage={errors.budget?.message}
                 />
             </>
-            :serType?.currentKey == '2'
+            :serviceTypeWatch == '2'
                     &&<>
                         <Select label={t("mentoring-type", {ns:"misc"})} 
                             className='col-span-2 sm:col-span-2'
                             selectedKeys={subjectType}
                             onSelectionChange={setSubjectType}
+                            isRequired
                         >
                             {subjectTypes.map((sType:any, key:any) => (
                                 <SelectItem key={key} value={sType.value}>
@@ -86,7 +171,12 @@ const ContactForm =()=>{
                     </>
         }
 
-        <Input type="email" variant={'flat'} label="Email" className='col-span-2 duration-100'/>
+        <Input type="email" variant={'flat'} label="Email" className='col-span-2 duration-100'
+            isDisabled={isLoadingBtn}
+            {...register("email")}
+            errorMessage={errors.email?.message}
+            isRequired
+        />
         {/* {JSON.stringify(serType)}{JSON.stringify(projType)} */}
         <Textarea
             label="Additional details"
@@ -96,17 +186,22 @@ const ContactForm =()=>{
                 base: "",
                 input: "resize-y min-h-[40px]",
             }}
+            isDisabled={isLoadingBtn}
+            {...register("description")}
+            errorMessage={errors.description?.message}
         />
         <div className='relative w-full flex justify-center col-span-2 duration-100'>
             <Button {...BUTTON_PROPS} fullWidth disable
                 className='text-[var(--foreground)] font-medium bg-transparent 
                     bg-[var(--btn-cta)] text-[white]
                     data-[hover=true]:text-[var(--black)]'
+                isLoading={isLoadingBtn}
+                type='submit'
             >
                 {t("send", "contact")}
             </Button>
         </div>
-    </div>
+    </form>
 }
 
 export default ContactForm
