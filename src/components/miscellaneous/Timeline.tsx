@@ -169,7 +169,7 @@ const Circle =({
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5, delay: 0.25}}
         className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1
-            bg-[var(--background-2)]
+            bg-[var(--background)]
         '
     >
         <div className='relative h-full w-full'>
