@@ -33,8 +33,6 @@ const subjectTypes = [
 
 const ContactForm =()=>{
     const {t} = useTranslation()
-    const [serType, setSerType]:any = useState(null)
-    const [projType, setProjType]:any = useState(null)
     const [subjectType, setSubjectType]:any = useState(null)
     const [isLoadingBtn, setIsLoadingBtn] = useState(false)
 
@@ -55,17 +53,12 @@ const ContactForm =()=>{
     })
     const serviceTypeWatch = watch('service_type')
     const {errors} = formState
-    const onError =(e:any)=>{
-        toast.error('¡Hubo un fallo a la hora de conectarse!', e);
-    }
     const valueByKey =(array:any, key:any)=>{
         return array.filter((v:any)=> v.key == key)[0]?.label || '-'
     }
     const handleContact = async (formInfo:any)=>{
         setIsLoadingBtn(true)
         const {email, name, service_type, project_type, description, budget} = formInfo
-        console.log("DATA: ", valueByKey(serviceTypes, service_type))
-
         const data = {
             name: name,
             email: email,
@@ -98,7 +91,6 @@ const ContactForm =()=>{
                 <Select label={t("service-type", {ns:"misc"})} 
                     {...field}
                     className='col-span-2 sm:col-span-1'
-                    selectedKeys={serType}
                     selectedKeys={[field.value]}
                     onSelectionChange={field.onChange}
                     // onSelectionChange={setSerType}
@@ -123,8 +115,7 @@ const ContactForm =()=>{
                         <Select label={t("project-type", {ns:"misc"})} 
                             {...field}
                             className='col-span-2 sm:col-span-1'
-                            selectedKeys={serType}
-                            selectedKeys={[field.value]}
+                            selectedKeys={field.value}
                             onSelectionChange={field.onChange}
                             errorMessage={errors.project_type?.message}
                             isRequired
@@ -180,7 +171,7 @@ const ContactForm =()=>{
         {/* {JSON.stringify(serType)}{JSON.stringify(projType)} */}
         <Textarea
             label="Additional details"
-            placeholder={serType?.currentKey == '0' || serType?.currentKey == '2'?t("additional-info",{ns:"misc"}):''}
+            placeholder={serviceTypeWatch == '0' || serviceTypeWatch == '2'?t("additional-info",{ns:"misc"}):''}
             className="w-full col-span-2 duration-100"
             classNames={{
                 base: "",

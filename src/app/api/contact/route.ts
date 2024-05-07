@@ -3,7 +3,7 @@ import {transporter, mailOptions} from '@/config/nodemailer'
 
 export async function POST(req:NextRequest) {
     const formVals:any = await req.json()
-    console.log("Email: ", formVals)
+    // console.log("Email: ", formVals)
 
     // return NextResponse.json({msg:200})
     try{
@@ -41,7 +41,6 @@ export async function POST(req:NextRequest) {
         </div>`
         })
     }catch(e:any){
-        console.log(e)
         return NextResponse.json({message: e.message})
     }
 
