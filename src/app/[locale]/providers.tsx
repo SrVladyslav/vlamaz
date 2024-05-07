@@ -4,6 +4,7 @@
 import {NextUIProvider} from '@nextui-org/react'
 import {ThemeProvider as NextThemesProvider} from "next-themes";
 import {useState, useEffect} from 'react'
+import { Toaster } from 'sonner'
 
 export function Providers({children}: { children: React.ReactNode }) {
     const [mounted, setMounted] = useState(false)
@@ -22,6 +23,10 @@ export function Providers({children}: { children: React.ReactNode }) {
       >
         {/* attribute="class" */}
         <NextUIProvider>
+            <Toaster
+              richColors
+              position="top-center"
+            />
             {children}
         </NextUIProvider>
       </NextThemesProvider>

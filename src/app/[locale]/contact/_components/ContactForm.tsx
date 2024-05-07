@@ -36,9 +36,9 @@ const ContactForm =()=>{
     const [subjectType, setSubjectType]:any = useState(null)
     const [isLoadingBtn, setIsLoadingBtn] = useState(false)
 
-    const sendContactMail =async (data:any)=>{
-        await sendContactForm(data)
-    }
+    // const sendContactMail =async (data:any)=>{
+    //     await sendContactForm(data)
+    // }
 
     const contactSchema = z.object({
         name: z.string().min(3),
@@ -67,12 +67,15 @@ const ContactForm =()=>{
             description: description,
             service_type: valueByKey(serviceTypes, service_type),
             project_type: valueByKey(projectTypes, project_type),
-            mentoring_type: valueByKey(projectTypes, mentoring_type),
+            mentoring_type: valueByKey(subjectTypes, mentoring_type),
         }
 
-        await sendContactMail(data).then(()=>{
+        await sendContactForm(data).then((e:any)=>{
+            console.log(e)
             setIsLoadingBtn(false)
+            toast.success("Tu mensaje se envió correectamente!")
         }).catch(()=>{
+            toast.error("It vas imposible to send your email, please, try again or contact me on Linkedin.")
             setIsLoadingBtn(false)
         })
         setIsLoadingBtn(false)
@@ -98,6 +101,7 @@ const ContactForm =()=>{
                     // onSelectionChange={setSerType}
                     errorMessage={errors.service_type?.message as ReactNode}
                     isRequired
+                    isDisabled={isLoadingBtn}
                 >
                     {serviceTypes.map((sType:any, key:any) => (
                         <SelectItem key={key} value={sType.value}>
@@ -121,6 +125,7 @@ const ContactForm =()=>{
                             onSelectionChange={field.onChange}
                             errorMessage={errors.project_type?.message as ReactNode}
                             isRequired
+                            isDisabled={isLoadingBtn}
                         >
                             {projectTypes.map((pType:any, key:any) => (
                                 <SelectItem key={key} value={pType.value}>

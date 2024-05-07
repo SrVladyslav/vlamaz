@@ -43,10 +43,14 @@ export async function POST(req:NextRequest) {
                 </tr>
             </table>
         </div>`
+        }).then(()=>{
+            return NextResponse.json({message: 'GOOD'}, {status: 200})
+        }).catch((e:any)=>{
+            return NextResponse.json({message: e.message}, {status: 400})
         })
+        return NextResponse.json({message: 'GOOD'}, {status: 200})
     }catch(e:any){
-        return NextResponse.json({message: e.message})
+        return NextResponse.json({message: e.message}, {status: 400})
     }
-
-    return NextResponse.json({});
+    return NextResponse.json({message: 'F'}, {status: 400})
 }
