@@ -30,6 +30,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning
       className={`${rubik.className} ${greatVibes.variable}`}
     >
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/iconn/logo.webp"></link>
+        <meta name="theme-color" content="#fff" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+      </head>
       <body>
         <Providers>
           {children}
