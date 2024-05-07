@@ -222,7 +222,7 @@ const Fragment = (
                             </div>
                         </div>
                     </>
-                    :<div className='relative flex flex-col h-full items-center gap-5'>
+                    :<div className='relative flex flex-col h-full items-center gap-5 overflow-hidden'>
                         <Circle logo={item?.company_logo_src}/>
                         <Line delay={lineDelay}/>
                     </div>
