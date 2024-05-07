@@ -49,8 +49,8 @@ const Card =({
         <motion.div
             initial={{opacity: 0, x:-20}}
             whileInView={{opacity: 1, x:0}}
-            viewport={{ once: true, amount: 0.4 }}            
-            transition={{ duration: 0.5, delay: 0.25}}
+            viewport={{ once: true, amount: 0.2  }}            
+            transition={{ duration: 0.5, delay: 0.2}}
             // transition={{ duration: 0.5, delay: delay? delay+0.25: 0.25}}
             className='relative flex flex-col gap-6 overflow-hidden'
         >

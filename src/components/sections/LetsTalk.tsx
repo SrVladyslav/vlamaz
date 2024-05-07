@@ -28,8 +28,8 @@ const LetsTalk =()=>{
             <motion.h3 
                 initial={{opacity: 0, scale: 0.80}}
                 whileInView={{opacity: 1, scale: 1}}
-                viewport={{ once: false, amount: 0.7 }}
-                transition={{ duration: 0.75, delay: 0.25}}
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.2}}
                 className='relative font-medium text-[var(--foreground-5)]
                     text-4xl md:text-5xl text-center
                 '
@@ -39,8 +39,8 @@ const LetsTalk =()=>{
             <motion.div 
                 initial={{opacity: 0, y:20}}
                 whileInView={{opacity: 1, y:0}}
-                viewport={{ once: false, amount: 0.7 }}
-                transition={{ duration: 0.75, delay: 1}}
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.75}}
                 className='relative w-full flex justify-center'
             >
                 <Button 

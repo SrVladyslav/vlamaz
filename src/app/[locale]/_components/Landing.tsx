@@ -15,11 +15,11 @@ const Landing =()=>{
 
     return <div className='relative w-full flex justify-center px-5'>
         <div className='relative grid grid-cols-1 md:grid-cols-2 
-            md:h-[100vh] md:h-[100dvh]
+            h-fit md:h-[100vh] md:h-[100dvh]
             pt-[70px] w-full max-w-screen-xl
         '>
             <div className='relative px-5 pb-5 flex items-center justify-center
-                h-[250px] md:h-full w-full
+                h-[200px] sm:h-[250px] md:h-full w-full
             '>
                 <motion.div 
                     initial={{opacity: 0, scale:0.5}}
@@ -95,7 +95,9 @@ const Landing =()=>{
                                 as={Link}
                                 href='/contact'
                                 {...CTA_BUTTON_PROPS}
-                                className='text-white bg-[var(--btn-cta)] tracking-wide font-medium'
+                                className='text-white bg-[var(--btn-cta)] tracking-wide font-medium
+                                    data-[hover=true]:text-[var(--black)]
+                                '
                             >{t('meeting',{ns:'home'})}</Button>
                         </motion.div>
                         <motion.div 

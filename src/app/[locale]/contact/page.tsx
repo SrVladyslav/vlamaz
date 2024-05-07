@@ -9,7 +9,7 @@ import ContactLanding from '@/app/[locale]/contact/_components/ContactLanding'
 import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/providers/TranslationsProvider'
 
-const i18nNamespaces = ['contact', 'navbar', 'misc'];
+const i18nNamespaces = ['contact', 'navbar', 'misc', 'contact'];
 
 const metadatas:any = {
     'en': 'Contact',

@@ -98,13 +98,12 @@ const ContactForm =()=>{
             }}
         />
         <div className='relative w-full flex justify-center col-span-2 duration-100'>
-            <Button {...BUTTON_PROPS} fullWidth 
+            <Button {...BUTTON_PROPS} fullWidth disable
                 className='text-[var(--foreground)] font-medium bg-transparent 
-                    bg-[var(--btn-cta-2)] text-[white]
-                    data-[hover=true]:text-[var(--yellow)]
-                '
+                    bg-[var(--btn-cta)] text-[white]
+                    data-[hover=true]:text-[var(--black)]'
             >
-                Send
+                {t("send", "contact")}
             </Button>
         </div>
     </div>

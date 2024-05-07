@@ -24,8 +24,8 @@ const Knowledge =()=>{
             <motion.div 
                 initial={{opacity: 0, y:30}}
                 whileInView={{opacity: 1, y:0}}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: 0.25}}
+                viewport={{ once: false, amount: 0.1 }}
+                transition={{ duration: 0.4, delay: 0.2}}
                 className='relative p-10 md:p-10 py-10
                     flex flex-col items-center justify-start
                     gap-10 text-center tracking-wider
@@ -67,7 +67,7 @@ const Knowledge =()=>{
                             border-[2px] border-none data-[hover=true]:border-[var(--foreground-2)]   
                         '
                         as={Link}
-                        href=''
+                        href='/contact'
                     >
                         <div className='relative flex flex-row gap-2 items-center'>
                             {/* <span>{t('misc',{ns:"background"})}</span> */}
@@ -80,8 +80,8 @@ const Knowledge =()=>{
             <motion.div 
                 initial={{opacity: 0, y:30}}
                 whileInView={{opacity: 1, y:0}}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: 0.5}}
+                viewport={{ once: false, amount: 0.1 }}
+                transition={{ duration: 0.4, delay: 0.4}}
                 className='relative p-5 md:p-10 py-10 tracking-wider
                     flex flex-col items-center justify-start text-center
                     border-y-[1px] border-y-[var(--gray-3)] border-x-0 gap-10
@@ -126,7 +126,7 @@ const Knowledge =()=>{
                             border-[1px] border-[var(--gray-3)] data-[hover=true]:border-[var(--foreground-2)]   
                         '
                         as={Link}
-                        href=''
+                        href='/contact'
                     >
                         <div className='relative flex flex-row gap-2 items-center'>
                             {/* <span>{t('misc',{ns:"background"})}</span> */}
@@ -139,8 +139,8 @@ const Knowledge =()=>{
             <motion.div 
                 initial={{opacity: 0, y:30}}
                 whileInView={{opacity: 1, y:0}}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: 0.75}}
+                viewport={{ once: false, amount: 0.1 }}
+                transition={{ duration: 0.6, delay: 0.6}}
                 className='relative p-5 md:p-10 py-10 text-center
                     flex flex-col items-center justify-start
                     col-span-1 sm:col-span-2 lg:col-span-1
@@ -183,7 +183,7 @@ const Knowledge =()=>{
                             border-[2px] border-none data-[hover=true]:border-[var(--foreground-2)]   
                         '
                         as={Link}
-                        href=''
+                        href='/contact'
                     >
                         <div className='relative flex flex-row gap-2 items-center'>
                             {/* <span>{t('misc',{ns:"background"})}</span> */}
