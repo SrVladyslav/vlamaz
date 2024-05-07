@@ -4,7 +4,7 @@ import {transporter, mailOptions} from '@/config/nodemailer'
 export async function POST(req:NextRequest) {
     const formVals:any = await req.json()
     // console.log("Email: ", formVals)
-
+    // TODO: proove that the data is valid
     // return NextResponse.json({msg:200})
     try{
         await transporter.sendMail({
@@ -24,6 +24,10 @@ export async function POST(req:NextRequest) {
                 <tr>
                     <th style="width: 30%; font-weight: bold; border-bottom: 1px solid black;">Service Type:</th>
                     <td style="border-bottom: 1px solid black;">${formVals?.service_type}</td>
+                </tr>
+                <tr>
+                    <th style="width: 30%; font-weight: bold; border-bottom: 1px solid black;">Mentoring Type:</th>
+                    <td style="border-bottom: 1px solid black;">${formVals?.mentoring_type}</td>
                 </tr>
                 <tr>
                     <th style="width: 30%; font-weight: bold; border-bottom: 1px solid black;">Budget:</th>

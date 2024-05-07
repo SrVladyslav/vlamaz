@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useState} from 'react'
+import React, {useState, ReactNode} from 'react'
 import { Input, Select, SelectItem, Textarea, Button} from "@nextui-org/react";
 import { BUTTON_PROPS } from '@/config/styles';
 
@@ -45,6 +45,7 @@ const ContactForm =()=>{
         email: z.string().email().min(1),
         service_type: z.string(),
         project_type: z.string().optional(),
+        mentoring_type: z.string().optional(),
         description: z.string().max(500, {message:"Max 500 Ch."}).optional(),
         budget: z.string().optional()
     })
@@ -58,7 +59,7 @@ const ContactForm =()=>{
     }
     const handleContact = async (formInfo:any)=>{
         setIsLoadingBtn(true)
-        const {email, name, service_type, project_type, description, budget} = formInfo
+        const {email, name, service_type, project_type, mentoring_type, description, budget} = formInfo
         const data = {
             name: name,
             email: email,
@@ -66,6 +67,7 @@ const ContactForm =()=>{
             description: description,
             service_type: valueByKey(serviceTypes, service_type),
             project_type: valueByKey(projectTypes, project_type),
+            mentoring_type: valueByKey(projectTypes, mentoring_type),
         }
 
         await sendContactMail(data).then(()=>{
@@ -83,7 +85,7 @@ const ContactForm =()=>{
             className='col-span-2 sm:col-span-1'
             isDisabled={isLoadingBtn}
             {...register("name")}
-            errorMessage={errors.name?.message}
+            errorMessage={errors.name?.message as ReactNode}
             isRequired
         />
         <Controller
@@ -94,7 +96,7 @@ const ContactForm =()=>{
                     selectedKeys={[field.value]}
                     onSelectionChange={field.onChange}
                     // onSelectionChange={setSerType}
-                    errorMessage={errors.service_type?.message}
+                    errorMessage={errors.service_type?.message as ReactNode}
                     isRequired
                 >
                     {serviceTypes.map((sType:any, key:any) => (
@@ -117,7 +119,7 @@ const ContactForm =()=>{
                             className='col-span-2 sm:col-span-1'
                             selectedKeys={field.value}
                             onSelectionChange={field.onChange}
-                            errorMessage={errors.project_type?.message}
+                            errorMessage={errors.project_type?.message as ReactNode}
                             isRequired
                         >
                             {projectTypes.map((pType:any, key:any) => (
@@ -142,7 +144,7 @@ const ContactForm =()=>{
                     }
                     isDisabled={isLoadingBtn}
                     {...register("budget")}
-                    errorMessage={errors.budget?.message}
+                    errorMessage={errors.budget?.message as ReactNode}
                 />
             </>
             :serviceTypeWatch == '2'
@@ -152,6 +154,7 @@ const ContactForm =()=>{
                             selectedKeys={subjectType}
                             onSelectionChange={setSubjectType}
                             isRequired
+                            errorMessage={errors.mentoring_type?.message as ReactNode}
                         >
                             {subjectTypes.map((sType:any, key:any) => (
                                 <SelectItem key={key} value={sType.value}>
@@ -165,7 +168,7 @@ const ContactForm =()=>{
         <Input type="email" variant={'flat'} label="Email" className='col-span-2 duration-100'
             isDisabled={isLoadingBtn}
             {...register("email")}
-            errorMessage={errors.email?.message}
+            errorMessage={errors.email?.message as ReactNode}
             isRequired
         />
         {/* {JSON.stringify(serType)}{JSON.stringify(projType)} */}
@@ -179,7 +182,7 @@ const ContactForm =()=>{
             }}
             isDisabled={isLoadingBtn}
             {...register("description")}
-            errorMessage={errors.description?.message}
+            errorMessage={errors.description?.message as ReactNode}
         />
         <div className='relative w-full flex justify-center col-span-2 duration-100'>
             <Button {...BUTTON_PROPS} fullWidth disable
