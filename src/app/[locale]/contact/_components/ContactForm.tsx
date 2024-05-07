@@ -73,7 +73,7 @@ const ContactForm =()=>{
         await sendContactForm(data).then((e:any)=>{
             console.log(e)
             setIsLoadingBtn(false)
-            toast.success("Tu mensaje se envió correectamente!")
+            toast.success("Tu mensaje se envió correctamente!")
         }).catch(()=>{
             toast.error("It vas imposible to send your email, please, try again or contact me on Linkedin.")
             setIsLoadingBtn(false)

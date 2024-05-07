@@ -163,25 +163,25 @@ const Circle =({
     isStart?:boolean
 })=>{
 
-    return <div className='relative'>
-        <motion.div 
-            initial={{opacity: 0, y:15}}
-            whileInView={{opacity: 1, y:0}}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: 0.25}}
-            className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1'
-        >
-            <div className='relative h-full w-full'>
-                <Image
-                    alt={'Logo of work'}
-                    src={logo}
-                    fill
-                    className='relative object-contain overflow-hidden h-full w-full
-                    drop-shadow-[1px_3px_15px_var(--semitransparent-bg-3)]'
-                />
-            </div>
-        </motion.div>
-    </div>
+    return <motion.div 
+        initial={{opacity: 0, y:15}}
+        whileInView={{opacity: 1, y:0}}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.25}}
+        className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1
+            bg-[var(--background-2)]
+        '
+    >
+        <div className='relative h-full w-full'>
+            <Image
+                alt={'Logo of work'}
+                src={logo}
+                fill
+                className='relative object-contain overflow-hidden h-full w-full
+                drop-shadow-[1px_3px_15px_var(--semitransparent-bg-3)]'
+            />
+        </div>
+    </motion.div>
 }
 
 const Fragment = (
@@ -198,7 +198,7 @@ const Fragment = (
             ${isEnd ?"pt-0 justify-start":"pt-5 justify-center"}
         `} id="background">
             {isStart
-                ?<>
+                ?<div className='relative flex flex-col h-full items-center gap-0'>
                     <div className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1 flex
                         justify-center items-end pb-0
                     '>
@@ -209,7 +209,7 @@ const Fragment = (
                         </div>
                     </div>
                     <Line delay={0.15} isTop/>
-                </>
+                </div>
                 :isEnd
                     ?<>
                         <div className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1 flex flex-col
@@ -222,10 +222,10 @@ const Fragment = (
                             </div>
                         </div>
                     </>
-                    :<>
+                    :<div className='relative flex flex-col h-full items-center gap-5'>
                         <Circle logo={item?.company_logo_src}/>
                         <Line delay={lineDelay}/>
-                    </>
+                    </div>
             }
         </div>
         <div className={`
