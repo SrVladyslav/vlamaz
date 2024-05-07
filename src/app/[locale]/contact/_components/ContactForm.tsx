@@ -49,7 +49,7 @@ const ContactForm =()=>{
         description: z.string().max(500, {message:"Max 500 Ch."}).optional(),
         budget: z.string().optional()
     })
-    const {register, control, handleSubmit, formState, getValues, watch} = useForm({
+    const {register, control, handleSubmit, formState, reset, watch} = useForm({
         resolver: zodResolver(contactSchema)
     })
     const serviceTypeWatch = watch('service_type')
@@ -74,6 +74,7 @@ const ContactForm =()=>{
             console.log(e)
             setIsLoadingBtn(false)
             toast.success("Tu mensaje se envió correctamente!")
+            reset()
         }).catch(()=>{
             toast.error("It vas imposible to send your email, please, try again or contact me on Linkedin.")
             setIsLoadingBtn(false)
