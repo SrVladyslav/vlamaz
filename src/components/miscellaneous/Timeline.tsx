@@ -149,7 +149,7 @@ const Line =({
                 ease: "easeIn"
             }}
             className={`
-                absolute top-0 left-0 w-full h-full
+                absolute top-0 left-0 w-full
                 bg-gradient-to-br from-[var(--blue)] to-[var(--blue-2)]
             `}
         />

@@ -20,8 +20,8 @@ const BiographySection =()=>{
                 <motion.div 
                     initial={{opacity: 0, x:-20}}
                     whileInView={{opacity: 1, x:0}}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.4, delay: 0.15 }}
+                    viewport={{ once: true, amount: 0.0 }}
+                    transition={{ duration: 0.35, delay: 0.15 }}
                     className='z-[666] left-0 sm:relative h-fit sm:h-auto duration-75'
                 >
                     <div className='relative sm:sticky sm:top-[90px] sm:left-0 
@@ -35,8 +35,8 @@ const BiographySection =()=>{
                 <motion.div
                     initial={{opacity: 0, x:20}}
                     whileInView={{opacity: 1, x:0}}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.4, delay: 0.25 }} 
+                    viewport={{ once: true, amount: 0.0 }}
+                    transition={{ duration: 0.35, delay: 0.15 }} 
                     className='relative flex flex-col gap-6 max-w-readable75'
                 >
                     <p className='tracking-wider text-[var(--foreground-4)]'>
