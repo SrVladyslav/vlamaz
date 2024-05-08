@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 // Translations
 import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/providers/TranslationsProvider'
-const i18nNamespaces = ['blog', 'navbar'];
+const i18nNamespaces = ['blog', 'navbar', 'misc'];
 
 const metadatas:any = {
     'en': 'Blog',
@@ -38,7 +38,9 @@ const Blog = async ({
             <div className='relative'>
                 <Navbar/>
                 <div className='relative flex flex-col gap-10 w-full h-full'>
-                    <div>{t('hello-title')}</div>
+                    <div className='relative w-full h-[50vh] flex justify-center items-center'>
+                        <h2 className='text-2xl text-[var(--foreground)]'>{t('soon', {ns:'misc'})}</h2>
+                    </div>
                     <Footer/>
                 </div>
             </div>
