@@ -133,7 +133,7 @@ const Line =({
     delay?:number,
     isTop?:boolean
 })=>{
-    return <div className={`relative w-[4px] h-full overflow-hidden 
+    return <div className={`relative w-[4px] h-full
             ${isTop?"rounded-b-[2px]":"rounded-[2px]"}
             ${isLong?"min-h-20":"min-h-0"}
         `}>
@@ -148,7 +148,7 @@ const Line =({
                 ease: "easeIn"
             }}
             className={`
-                absolute top-0 left-0 w-full
+                relative top-0 left-0 w-full rounded-2xl
                 bg-gradient-to-br from-[var(--blue)] to-[var(--blue-2)]
             `}
         />
