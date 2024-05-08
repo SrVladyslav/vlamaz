@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Rubik, UnifrakturMaguntia, Mea_Culpa, Great_Vibes} from "next/font/google";
 import "./globals.css";
 import {Providers} from "./providers";
-// import {Providers} from '@/app/[locale]/providers';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const rubik = Rubik({
   subsets: ['latin','latin-ext'],
@@ -39,6 +39,7 @@ export default function RootLayout({
       <body>
         <Providers>
           {children}
+          <SpeedInsights/>
         </Providers>
       </body>
     </html>

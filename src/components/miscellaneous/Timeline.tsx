@@ -183,32 +183,6 @@ const Circle =({
         </motion.div>
     </div>
 }
-// const Circle =({
-//     logo
-// }:{
-//     logo:string|any
-// })=>{
-
-//     return <motion.div 
-//         initial={{opacity: 0, y:15}}
-//         whileInView={{opacity: 1, y:0}}
-//         viewport={{ once: true, amount: 0.3 }}
-//         transition={{ duration: 0.5, delay: 0.25}}
-//         className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1
-//             bg-[var(--background)]
-//         '
-//     >
-//         <div className='relative h-full w-full'>
-//             <Image
-//                 alt={'Logo of work'}
-//                 src={logo}
-//                 fill
-//                 className='relative object-contain overflow-hidden h-full w-full
-//                 drop-shadow-[1px_3px_15px_var(--semitransparent-bg-3)]'
-//             />
-//         </div>
-//     </motion.div>
-// }
 
 const Fragment = (
     {children, item, lineDelay, isStart, isEnd, id}
