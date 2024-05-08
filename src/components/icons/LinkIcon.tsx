@@ -14,7 +14,7 @@ const LinkIcon =({
         <Link className='relative flex items-center'
             href={href} isExternal={isExternal}
         >
-            <FaLink className='icon fill-[var(--foreground-2)]'/>
+            <FaLink className='icon fill-[var(--foreground-5)]'/>
         </Link>
     </div>
 }

@@ -59,7 +59,7 @@ const Card =({
             '>
                 {item?.time_range}
             </span>
-            <div className='relative w-full gap-6 h-fit
+            <div className='relative w-full gap-6 h-fit overflow-hidden
                 grid grid-cols-1 md:grid-cols-[1fr_auto]
             '>
                 <div className='relative w-full h-fit flex flex-col gap-5'>
@@ -133,8 +133,7 @@ const Line =({
     delay?:number,
     isTop?:boolean
 })=>{
-    return <div
-        className={`relative w-[4px] h-full overflow-hidden 
+    return <div className={`relative w-[4px] h-full overflow-hidden 
             ${isTop?"rounded-b-[2px]":"rounded-[2px]"}
             ${isLong?"min-h-20":"min-h-0"}
         `}>
@@ -157,32 +156,59 @@ const Line =({
 }
 
 const Circle =({
-    logo, isStart
+    logo
 }:{
-    logo:string|any, 
-    isStart?:boolean
+    logo:string|any
 })=>{
 
-    return <motion.div 
-        initial={{opacity: 0, y:15}}
-        whileInView={{opacity: 1, y:0}}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.5, delay: 0.25}}
-        className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1
-            bg-[var(--background)]
-        '
-    >
-        <div className='relative h-full w-full'>
-            <Image
-                alt={'Logo of work'}
-                src={logo}
-                fill
-                className='relative object-contain overflow-hidden h-full w-full
-                drop-shadow-[1px_3px_15px_var(--semitransparent-bg-3)]'
-            />
-        </div>
-    </motion.div>
+    return <div className='relative h-20 w-full flex items-center'>
+        <motion.div 
+            initial={{opacity: 0, y:15}}
+            whileInView={{opacity: 1, y:0}}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.25}}
+            className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1
+                bg-[var(--background)]
+            '
+        >
+            <div className='relative h-full w-full'>
+                <Image
+                    alt={'Logo of work'}
+                    src={logo}
+                    fill
+                    className='relative object-contain overflow-hidden h-full w-full
+                    drop-shadow-[1px_3px_15px_var(--semitransparent-bg-3)]'
+                />
+            </div>
+        </motion.div>
+    </div>
 }
+// const Circle =({
+//     logo
+// }:{
+//     logo:string|any
+// })=>{
+
+//     return <motion.div 
+//         initial={{opacity: 0, y:15}}
+//         whileInView={{opacity: 1, y:0}}
+//         viewport={{ once: true, amount: 0.3 }}
+//         transition={{ duration: 0.5, delay: 0.25}}
+//         className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1
+//             bg-[var(--background)]
+//         '
+//     >
+//         <div className='relative h-full w-full'>
+//             <Image
+//                 alt={'Logo of work'}
+//                 src={logo}
+//                 fill
+//                 className='relative object-contain overflow-hidden h-full w-full
+//                 drop-shadow-[1px_3px_15px_var(--semitransparent-bg-3)]'
+//             />
+//         </div>
+//     </motion.div>
+// }
 
 const Fragment = (
     {children, item, lineDelay, isStart, isEnd, id}
@@ -192,6 +218,40 @@ const Fragment = (
 
     return <div className='relative grid grid-cols-[auto_1fr]'>
         <div className={`relative flex flex-col
+            h-full w-full items-center
+            pr-0 md:pr-10 duration-100
+        `} id="background">
+            {/* ${isEnd ?"pt-0 justify-start":"pt-5 justify-center"} */}
+            {isStart
+                ?<div className='relative flex flex-col h-full items-center gap-0'>
+                    <div className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1 flex
+                        justify-center items-end pb-0
+                    '>
+                        <div className='relative bg-gradient-to-r from-[var(--blue)] to-[var(--blue-2)]
+                            h-5 w-5 min-h-5 min-w-5 rounded-full p-1
+                        '>
+                            <div className='relative bg-[var(--background)] h-full w-full rounded-full'/>
+                        </div>
+                    </div>
+                    <Line delay={0.15} isTop/>
+                </div>
+                :isEnd
+                    ?<div className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1 flex flex-col
+                        justify-start items-center pt-0
+                    '>
+                        <div className='relative bg-gradient-to-r from-[var(--blue)] to-[var(--blue-2)]
+                            h-5 w-5 min-h-5 min-w-5 rounded-full p-1
+                        '>
+                            <div className='relative bg-[var(--background)] h-full w-full rounded-full'/>
+                        </div>
+                    </div>
+                    :<div className='relative flex flex-col h-full items-center'>
+                        <Circle logo={item?.company_logo_src}/>
+                        <Line delay={lineDelay}/>
+                    </div>
+            }
+        </div>
+        {/* <div className={`relative flex flex-col
             h-full w-full items-center
             pr-0 md:pr-10 duration-100
             ${isStart || isEnd?"gap-0":"gap-5"}
@@ -227,10 +287,9 @@ const Fragment = (
                         <Line delay={lineDelay}/>
                     </div>
             }
-        </div>
+        </div> */}
         <div className={`
             relative pb-20 pl-5 flex flex-col gap-6 h-fit w-full
-            ${isEnd?"pt-0":"pt-5"}
         `}>
             {isStart
                 ?<div className='relative pt-0'>

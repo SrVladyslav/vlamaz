@@ -154,8 +154,7 @@ const CronologhySection =()=>{
     ]
 
     return (
-        <div 
-            className='relative w-full flex justify-center px-5 bg-[var(--background-22)]'>
+        <div className='relative w-full flex justify-center px-5 bg-[var(--background-22)]'>
             <div className='relative gap-10 w-full max-w-screen-xl'>
                 <Timeline timedata= {timedata}/>
             </div>

@@ -14,7 +14,7 @@ const GithubIcon =({
         <Link className='relative flex items-center'
             href={href} isExternal={isExternal}
         >
-            <FaGithub className='icon fill-[var(--foreground-2)]'/>
+            <FaGithub className='icon fill-[var(--foreground-5)]'/>
         </Link>
     </div>
 }
