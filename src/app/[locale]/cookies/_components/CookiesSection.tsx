@@ -12,7 +12,7 @@ const CookiesSection =()=>{
     return (
         <div
             id="cookies" 
-            className='relative w-full flex justify-center px-5 bg-[var(--background-3)] 
+            className='relative w-full flex justify-center px-5 bg-[var(--background-1)] 
                 py-20 pt-32 sm:pt-40
         '>
             <div className='relative gap-10 w-full max-w-screen-xl duration-100
