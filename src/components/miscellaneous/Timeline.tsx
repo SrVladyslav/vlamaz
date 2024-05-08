@@ -133,8 +133,7 @@ const Line =({
     delay?:number,
     isTop?:boolean
 })=>{
-    return <div className={`relative w-[4px] h-full
-            ${isTop?"rounded-b-[2px]":"rounded-[2px]"}
+    return <div className={`relative w-[4px] flex flex-grow
             ${isLong?"min-h-20":"min-h-0"}
         `}>
         <motion.div 
@@ -148,7 +147,8 @@ const Line =({
                 ease: "easeIn"
             }}
             className={`
-                relative top-0 left-0 w-full rounded-2xl
+                relative w-full
+                ${isTop?"rounded-b-[2px]":"rounded-[2px]"}
                 bg-gradient-to-br from-[var(--blue)] to-[var(--blue-2)]
             `}
         />
@@ -218,7 +218,7 @@ const Fragment = (
 
     return <div className='relative grid grid-cols-[auto_1fr]'>
         <div className={`relative flex flex-col
-            h-full w-full items-center
+            w-full items-center
             pr-0 md:pr-10 duration-100
         `} id="background">
             {/* ${isEnd ?"pt-0 justify-start":"pt-5 justify-center"} */}
@@ -252,7 +252,7 @@ const Fragment = (
             } 
         </div>
         <div className={`relative pb-20 pl-5 flex flex-col gap-6 h-fit w-full 
-            ${isStart || isEnd? 'pt-0': 'pt-5'}
+            ${isStart || isEnd? 'pt-0': 'pt-6'}
         `}>
             {isStart
                 ?<div className='relative pt-0'>
