@@ -176,7 +176,7 @@ const Circle =({
                     alt={'Logo of work'}
                     src={logo}
                     fill
-                    className='relative object-contain overflow-hidden h-full w-full
+                    className='relative object-contain h-full w-full
                     drop-shadow-[1px_3px_15px_var(--semitransparent-bg-3)]'
                 />
             </div>
