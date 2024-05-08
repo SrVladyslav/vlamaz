@@ -55,32 +55,18 @@ const CookiesSection =()=>{
                         <h2 className='tracking-wider text-2xl text-[var(--foreground-2)]'>
                             {t('t-3', {ns:'cookies'})}
                         </h2>
-                        <div className='relative flex flex-row gap-3 items-start'>
+                        <div className='relative flex flex-row gap-3 items-start pl-5'>
                             <FaArrowRight className='icon-mini mt-[3px]'/>
                             <span className='tracking-wider text-[var(--foreground-4)]'>
                                 {t('p-3', {ns:'cookies'})}
                             </span>
                         </div>
                     </section>
-                    {/* <section className='relative flex flex-col mt-8 gap-5'>
-                        <h2 className='tracking-wider text-2xl text-[var(--foreground-2)]'>
-                            {t('t-4', {ns:'cookies'})}
-                        </h2>
-                        <p className='tracking-wider text-[var(--foreground-4)]'>
-                            {t('p-4', {ns:'cookies'})}
-                        </p>
-                        <div className='relative flex flex-row gap-3 items-start'>
-                            <FaArrowRight className='icon-mini mt-[3px]'/>
-                            <span className='tracking-wider text-[var(--foreground-4)]'>
-                                Google analytics.
-                            </span>
-                        </div>
-                    </section> */}
                     <section className='relative flex flex-col mt-8 gap-5'>
                         <h2 className='tracking-wider text-2xl text-[var(--foreground-2)]'>
                             {t('t-5', {ns:'cookies'})}
                         </h2>
-                        <div className='relative flex flex-row gap-3 items-start'>
+                        <div className='relative flex flex-row gap-3 items-start pl-5'>
                             <FaArrowRight className='icon-mini mt-[3px]'/>
                             <Link href='https://support.google.com/chrome/answer/95647?hl=es' isExternal>
                                 <span className='tracking-wider text-[var(--foreground-4)]'>
@@ -88,7 +74,7 @@ const CookiesSection =()=>{
                                 </span>
                             </Link>
                         </div>
-                        <div className='relative flex flex-row gap-3 items-start'>
+                        <div className='relative flex flex-row gap-3 items-start pl-5'>
                             <FaArrowRight className='icon-mini mt-[3px]'/>
                             <Link href='http://support.apple.com/kb/HT1677?viewlocale=es_ES' isExternal>
                                 <span className='tracking-wider text-[var(--foreground-4)]'>
@@ -96,7 +82,7 @@ const CookiesSection =()=>{
                                 </span>
                             </Link>
                         </div>
-                        <div className='relative flex flex-row gap-3 items-start'>
+                        <div className='relative flex flex-row gap-3 items-start pl-5'>
                             <FaArrowRight className='icon-mini mt-[3px]'/>
                             <Link href='http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we' isExternal>
                                 <span className='tracking-wider text-[var(--foreground-4)]'>
@@ -104,7 +90,7 @@ const CookiesSection =()=>{
                                 </span>
                             </Link>
                         </div>
-                        <div className='relative flex flex-row gap-3 items-start'>
+                        <div className='relative flex flex-row gap-3 items-start pl-5'>
                             <FaArrowRight className='icon-mini mt-[3px]'/>
                             <Link href='https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09' isExternal>
                                 <span className='tracking-wider text-[var(--foreground-4)]'>

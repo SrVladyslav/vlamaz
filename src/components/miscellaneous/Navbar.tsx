@@ -160,8 +160,8 @@ const Navbar =()=>{
                 {/* Burger */}
                 <div className='relative flex flex-row gap-2 items-center justify-end'>
                     <div className='relative hidden md:flex flex-row gap-2 items-center'>
-                        <GithubIcon isExternal href='https://github.com/SrVladyslav'/>
-                        <LinkedinIcon isExternal href='https://www.linkedin.com/in/vladyslav-mazurkevych/'/>
+                        <GithubIcon isExternal white href='https://github.com/SrVladyslav'/>
+                        <LinkedinIcon isExternal white href='https://www.linkedin.com/in/vladyslav-mazurkevych/'/>
                     </div>
                     <LanguageSelector/>
                     <ToggleTheme/>
@@ -246,8 +246,8 @@ const Navbar =()=>{
                         <div className='absolute top-0 left-0 w-full
                             h-[2px] bg-[var(--background-2)]'
                         />
-                        <GithubIcon isExternal href='https://github.com/SrVladyslav'/>
-                        <LinkedinIcon isExternal href='https://www.linkedin.com/in/vladyslav-mazurkevych/'/>
+                        <GithubIcon isExternal white href='https://github.com/SrVladyslav'/>
+                        <LinkedinIcon isExternal white href='https://www.linkedin.com/in/vladyslav-mazurkevych/'/>
                     </div>
                 </motion.div>
             </motion.div>

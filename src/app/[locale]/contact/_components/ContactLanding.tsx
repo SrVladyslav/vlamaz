@@ -25,8 +25,8 @@ const ContactLanding =()=>{
                 </div>
                 <p className='max-w-readable40 relative tracking-wider text-[var(--foreground-4)]'>{t('description','contact')}</p>
                 <div className='relative flex flex-row gap-3 justify-center md:justify-end'>
-                    <LinkedinIcon isExternal href='https://www.linkedin.com/in/vladyslav-mazurkevych/'/>
-                    <GithubIcon isExternal href='https://github.com/SrVladyslav'/>
+                    <LinkedinIcon white isExternal href='https://www.linkedin.com/in/vladyslav-mazurkevych/'/>
+                    <GithubIcon white isExternal href='https://github.com/SrVladyslav'/>
                 </div>
             </div>
             <div className='relative w-full h-fit flex flex-col gap-5'>

@@ -4,6 +4,9 @@ import React from 'react'
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
+import LinkedinIcon from '@/components/icons/LinkedinIcon';
+import GithubIcon from '@/components/icons/GithubIcon';
+
 const Footer =()=>{
     const { t } = useTranslation();
 
@@ -23,6 +26,10 @@ const Footer =()=>{
                         El progreso tecnológico desplaza competencias, el aprendizaje continuo con una visión global te permite adaptarte.
                         </p>
                     </div>
+                    <div className='relative flex flex-row gap-3 items-center pt-3'>
+                        <GithubIcon isExternal white href='https://github.com/SrVladyslav'/>
+                        <LinkedinIcon isExternal white href='https://www.linkedin.com/in/vladyslav-mazurkevych/'/>
+                    </div>
                 </div>
                 <div className='relative flex flex-col gap-3'>
                     <h2 className='text-lg font-medium'>Navbar</h2>
@@ -36,8 +43,8 @@ const Footer =()=>{
                 <div className='relative flex flex-col gap-3'>
                     <h2 className='text-lg font-medium'>Legal</h2>
                     <div className='relative w-full flex flex-col gap-2'>
-                        <span className='text-sm whitespace-nowrap'>{t('terms-policy', {ns:"navbar"})}</span>
-                        <span className='text-sm whitespace-nowrap'>{t('privacy-policy', {ns:"navbar"})}</span>
+                        {/* <span className='text-sm whitespace-nowrap'>{t('terms-policy', {ns:"navbar"})}</span> */}
+                        <Link href='privacy' className='text-sm whitespace-nowrap'>{t('privacy-policy', {ns:"navbar"})}</Link>
                         <Link href='cookies' className='text-sm whitespace-nowrap'>{t('cookies-policy', {ns:"navbar"})}</Link>
                     </div>
                 </div>
