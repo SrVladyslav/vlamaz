@@ -13,6 +13,8 @@ import {useAllowScrollWithBackup} from '@/hooks/useAllowScrollWithBackup'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RxCross1, RxHamburgerMenu} from "react-icons/rx";
 import { FaAngleRight } from "react-icons/fa6";
+import GithubIcon from '@/components/icons/GithubIcon'
+import LinkedinIcon from '@/components/icons/LinkedinIcon'
 
 import { useTranslation } from 'react-i18next';
 
@@ -158,8 +160,8 @@ const Navbar =()=>{
                 {/* Burger */}
                 <div className='relative flex flex-row gap-2 items-center justify-end'>
                     <div className='relative hidden md:flex flex-row gap-2 items-center'>
-                        <FaGithub className='icon' tabIndex={0}/>
-                        <FaLinkedin className='icon' tabIndex={0}/>
+                        <GithubIcon isExternal href='https://github.com/SrVladyslav'/>
+                        <LinkedinIcon isExternal href='https://www.linkedin.com/in/vladyslav-mazurkevych/'/>
                     </div>
                     <LanguageSelector/>
                     <ToggleTheme/>
@@ -244,8 +246,8 @@ const Navbar =()=>{
                         <div className='absolute top-0 left-0 w-full
                             h-[2px] bg-[var(--background-2)]'
                         />
-                        <FaGithub className='icon' tabIndex={0}/>
-                        <FaLinkedin className='icon' tabIndex={0}/>
+                        <GithubIcon isExternal href='https://github.com/SrVladyslav'/>
+                        <LinkedinIcon isExternal href='https://www.linkedin.com/in/vladyslav-mazurkevych/'/>
                     </div>
                 </motion.div>
             </motion.div>

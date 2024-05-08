@@ -7,5 +7,29 @@
     "title-6":"started",    
     "title-7":"?",
     "description":"I'll text you back ASAP!",
-    "send":"Send"   
+    "send":"Send",
+
+    "name":"Name",
+    "email":"Email",
+    "details":"Additional details",
+    "details_1":"Please, provide an additional information here so our meeting can be more productive.",
+    
+    "service_type":"Service type",
+    "service_type_1":"I want a meeting",
+    "service_type_2":"I wanna hire you",
+    "service_type_3":"Mentoring session",
+
+    "project_type":"Project type",
+    "project_type_1":"Startup",
+    "project_type_2":"Company",
+    "project_type_3":"Startup [Part-time]",
+    "project_type_4":"Company [Part-time]",
+    "budget":"Budget",
+
+    "mentoring_area":"Mentoring area",
+    "ml":"Machine Learning",
+    "da":"Data Analytics",
+    "bd":"Backend Development",
+    "fd":"Frontend Development",
+    "sm":"Sales & Marketing from startup perspective"
 }

@@ -7,5 +7,30 @@
     "title-6":"de una",    
     "title-7":"?",
     "description":"Te responderé ASAP!",
-    "send":"Enviar"   
+    "send":"Enviar",
+
+    "name": "Nombre",
+    "email": "Correo",
+    "details": "Detalles adicionales",
+    "details_1": "Por favor, proporcione información adicional aquí para que nuestra reunión pueda ser más productiva.",
+    
+
+    "service_type": "Tipo de servicio",
+    "service_type_1": "Quiero una reunión",
+    "service_type_2": "Quiero contratarte",
+    "service_type_3": "Sesión de mentoría",
+
+    "project_type": "Tipo de proyecto",
+    "project_type_1": "Startup",
+    "project_type_2": "Empresa",
+    "project_type_3": "Startup [Tiempo parcial]",
+    "project_type_4": "Empresa [Tiempo parcial]",
+    "budget": "Presupuesto",
+
+    "mentoring_area": "Área de mentoría",
+    "ml": "Aprendizaje automático",
+    "da": "Análisis de datos",
+    "bd": "Desarrollo de backend",
+    "fd": "Desarrollo de frontend",
+    "sm": "Ventas y marketing desde la perspectiva de una startup"
 }

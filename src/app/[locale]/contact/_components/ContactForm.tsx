@@ -12,27 +12,28 @@ import {zodResolver} from '@hookform/resolvers/zod'
 import { toast } from 'sonner';
 import {z} from 'zod'
 
-const serviceTypes = [
-    {label:"I want a meeting", value:"JUST_MEETING", key:"0"},
-    {label:"I wanna hire you", value:"HIRING", key:"1"},
-    {label:"Mentoring session ", value:"MENTORING", key:"2"}
-]
-const projectTypes = [
-    {label:"Startup", value:"STARTUP-FT", key:"0"},
-    {label:"Company", value:"COMPANY-FT", key:"1"},
-    {label:"Startup [Part-time]", value:"STARTUP-PT", key:"2"},
-    {label:"Company [Part-time]", value:"COMPANY-PT", key:"3"}
-]
-const subjectTypes = [
-    {label:"Machine Learning", value:"ML", key:"0"},
-    {label:"Data Analytics", value:"ML", key:"1"},
-    {label:"Backend Development", value:"BACK-DEV", key:"2"},
-    {label:"Frontend Development", value:"FRONT-DEV", key:"3"},
-    {label:"Sales & Marketing from startup perspective", value:"SALES-MARK", key:"4"},
-]
-
 const ContactForm =()=>{
     const {t} = useTranslation()
+
+    const serviceTypes = [
+        {label: t('service_type_1', {ns:'contact'}), value:"JUST_MEETING", key:"0"},
+        {label: t('service_type_2', {ns:'contact'}), value:"HIRING", key:"1"},
+        {label: t('service_type_3', {ns:'contact'}), value:"MENTORING", key:"2"}
+    ]
+    const projectTypes = [
+        {label: t('project_type_1', {ns:'contact'}), value:"STARTUP-FT", key:"0"},
+        {label: t('project_type_2', {ns:'contact'}), value:"COMPANY-FT", key:"1"},
+        {label: t('project_type_3', {ns:'contact'}), value:"STARTUP-PT", key:"2"},
+        {label: t('project_type_4', {ns:'contact'}), value:"COMPANY-PT", key:"3"}
+    ]
+    const subjectTypes = [
+        {label: t('ml', {ns:'contact'}), value:"ML", key:"0"},
+        {label: t('da', {ns:'contact'}), value:"ML", key:"1"},
+        {label: t('bd', {ns:'contact'}), value:"BACK-DEV", key:"2"},
+        {label: t('fd', {ns:'contact'}), value:"FRONT-DEV", key:"3"},
+        {label: t('sm', {ns:'contact'}), value:"SALES-MARK", key:"4"},
+    ]
+
     const [subjectType, setSubjectType]:any = useState(null)
     const [isLoadingBtn, setIsLoadingBtn] = useState(false)
 
@@ -85,7 +86,7 @@ const ContactForm =()=>{
     return <form className='relative grid grid-cols-2 gap-5 w-full md:max-w-[450px] duration-100'
         onSubmit={handleSubmit(handleContact)}
     >
-        <Input type="text" variant={'flat'} label={t('name',{ns:"misc"})} 
+        <Input type="text" variant={'flat'} label={t('name',{ns:"contact"})} 
             className='col-span-2 sm:col-span-1'
             isDisabled={isLoadingBtn}
             {...register("name")}
@@ -94,7 +95,7 @@ const ContactForm =()=>{
         />
         <Controller
             render={({ field }) => (
-                <Select label={t("service-type", {ns:"misc"})} 
+                <Select label={t("service_type", {ns:"contact"})} 
                     {...field}
                     className='col-span-2 sm:col-span-1'
                     selectedKeys={[field.value]}
@@ -119,7 +120,7 @@ const ContactForm =()=>{
             ?<>
                 <Controller
                     render={({ field }) => (
-                        <Select label={t("project-type", {ns:"misc"})} 
+                        <Select label={t("project_type", {ns:"contact"})} 
                             {...field}
                             className='col-span-2 sm:col-span-1'
                             selectedKeys={field.value}
@@ -141,7 +142,7 @@ const ContactForm =()=>{
                 />
                 <Input
                     type="text"
-                    label="Budget"
+                    label={t("budget", {ns:"contact"})}
                     className='col-span-2 sm:col-span-1'
                     startContent={
                         <div className="pointer-events-none flex items-center">
@@ -155,7 +156,7 @@ const ContactForm =()=>{
             </>
             :serviceTypeWatch == '2'
                     &&<>
-                        <Select label={t("mentoring-type", {ns:"misc"})} 
+                        <Select label={t("mentoring_area", {ns:"contact"})} 
                             className='col-span-2 sm:col-span-2'
                             selectedKeys={subjectType}
                             onSelectionChange={setSubjectType}
@@ -171,7 +172,8 @@ const ContactForm =()=>{
                     </>
         }
 
-        <Input type="email" variant={'flat'} label="Email" className='col-span-2 duration-100'
+        <Input type="email" variant={'flat'} label={t("email", {ns:"contact"})} 
+            className='col-span-2 duration-100'
             isDisabled={isLoadingBtn}
             {...register("email")}
             errorMessage={errors.email?.message as ReactNode}
@@ -179,8 +181,8 @@ const ContactForm =()=>{
         />
         {/* {JSON.stringify(serType)}{JSON.stringify(projType)} */}
         <Textarea
-            label="Additional details"
-            placeholder={serviceTypeWatch == '0' || serviceTypeWatch == '2'?t("additional-info",{ns:"misc"}):''}
+            label={t("details", {ns:"contact"})}
+            placeholder={serviceTypeWatch == '0' || serviceTypeWatch == '2'?t("details_1",{ns:"contact"}):''}
             className="w-full col-span-2 duration-100"
             classNames={{
                 base: "",
