@@ -38,7 +38,7 @@ const Footer =()=>{
                     <div className='relative w-full flex flex-col gap-2'>
                         <span className='text-sm whitespace-nowrap'>{t('terms-policy', {ns:"navbar"})}</span>
                         <span className='text-sm whitespace-nowrap'>{t('privacy-policy', {ns:"navbar"})}</span>
-                        <span className='text-sm whitespace-nowrap'>{t('cookies-policy', {ns:"navbar"})}</span>
+                        <Link href='cookies' className='text-sm whitespace-nowrap'>{t('cookies-policy', {ns:"navbar"})}</Link>
                     </div>
                 </div>
             </div>
