@@ -249,47 +249,10 @@ const Fragment = (
                         <Circle logo={item?.company_logo_src}/>
                         <Line delay={lineDelay}/>
                     </div>
-            }
+            } 
         </div>
-        {/* <div className={`relative flex flex-col
-            h-full w-full items-center
-            pr-0 md:pr-10 duration-100
-            ${isStart || isEnd?"gap-0":"gap-5"}
-            ${isEnd ?"pt-0 justify-start":"pt-5 justify-center"}
-        `} id="background">
-            {isStart
-                ?<div className='relative flex flex-col h-full items-center gap-0'>
-                    <div className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1 flex
-                        justify-center items-end pb-0
-                    '>
-                        <div className='relative bg-gradient-to-r from-[var(--blue)] to-[var(--blue-2)]
-                            h-5 w-5 min-h-5 min-w-5 rounded-full p-1
-                        '>
-                            <div className='relative bg-[var(--background)] h-full w-full rounded-full'/>
-                        </div>
-                    </div>
-                    <Line delay={0.15} isTop/>
-                </div>
-                :isEnd
-                    ?<>
-                        <div className='relative h-8 w-8 min-h-8 min-w-8 rounded-full p-1 flex flex-col
-                            justify-start items-center pt-0
-                        '>
-                            <div className='relative bg-gradient-to-r from-[var(--blue)] to-[var(--blue-2)]
-                                h-5 w-5 min-h-5 min-w-5 rounded-full p-1
-                            '>
-                                <div className='relative bg-[var(--background)] h-full w-full rounded-full'/>
-                            </div>
-                        </div>
-                    </>
-                    :<div className='relative flex flex-col h-full items-center gap-5 overflow-hidden'>
-                        <Circle logo={item?.company_logo_src}/>
-                        <Line delay={lineDelay}/>
-                    </div>
-            }
-        </div> */}
-        <div className={`
-            relative pb-20 pl-5 flex flex-col gap-6 h-fit w-full
+        <div className={`relative pb-20 pl-5 flex flex-col gap-6 h-fit w-full 
+            ${isStart || isEnd? 'pt-0': 'pt-5'}
         `}>
             {isStart
                 ?<div className='relative pt-0'>
