@@ -37,7 +37,7 @@ const Background = async ({
                 <Navbar/>
                 <BackgroundLanding/>
                 <CronologhySection/>
-                <BiographySection/>
+                <BiographySection/> 
                 <LetsTalk/>
                 <div className='relative flex flex-col gap-10 w-full h-full'>
                     <Footer/>
