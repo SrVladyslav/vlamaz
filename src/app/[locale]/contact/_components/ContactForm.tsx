@@ -17,8 +17,8 @@ const ContactForm =()=>{
 
     const serviceTypes = [
         {label: t('service_type_1', {ns:'contact'}), value:"JUST_MEETING", key:"0"},
-        {label: t('service_type_2', {ns:'contact'}), value:"HIRING", key:"1"},
-        {label: t('service_type_3', {ns:'contact'}), value:"MENTORING", key:"2"}
+        {label: t('service_type_3', {ns:'contact'}), value:"MENTORING", key:"1"}
+        // {label: t('service_type_2', {ns:'contact'}), value:"HIRING", key:"1"},
     ]
     const projectTypes = [
         {label: t('project_type_1', {ns:'contact'}), value:"STARTUP-FT", key:"0"},

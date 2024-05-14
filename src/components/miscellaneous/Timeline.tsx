@@ -253,7 +253,7 @@ const Timeline =({timedata}:{timedata:any})=>{
         more:"",
         tech_icons: []
     }
-    return <div className='relative w-full h-fit flex justify-center mt-20 mb-0'>
+    return <div id="timeline" className='relative w-full h-fit flex justify-center mt-20 mb-0'>
         <div className='relative w-full h-fit flex flex-col max-w-screen-md'>
             <Fragment isStart id="background"/>
             {timedata?.map((item:any, key:any)=>{

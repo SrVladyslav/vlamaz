@@ -40,8 +40,8 @@ const BackgroundLanding =()=>{
                 flex items-center justify-center 
             '>
                 <NextSectionBtn
-                    scrollId={'background-biography'}
-                    topOffset={70}
+                    scrollId={'timeline'}
+                    topOffset={0}
                 />
             </div>
         </div>
