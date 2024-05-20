@@ -1,0 +1,18 @@
+# *
+User-agent: *
+Allow: /
+Allow: /learn
+Allow: /background
+Allow: /contact
+Allow: /es/learn
+Allow: /es/background
+Allow: /es/contact
+Allow: /ua/learn
+Allow: /ua/background
+Allow: /es/contact
+
+# Host
+Host: https://vlamaz.com
+
+# Sitemaps
+Sitemap: https://vlamaz.com/sitemap.xml
