@@ -35,7 +35,7 @@ const Footer =()=>{
                     <h2 className='text-lg font-medium'>Navbar</h2>
                     <div className='relative w-full flex flex-col gap-2'>
                         <Link href='/' className='text-sm whitespace-nowrap'>{t('home', {ns:"navbar"})}</Link>
-                        <Link href='https://learnvlamaz.com' className='text-sm whitespace-nowrap'>{t('blog', {ns:"navbar"})}</Link>
+                        <Link href='https://learn.vlamaz.com' className='text-sm whitespace-nowrap'>{t('blog', {ns:"navbar"})}</Link>
                         <Link href='/background' className='text-sm whitespace-nowrap'>{t('projects', {ns:"navbar"})}</Link>
                         <Link href='/contact' className='text-sm whitespace-nowrap'>{t('contact', {ns:"navbar"})}</Link>
                     </div>

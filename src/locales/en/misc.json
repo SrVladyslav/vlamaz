@@ -18,6 +18,11 @@
     "mentoring-type":"Mentoring area",
     "additional-info":"Please, provide an additional information here so our meeting can be more productive.",
 
+    "learn-learn":"Training",
+    "learn-title": "Learn with ",
+    "learn-description": "Here you will find my content (Blog, Snippets, Courses, etc.) about computing and more.",
+    "learn-go": "View content",
+    
     "JUST_MEETING":"I wanna talk with you",
     "HIRING":"I wanna hire you",
     "":""

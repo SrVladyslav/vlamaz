@@ -43,8 +43,8 @@ const BiographySection =()=>{
                         {t("bio-1",{ns:"background"})}<b><a href="https://www.upv.es/" className='text-[var(--yellow)]'>{t("bio-2",{ns:"background"})}</a></b>
                         {t("bio-3",{ns:"background"})}<b>{t("bio-4",{ns:"background"})}</b>{t("bio-5",{ns:"background"})}
                     </p>
-                    <p className='tracking-wider text-[var(--foreground-4)]'>{t("bio-6",{ns:"background"})}</p>
-                    <p className='tracking-wider text-[var(--foreground-4)]'>{t("bio-7",{ns:"background"})}</p>
+                    {/* <p className='tracking-wider text-[var(--foreground-4)]'>{t("bio-6",{ns:"background"})}</p> */}
+                    {/* <p className='tracking-wider text-[var(--foreground-4)]'>{t("bio-7",{ns:"background"})}</p> */}
                     <p className='tracking-wider text-[var(--foreground-4)]'>{t("bio-8",{ns:"background"})}</p>
                     <p className='tracking-wider text-[var(--foreground-4)]'>
                         {t("bio-9",{ns:"background"})}

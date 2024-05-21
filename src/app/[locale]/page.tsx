@@ -2,6 +2,7 @@ import Navbar from '@/components/miscellaneous/Navbar'
 import Landing from '@/app/[locale]/_components/Landing'
 import LetsTalk from '@/components/sections/LetsTalk'
 import Knowledge from '@/app/[locale]/_components/Knowledge'
+import LearnVlamaz from '@/app/[locale]/_components/LearnVlamaz'
 import Footer from '@/components/miscellaneous/Footer'
 // Translations
 import initTranslations from '@/app/i18n'
@@ -23,6 +24,7 @@ const Home = async ({
         <div className='relative flex flex-col w-full'>
           <Landing/>
           <Knowledge/>
+          <LearnVlamaz/>
           <LetsTalk/>
           <Footer/>
         </div>

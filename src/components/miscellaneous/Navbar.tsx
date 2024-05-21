@@ -10,7 +10,7 @@ import LanguageSelector from '@/components/buttons/LanguageSelector'
 import { useRouter, usePathname } from 'next/navigation'
 import {useAllowScrollWithBackup} from '@/hooks/useAllowScrollWithBackup'
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 import { RxCross1, RxHamburgerMenu} from "react-icons/rx";
 import { FaAngleRight } from "react-icons/fa6";
 import GithubIcon from '@/components/icons/GithubIcon'
