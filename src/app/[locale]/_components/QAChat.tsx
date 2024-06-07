@@ -22,7 +22,7 @@ const AssistantMsg =({message, key}:{
 })=>{
     return <div key={key} className='relative w-full pr-10 sm:pr-20 flex justify-start'>
         <span className='relative bg-[var(--background-2)] py-3 px-5 
-            text-base rounded-2xl rounded-br-sm font-medium tracking-wide'>
+            text-base rounded-2xl rounded-bl-sm font-medium tracking-wide'>
             {message}
         </span>
     </div>
