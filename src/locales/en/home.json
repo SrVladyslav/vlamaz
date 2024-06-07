@@ -6,6 +6,10 @@
     "meeting":"Book a meeting",
     "my-projects": "My background",
 
+    "bot-1": "Do you have ",
+    "bot-2": "any questions",
+    "bot-3": "Could you help me with PyTorch?",
+
     "a-title-1":"Full-Stack Developer",
     "a-desc-1":"I'm graduated in CS specialized in DS/ML and I love to code things from scratch with clean design.",
     "a-title-2":"Languages I speak:",
