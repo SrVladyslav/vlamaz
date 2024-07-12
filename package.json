@@ -17,6 +17,7 @@
     "@supabase/supabase-js": "^2.44.3",
     "@types/three": "^0.164.0",
     "@vercel/speed-insights": "^1.0.10",
+    "braces": "^3.0.3",
     "framer-motion": "^11.0.27",
     "groq-sdk": "^0.4.0",
     "i18next": "^23.11.1",

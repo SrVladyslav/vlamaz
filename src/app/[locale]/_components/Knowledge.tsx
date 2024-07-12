@@ -71,7 +71,7 @@ const Knowledge =()=>{
                     >
                         <div className='relative flex flex-row gap-2 items-center'>
                             {/* <span>{t('misc',{ns:"background"})}</span> */}
-                            <span>👨🏻‍💻  {t('hire-me',{ns:'misc'})}</span>
+                            <span>👨🏻‍💻  {t('hire-me',{ns:'misc'})} </span>
                             <FaArrowRight/>
                         </div>
                     </Button>
