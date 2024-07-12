@@ -123,7 +123,7 @@ const Knowledge =()=>{
                         className='text-[var(--foreground)] font-medium bg-transparent group duration-75
                             bg-[var(--background)] data-[hover=true]:bg-[var(--background)] mt-4
                             data-[hover=true]:text-[var(--foreground-6)] tracking-wider
-                            border-[1px] border-[var(--gray-3)] data-[hover=true]:border-[var(--foreground-2)]   
+                            border-[1px] border-[var(--foreground-2)] data-[hover=true]:border-[var(--foreground-2)]   
                         '
                         as={Link}
                         href='/contact'

@@ -11,18 +11,21 @@
     "bot-3":"¿Me podríoas ayudar con PyTorch?",
 
     "a-title-1": "Desarrollador Full-Stack",
-    "a-desc-1": "Me gradué en Ciencias de la Computación especializado en CD/AA y me encanta programar cosas desde cero con un diseño limpio.",
+    "a-desc-1-old": "Me gradué en Ciencias de la Computación especializado en CD/AA y me encanta programar cosas desde cero con un diseño limpio.",
     "a-title-2": "Lenguajes que hablo:",
     "a-title-3": "Tecnologías de desarrollo:",
+    "a-desc-1": "Experiencia creando varios proyectos web production-ready desde cero.",
     
     "b-title-1": "Ciencia de Datos",
-    "b-desc-1": "Como científico de datos, estoy acostumbrado a trabajar con datos de texto e imágenes, desde su análisis hasta el entrenamiento de modelos.",
+    "b-desc-1-old": "Como científico de datos, estoy acostumbrado a trabajar con datos de texto e imágenes, desde su análisis hasta el entrenamiento de modelos.",
+    "b-desc-1": "Graduado en Informática (especialidad DS/ML). Trabajo con texto e imágenes.",
     "b-title-2": "Cosas que más me gustan:",
     "b-desc-2": "Análisis Exploratorio de Datos, Modelos Generativos",
     "b-title-3": "Herramientas y bibliotecas:",
     
     "c-title-1": "Emprendimiento",
-    "c-desc-1": "He iniciado dos startups, las cuales fueron aceleradas por Lanzadera, con ellas aprendí valiosas lecciones en el camino.",
+    "c-desc-1-old": "He iniciado dos startups, las cuales fueron aceleradas por Lanzadera, con ellas aprendí valiosas lecciones en el camino.",
+    "c-desc-1": "Valiosas lecciones aprendidas creando una startup acelerada por Lanzadera.",
     "c-title-2": "Experiencias en las que puedo contribuir:",
     "c-desc-2": "Marketing, Ventas en frío, Gestión, Metodología Lean/Agile.",
     "c-title-3": "Herramientas:"
