@@ -21,7 +21,8 @@
 
     "learn-learn":"Training",
     "learn-title": "Learn with ",
-    "learn-description": "Here you will find my content (Blog, Snippets, Courses, etc.) about computing and more.",
+    "learn-description-old": "Here you will find my content (Blog, Snippets, Courses, etc.) about computing and more.",
+    "learn-description":"Here you will find useful content (Notes, Courses, etc...) about computer science, marketing, and other things.",
     "learn-go": "View content",
     
     "JUST_MEETING":"I wanna talk with you",

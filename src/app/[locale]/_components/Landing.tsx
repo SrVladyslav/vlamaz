@@ -26,12 +26,28 @@ const Landing =()=>{
                     whileInView={{opacity: 1, scale:1}}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.25, delay: 0.25}}
-                    className='relative w-full h-full'
+                    className='relative w-full h-full flex justify-center items-center'
                 >
-                    <Image alt="Landing Vlad"
-                        src={'/images/landing.webp'}
+                    {/* <Image alt="Landing Vlad"
+                        src={'/images/landing-sm.webp'}
                         fill 
+                        sizes="(max-width: 768px) 768px, 100vw"
                         className='absolute object-contain
+                            md:hidden
+                            drop-shadow-[0_35px_35px_rgba(249,173,5,0.1)]
+                        '
+                    /> */}
+                    <img 
+                        fetchPriority="high"
+                        loading="lazy"
+                        srcSet="./images/landing-sm.webp 320w, ./images/landing-md.webp 768w, ./images/landing-lg.webp 1024w"
+                        sizes="(max-width: 320px) 280px,
+                            (max-width: 768px) 720px,
+                            1024px"
+                        src="/images/landing-sm.webp" alt="Landing Vlad" 
+                        className='absolute object-contain
+                            md:hiddens object-cover 
+                            h-full w-auto md:w-full md:h-auto
                             drop-shadow-[0_35px_35px_rgba(249,173,5,0.1)]
                         '
                     />

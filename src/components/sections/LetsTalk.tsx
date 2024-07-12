@@ -33,7 +33,11 @@ const LetsTalk =()=>{
                 className='relative font-medium text-[var(--foreground-5)]
                     text-4xl md:text-5xl text-center
                 '
-            >{t('contact-1',{ns:'misc'})}<span className='text-[var(--yellow)] font-semibold'>{t('contact-2',{ns:'misc'})}</span>{t('contact-3',{ns:'misc'})}<span className='text-[var(--yellow)] font-semibold'>{t('contact-4',{ns:'misc'})}</span>
+            >
+                <div className='relative w-full flex justify-center pb-5'>
+                    <img src="./images/vlamaz.webp" alt="Logo" className='h-24 w-24 min-h-24 min-w-24'/>
+                </div>
+                {t('contact-1',{ns:'misc'})}<span className='text-[var(--yellow)] font-semibold'>{t('contact-2',{ns:'misc'})}</span>{t('contact-3',{ns:'misc'})}<span className='text-[var(--yellow)] font-semibold'>{t('contact-4',{ns:'misc'})}</span>
             {t('contact-5',{ns:'misc'})}<span className='text-[var(--yellow)] font-semibold'>{t('contact-6',{ns:'misc'})}</span>{t('contact-7',{ns:'misc'})}
             </motion.h3>
             <motion.div 

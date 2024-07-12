@@ -10,9 +10,10 @@
 
     "learn-learn":"Formación",
     "learn-title":"Aprende con ",
-    "learn-description":"Aquí encontrarás mi contenido (Blog, Snippets, Cursos, etc.) sobre la informática y más cosas.",
+    "learn-description-old":"Aquí encontrarás mi contenido (Blog, Snippets, Cursos, etc.) sobre la informática y más cosas.",
+    "learn-description":"Aquí encontrarás contenido útil (Apuntes, Cursos, etc...) sobre informática, marketing y más.",
     "learn-go":"Ver contenido",
 
-    "hire-me":"Contratar",
+    "hire-me":"Contactar",
     "soon": "¡Próximamente 🥰!"
 }

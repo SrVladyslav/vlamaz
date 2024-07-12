@@ -58,6 +58,7 @@ const Navbar =()=>{
                 handleBurger(newActive);
                 setActiveSidebar(newActive)
             }}
+            alt="Burger button"
             className='text-[var(--foreground)] data-[hover=true]:text-[var(--foreground)] font-medium bg-[red]
                 bg-transparent data-[hover=true]:bg-[var(--background-2)] rounded-0
                 h-[32px] w-[32px] min-h-[32px] min-w-[32px]
