@@ -40,7 +40,7 @@ const Landing =()=>{
                             '
                         /> */}
                         <img 
-                            srcSet="./images/landing-sm.webp 320w, ./images/landing-md.webp 768w, ./images/landing-lg.webp 1024w"
+                            srcSet="/images/landing-sm.webp 320w, ./images/landing-md.webp 768w, ./images/landing-lg.webp 1024w"
                             sizes="(max-width: 320px) 280px,
                                 (max-width: 768px) 720px,
                                 1024px"
