@@ -30,16 +30,15 @@ const Landing =()=>{
                         transition={{ duration: 0.25, delay: 0.25}}
                         className='relative w-full h-full flex justify-center items-center'
                     >
-                        {/* <Image alt="Landing Vlad"
-                            src={'/images/landing-sm.webp'}
+                        <Image alt="Landing Vlad"
+                            src={'/images/landing-lg.webp'}
                             fill 
-                            sizes="(max-width: 768px) 768px, 100vw"
+                            sizes="(max-width: 768px) 720px, (max-width: 320px) 280px, 100vw"
                             className='absolute object-contain
-                                md:hidden
                                 drop-shadow-[0_35px_35px_rgba(249,173,5,0.1)]
                             '
-                        /> */}
-                        <img 
+                        />
+                        {/* <img 
                             srcSet="/images/landing-sm.webp 320w, ./images/landing-md.webp 768w, ./images/landing-lg.webp 1024w"
                             sizes="(max-width: 320px) 280px,
                                 (max-width: 768px) 720px,
@@ -50,7 +49,7 @@ const Landing =()=>{
                                 h-full w-auto md:w-full md:h-auto
                                 drop-shadow-[0_35px_35px_rgba(249,173,5,0.1)]
                             '
-                        />
+                        /> */}
                     </motion.div>
                 </LazyMotion>
             </div>
