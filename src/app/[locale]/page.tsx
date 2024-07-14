@@ -7,11 +7,11 @@ import Landing from '@/app/[locale]/_components/Landing'
 // import Footer from '@/components/miscellaneous/Footer'
 
 import dynamic from 'next/dynamic'
-const LetsTalk = dynamic(() => import('@/components/sections/LetsTalk'), { ssr: false })
-const Knowledge = dynamic(() => import('@/app/[locale]/_components/Knowledge'), { ssr: false })
-const LearnVlamaz = dynamic(() => import('@/app/[locale]/_components/LearnVlamaz'), { ssr: false })
-const QASection = dynamic(() => import('@/app/[locale]/_components/QASection'), { ssr: false })
-const Footer = dynamic(() => import('@/components/miscellaneous/Footer'), { ssr: false })
+const LetsTalk = dynamic(() => import('@/components/sections/LetsTalk'), { ssr: true })
+const Knowledge = dynamic(() => import('@/app/[locale]/_components/Knowledge'), { ssr: true })
+const LearnVlamaz = dynamic(() => import('@/app/[locale]/_components/LearnVlamaz'), { ssr: true })
+const QASection = dynamic(() => import('@/app/[locale]/_components/QASection'), { ssr: true })
+const Footer = dynamic(() => import('@/components/miscellaneous/Footer'), { ssr: true })
 
 // Translations
 import initTranslations from '@/app/i18n'
