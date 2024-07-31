@@ -14,7 +14,7 @@ const ContactLanding =()=>{
     return <div className='relative w-full flex justify-center items-center px-5 pb-20'>
         <div className='relative grid grid-cols-1 md:grid-cols-2 
             md:h-[100vh] md:h-[100dvh] gap-10 sm:gap-5 md:gap-10
-            pt-[170px] w-full max-w-screen-xl
+            pt-[170px] w-full max-w-screen-xl mt-10
         '>
             <div className='relative w-full h-fit flex flex-col gap-5
                 items-center md:items-end

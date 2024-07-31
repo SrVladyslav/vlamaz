@@ -13,7 +13,6 @@ import { LazyMotion, domAnimation, m as motion} from "framer-motion"
 const Landing =()=>{
     const { t } = useTranslation();
 
-
     return <div className='relative w-full flex justify-center px-5'>
         <div className='relative grid grid-cols-1 md:grid-cols-2 
             h-fit md:h-[100vh] md:h-[100dvh]
@@ -34,10 +33,13 @@ const Landing =()=>{
                             src={'/images/landing-lg.webp'}
                             fill 
                             sizes="(max-width: 768px) 720px, (max-width: 320px) 280px, 100vw"
-                            className='absolute object-contain
+                            className='absolute object-contain z-[3]
                                 drop-shadow-[0_35px_35px_rgba(249,173,5,0.1)]
                             '
                         />
+                        <div className='yellow-gradient absolute z-[0] right-1/2
+                            top-1/4 w-[50%] h-[50%] rounded-full opacity-[0.2]
+                        '/>
                         {/* <img 
                             srcSet="/images/landing-sm.webp 320w, ./images/landing-md.webp 768w, ./images/landing-lg.webp 1024w"
                             sizes="(max-width: 320px) 280px,
@@ -54,9 +56,8 @@ const Landing =()=>{
                 </LazyMotion>
             </div>
             <div className='relative flex justify-center md:justify-start'>
-                <div 
-                    className='flex flex-col items-left justify-center
-                        gap-5 items-center md:items-start
+                <div className='flex flex-col items-left justify-center
+                        gap-5 items-center md:items-start relative
                     '
                 >
                     <LazyMotion features={domAnimation}>
@@ -143,32 +144,6 @@ const Landing =()=>{
                             </motion.div>
                         </LazyMotion>
                     </div>
-
-                    {/* <VioletLabel/>
-                    <h1 className='text-6xl md:text-7xl lg:text-8xl font-extrabold duration-100
-                        text-center md:text-left'
-                    >{t('title-1',{ns:'home'})} <span className='text-nowrap text-[var(--yellow)]'>{t('title-2',{ns:'home'})}</span>!</h1>
-                    <h2 className='text-center md:text-left text-[var(--foreground-3)]
-                        max-w-readable50 tracking-wider
-                    '>{t('subtitle',{ns:'home'})}</h2>
-                    <div className='relative flex flex-row gap-2'>
-                        <Button 
-                            onPress={()=>{console.log("HOLA")}}
-                            {...CTA_BUTTON_PROPS}
-                            className='text-white bg-[var(--btn-cta)] tracking-wide font-medium'
-                        >{t('meeting',{ns:'home'})}</Button>
-                        <Button 
-                            // onPress={()=>{
-                            //     router.push("/background?#background");
-                            //     // scrollToHashWithOffset('background',50)
-                            // }}
-                            scrollSmooth
-                            href={'/background#background'}
-                            as={Link}
-                            {...BUTTON_PROPS}
-                            className='text-white bg-[var(--btn-cta-2)] tracking-wide font-medium'
-                        >{t("my-projects", {ns:"home"})}</Button>
-                    </div> */}
                 </div>
             </div>
         </div>

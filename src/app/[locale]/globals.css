@@ -46,6 +46,10 @@
   --background: #1F1F21;
   --background-2: #131313; /*Backgrounnd buttons*/
   --background-3: #131313; /*Backgrounnd buttons*/
+  
+  /* --background: #131313;
+  --background-2: #1F1F21;
+  --background-3: #1F1F21;  */
   --semitransparent-bg: rgba(0,0,0,0.3);
   --semitransparent-bg-2: rgba(249,173,5,0.07);
   --semitransparent-bg-3: rgba(33,214,239,0.4);
@@ -87,7 +91,14 @@ body {
     text-wrap: balance;
   }
 }
-
+.violet-gradient {
+  background: linear-gradient(90deg, #4b0077 0%, #32004f 100%);
+  filter:blur(900px);
+}
+.yellow-gradient {
+  background: linear-gradient(90deg, #F9AD05 0%, #F9AD05 100%);
+  filter:blur(100px);
+}
 .secondary-font {
   font-family: var(--font-great-vibes);
 }

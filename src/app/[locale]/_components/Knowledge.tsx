@@ -23,10 +23,10 @@ const Knowledge =()=>{
         '>  
             <LazyMotion features={domAnimation}>
                 <motion.div 
-                    initial={{opacity: 0, y:30}}
+                    initial={{opacity: 0, y:15}}
                     whileInView={{opacity: 1, y:0}}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.4, delay: 0.2}}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{ duration: 0.4, delay: 0.2, ease: "easeOut"}}
                     className='relative p-10 md:p-10 py-10
                         flex flex-col items-center justify-start
                         gap-10 text-center tracking-wider
@@ -81,10 +81,10 @@ const Knowledge =()=>{
             </LazyMotion>
             <LazyMotion features={domAnimation}>
                 <motion.div 
-                    initial={{opacity: 0, y:30}}
+                    initial={{opacity: 0, y:20}}
                     whileInView={{opacity: 1, y:0}}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.4, delay: 0.4}}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{ duration: 0.4, delay: 0.4, ease: "easeOut"}}
                     className='relative p-5 md:p-10 py-10 tracking-wider
                         flex flex-col items-center justify-start text-center
                         border-y-[1px] border-y-[var(--gray-3)] border-x-0 gap-10
@@ -142,10 +142,10 @@ const Knowledge =()=>{
             </LazyMotion>
             <LazyMotion features={domAnimation}>
                 <motion.div 
-                    initial={{opacity: 0, y:30}}
+                    initial={{opacity: 0, y:20}}
                     whileInView={{opacity: 1, y:0}}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.6, delay: 0.6}}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{ duration: 0.4, delay: 0.6, ease: "easeOut"}}
                     className='relative p-5 md:p-10 py-10 text-center
                         flex flex-col items-center justify-start
                         col-span-1 sm:col-span-2 lg:col-span-1

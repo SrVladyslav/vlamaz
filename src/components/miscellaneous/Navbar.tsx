@@ -25,7 +25,7 @@ const Navbar =()=>{
     const {activateScroll, deactivateScroll} = useAllowScrollWithBackup(true)
     const links = [
         { path:'/', text: 'navbar:home', paths: ['/', '/en','/es','/ua'] },
-        { path:'https://learn.vlamaz.com', text: 'navbar:blog', paths: ['/blog', '/en/blog','/es/blog','/ua/blog'] },
+        // { path:'https://learn.vlamaz.com', text: 'navbar:blog', paths: ['/blog', '/en/blog','/es/blog','/ua/blog'] },
         { path:'/background', text: 'navbar:projects', paths: ['/background', '/en/background','/es/background','/ua/background'] },
         // { path:'/about', text: 'navbar:about', paths: ['/about', '/en/about','/es/about','/ua/about'] },
         { path:'/contact', text: 'navbar:contact', paths: ['/contact', '/en/contact','/es/contact','/ua/contact'] },

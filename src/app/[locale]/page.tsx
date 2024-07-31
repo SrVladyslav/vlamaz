@@ -1,10 +1,5 @@
 import Navbar from '@/components/miscellaneous/Navbar'
 import Landing from '@/app/[locale]/_components/Landing'
-// import LetsTalk from '@/components/sections/LetsTalk'
-// import Knowledge from '@/app/[locale]/_components/Knowledge'
-// import LearnVlamaz from '@/app/[locale]/_components/LearnVlamaz'
-// import QASection from '@/app/[locale]/_components/QASection'
-// import Footer from '@/components/miscellaneous/Footer'
 
 import dynamic from 'next/dynamic'
 const LetsTalk = dynamic(() => import('@/components/sections/LetsTalk'), { ssr: true })

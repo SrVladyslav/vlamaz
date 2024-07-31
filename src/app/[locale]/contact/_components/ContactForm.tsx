@@ -3,6 +3,7 @@
 import React, {useState, ReactNode} from 'react'
 import { Input, Select, SelectItem, Textarea, Button} from "@nextui-org/react";
 import { BUTTON_PROPS } from '@/config/styles';
+import { IoPeople } from "react-icons/io5";
 
 import { useTranslation } from 'react-i18next';
 import { sendContactForm } from '@/lib/api';
@@ -23,8 +24,8 @@ const ContactForm =()=>{
     const projectTypes = [
         {label: t('project_type_1', {ns:'contact'}), value:"STARTUP-FT", key:"0"},
         {label: t('project_type_2', {ns:'contact'}), value:"COMPANY-FT", key:"1"},
-        {label: t('project_type_3', {ns:'contact'}), value:"STARTUP-PT", key:"2"},
-        {label: t('project_type_4', {ns:'contact'}), value:"COMPANY-PT", key:"3"}
+        // {label: t('project_type_3', {ns:'contact'}), value:"STARTUP-PT", key:"2"},
+        // {label: t('project_type_4', {ns:'contact'}), value:"COMPANY-PT", key:"3"}
     ]
     const subjectTypes = [
         {label: t('ml', {ns:'contact'}), value:"ML", key:"0"},
@@ -146,12 +147,34 @@ const ContactForm =()=>{
                     className='col-span-2 sm:col-span-1'
                     startContent={
                         <div className="pointer-events-none flex items-center">
-                            <span className="text-default-400 text-small">€</span>
+                            <IoPeople className="icon-mini fill-default-400"/>
                         </div>
                     }
                     isDisabled={isLoadingBtn}
                     {...register("budget")}
                     errorMessage={errors.budget?.message as ReactNode}
+                />
+                <Controller
+                    render={({ field }) => (
+                        <Select label={t("mentoring_area", {ns:"contact"})} 
+                            {...field}
+                            className='col-span-2 sm:col-span-2'
+                            selectedKeys={field.value}
+                            onSelectionChange={field.onChange}
+                            errorMessage={errors.mentoring_type?.message as ReactNode}
+                            isRequired
+                            isDisabled={isLoadingBtn}
+                        >
+                            {subjectTypes.map((sType:any, key:any) => (
+                                <SelectItem key={key} value={sType.value}>
+                                    {sType.label}
+                                </SelectItem>
+                            ))}
+                        </Select>
+                    )}
+                    control={control}
+                    name="mentoring_type"
+                    defaultValue={'0'}
                 />
             </>
             :serviceTypeWatch == '2'
