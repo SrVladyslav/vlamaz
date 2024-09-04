@@ -4,8 +4,8 @@ import Landing from '@/app/[locale]/_components/Landing'
 import dynamic from 'next/dynamic'
 const LetsTalk = dynamic(() => import('@/components/sections/LetsTalk'), { ssr: true })
 const Knowledge = dynamic(() => import('@/app/[locale]/_components/Knowledge'), { ssr: true })
-const LearnVlamaz = dynamic(() => import('@/app/[locale]/_components/LearnVlamaz'), { ssr: true })
-const QASection = dynamic(() => import('@/app/[locale]/_components/QASection'), { ssr: true })
+// const LearnVlamaz = dynamic(() => import('@/app/[locale]/_components/LearnVlamaz'), { ssr: true })
+// const QASection = dynamic(() => import('@/app/[locale]/_components/QASection'), { ssr: true })
 const Footer = dynamic(() => import('@/components/miscellaneous/Footer'), { ssr: true })
 
 // Translations
@@ -28,8 +28,8 @@ const Home = async ({
         <div className='relative flex flex-col w-full'>
           <Landing/>
           <Knowledge/>
-          <LearnVlamaz/>
-          <QASection/>
+          {/* <LearnVlamaz/> */}
+          {/* <QASection/> */}
           <LetsTalk/>
           <Footer/>
         </div>
