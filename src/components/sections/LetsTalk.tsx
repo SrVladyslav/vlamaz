@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { useTheme } from 'next-themes'
-import { Button, Link } from '@nextui-org/react'
-import {CTA_BUTTON_PROPS} from '@/config/styles'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import PointsBackground from '@/components/miscellaneous/PointsBackground'
 import { FaArrowRight } from "react-icons/fa6";
 import { useTranslation } from 'react-i18next'
@@ -50,17 +50,19 @@ const LetsTalk =()=>{
                     transition={{ duration: 0.5, delay: 0.75}}
                     className='relative w-full flex justify-center'
                 >
-                    <Button 
-                        {...CTA_BUTTON_PROPS}
-                        as={Link}
-                        href='/contact'
+                    <Button
+                        asChild
+                        variant="solid"
+                        size="lg"
                         className='text-[var(--foreground)] font-medium bg-transparent group duration-75
-                            bg-[var(--background-2)] data-[hover=true]:text-[var(--foreground-2)] tracking-wider
-                            border-[2px] border-[var(--foreground-2)] data-[hover=true]:border-[var(--foreground-2)]   
+                            bg-[var(--background-2)] hover:text-[var(--foreground-2)] tracking-wider
+                            border-[2px] border-[var(--foreground-2)] hover:border-[var(--foreground-2)]
                         '
                     >
-                        <span>{t('contact-8',{ns:'misc'})}</span>
-                        <FaArrowRight className='icon-mini mt-[0px] duration-75 fill-[var(--foreground)] group-hover:fill-[var(--foreground-2)]'/>
+                        <Link href='/contact'>
+                            <span>{t('contact-8',{ns:'misc'})}</span>
+                            <FaArrowRight className='icon-mini mt-[0px] duration-75 fill-[var(--foreground)] group-hover:fill-[var(--foreground-2)]'/>
+                        </Link>
                     </Button>
                 </motion.div>
             </LazyMotion>

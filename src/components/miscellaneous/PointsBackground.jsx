@@ -1,14 +1,7 @@
 'use client'
 
-import React, { useMemo, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
-import { Points as Po, Point, PointMaterial, pointsMaterial } from '@react-three/drei';
-import { OrbitControls } from '@react-three/drei';
-
-// @ts-ignore
-import * as random from 'maath/random/dist/maath-random.esm'
-
 
 const particlesCount = 5000;
 const particlePositions = new Float32Array(particlesCount * 3);

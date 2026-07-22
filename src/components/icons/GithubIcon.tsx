@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { FaGithub } from "react-icons/fa";
-import { Link } from '@nextui-org/react';
+import { Link } from '@heroui/react';
 
 const GithubIcon =({
     href, isExternal, white

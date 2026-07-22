@@ -1,37 +1,41 @@
-'use client'
-import { Button, Switch} from "@nextui-org/react";
+"use client";
+import { Switch } from "@heroui/react";
 import { useTheme } from "next-themes";
-import {MoonIcon} from '@/components/icons/MoonIcon'
-import {SunIcon} from '@/components/icons/SunIcon'
-import {SWITCH_PROPS} from '@/config/styles'
+import { MoonIcon } from "@/components/icons/MoonIcon";
+import { SunIcon } from "@/components/icons/SunIcon";
+import { SWITCH_PROPS } from "@/config/styles";
 
-const ToggleTheme =()=>{
-    const {theme, setTheme} = useTheme()
+type ThumbIconProps = {
+  isSelected: boolean;
+  className: string;
+  width: string;
+  height: string;
+};
 
-    // return <Button
-    //     onClick={()=>{
-    //         console.log("Check")
-    //         setTheme(theme == 'dark'? 'light': 'dark')
-    //     }}
-    //     className="z-0"
-    //     color="primary"
-    //     radius="full"
-    // >
-    //     Toggle Theme {theme}
-    // </Button>
+const renderThumbIcon = ({
+  isSelected,
+  className,
+  width,
+  height,
+}: ThumbIconProps) =>
+  isSelected ? (
+    <SunIcon className={className} width={width} height={height} />
+  ) : (
+    <MoonIcon className={className} width={width} height={height} />
+  );
 
-    return (   
-        <Switch
-            {...SWITCH_PROPS}
-            defaultSelected
-            isSelected={theme=='light'}
-            onValueChange={()=>{setTheme(theme == 'dark'? 'light': 'dark')}}
-            size="lg"
-            color="success"
-            startContent={<SunIcon />}
-            endContent={<MoonIcon />}
-        />
-    )
-}
+const ToggleTheme = () => {
+  const { theme, setTheme } = useTheme();
 
-export default ToggleTheme
+  return (
+    <Switch
+      {...SWITCH_PROPS}
+      isSelected={theme === "light"}
+      onValueChange={() => setTheme(theme === "dark" ? "light" : "dark")}
+      size="md"
+      thumbIcon={renderThumbIcon}
+    />
+  );
+};
+
+export default ToggleTheme;

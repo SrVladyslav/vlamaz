@@ -7,8 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { FaArrowRight } from "react-icons/fa6";
 import { MdRocketLaunch } from "react-icons/md";
 
-import { Button, Link } from '@nextui-org/react';
-import { BUTTON_PROPS} from '@/config/styles'
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
 const LearnVlamaz =()=>{
@@ -52,13 +51,16 @@ const LearnVlamaz =()=>{
                         <p className='tracking-wider text-[white] font-semibold max-w-readable50'>
                             {t('learn-description', {ns:'misc'})}
                         </p>
-                        <Button 
-                            scrollSmooth
-                            href={'https://learn.vlamaz.com'}
-                            as={Link}
-                            {...BUTTON_PROPS}
-                            className='text-white mt-1 bg-[var(--btn-cta-2)] tracking-wide font-medium data-[hover=true]:text-[var(--yellow)]'
-                        >{t("learn-go", {ns:"misc"})} <FaArrowRight className='icon-mini'/></Button>
+                        <Button
+                            asChild
+                            variant="solid"
+                            size="lg"
+                            className='text-white mt-1 bg-[var(--btn-cta-2)] tracking-wide font-medium hover:text-[var(--yellow)]'
+                        >
+                            <a href='https://learn.vlamaz.com' target='_blank' rel='noopener noreferrer'>
+                                {t("learn-go", {ns:"misc"})} <FaArrowRight className='icon-mini'/>
+                            </a>
+                        </Button>
                     </div>
                     <div className='relative flex items-center justify-center row-start-1 sm:row-start-auto'>
                         <MdRocketLaunch className='fill-[white] w-auto h-full min-h-20'/>

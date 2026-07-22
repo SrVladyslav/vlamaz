@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Button } from '@nextui-org/react';
+import { Button } from '@/components/ui/button';
 import { FaArrowDown } from "react-icons/fa6";
 import {scrollToHashWithOffset} from '@/lib/helpers'
 
@@ -11,8 +11,7 @@ const NextSectionBtn =(
 )=>{
     return (
         <Button
-            radius='full'
-            onPress={()=>{
+            onClick={()=>{
                 scrollToHashWithOffset(scrollId, topOffset)
             }}
             variant='light'

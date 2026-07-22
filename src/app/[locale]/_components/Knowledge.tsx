@@ -10,8 +10,8 @@ import { TbCode } from "react-icons/tb";
 import { FaArrowRight } from "react-icons/fa6";
 import { MdRocketLaunch } from "react-icons/md";
 
-import { Button, Link } from '@nextui-org/react';
-import {LIGHT_BUTTON_PROPS} from '@/config/styles'
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const Knowledge =()=>{
     const {t} = useTranslation()
@@ -61,20 +61,21 @@ const Knowledge =()=>{
                     </div>
                     <div className='relative flex justify-center h-full items-end'>
                         <Button
-                            {...LIGHT_BUTTON_PROPS}
+                            asChild
+                            variant="light"
                             className='text-[var(--foreground)] font-medium bg-transparent group duration-75
-                                bg-none data-[hover=true]:bg-transparent mt-4
-                                data-[hover=true]:text-[var(--foreground-6)] tracking-wider
-                                border-[2px] border-none data-[hover=true]:border-[var(--foreground-2)]   
+                                bg-none hover:bg-transparent mt-4
+                                hover:text-[var(--foreground-6)] tracking-wider
+                                border-[2px] border-none hover:border-[var(--foreground-2)]
                             '
-                            as={Link}
-                            href='/contact'
                         >
-                            <div className='relative flex flex-row gap-2 items-center'>
-                                {/* <span>{t('misc',{ns:"background"})}</span> */}
-                                <span>👨🏻‍💻  {t('hire-me',{ns:'misc'})}</span>
-                                <FaArrowRight/>
-                            </div>
+                            <Link href='/contact'>
+                                <div className='relative flex flex-row gap-2 items-center'>
+                                    {/* <span>{t('misc',{ns:"background"})}</span> */}
+                                    <span>👨🏻‍💻  {t('hire-me',{ns:'misc'})}</span>
+                                    <FaArrowRight/>
+                                </div>
+                            </Link>
                         </Button>
                     </div>
                 </motion.div>
@@ -122,20 +123,21 @@ const Knowledge =()=>{
                     </div>
                     <div className='relative flex justify-center h-full items-end'>
                         <Button
-                            {...LIGHT_BUTTON_PROPS}
+                            asChild
+                            variant="light"
                             className='text-[var(--foreground)] font-medium bg-transparent group duration-75
-                                bg-[var(--background)] data-[hover=true]:bg-[var(--background)] mt-4
-                                data-[hover=true]:text-[var(--foreground-6)] tracking-wider
-                                border-[1px] border-[var(--foreground-2)] data-[hover=true]:border-[var(--foreground-2)]   
+                                bg-[var(--background)] hover:bg-[var(--background)] mt-4
+                                hover:text-[var(--foreground-6)] tracking-wider
+                                border-[1px] border-[var(--foreground-2)] hover:border-[var(--foreground-2)]
                             '
-                            as={Link}
-                            href='/contact'
                         >
-                            <div className='relative flex flex-row gap-2 items-center'>
-                                {/* <span>{t('misc',{ns:"background"})}</span> */}
-                                <span>{t('hire-me',{ns:'misc'})}</span>
-                                <FaArrowRight/>
-                            </div>
+                            <Link href='/contact'>
+                                <div className='relative flex flex-row gap-2 items-center'>
+                                    {/* <span>{t('misc',{ns:"background"})}</span> */}
+                                    <span>{t('hire-me',{ns:'misc'})}</span>
+                                    <FaArrowRight/>
+                                </div>
+                            </Link>
                         </Button>
                     </div>
                 </motion.div>
@@ -181,20 +183,21 @@ const Knowledge =()=>{
                     </div>
                     <div className='relative flex justify-center h-full items-end'>
                         <Button
-                            {...LIGHT_BUTTON_PROPS}
+                            asChild
+                            variant="light"
                             className='text-[var(--foreground)] font-medium bg-transparent group duration-75
-                                bg-none data-[hover=true]:bg-transparent mt-4
-                                data-[hover=true]:text-[var(--foreground-6)] tracking-wider
-                                border-[2px] border-none data-[hover=true]:border-[var(--foreground-2)]   
+                                bg-none hover:bg-transparent mt-4
+                                hover:text-[var(--foreground-6)] tracking-wider
+                                border-[2px] border-none hover:border-[var(--foreground-2)]
                             '
-                            as={Link}
-                            href='/contact'
                         >
-                            <div className='relative flex flex-row gap-2 items-center'>
-                                {/* <span>{t('misc',{ns:"background"})}</span> */}
-                                <span>{t('contact-8',{ns:'misc'})}</span>
-                                <FaArrowRight/>
-                            </div>
+                            <Link href='/contact'>
+                                <div className='relative flex flex-row gap-2 items-center'>
+                                    {/* <span>{t('misc',{ns:"background"})}</span> */}
+                                    <span>{t('contact-8',{ns:'misc'})}</span>
+                                    <FaArrowRight/>
+                                </div>
+                            </Link>
                         </Button>
                     </div>
                 </motion.div>

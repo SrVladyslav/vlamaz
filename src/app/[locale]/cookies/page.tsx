@@ -15,15 +15,17 @@ const metadatas:any = {
     'es': 'Proyectos',
     'ua': 'Проекти'
 }
-export async function generateMetadata({ params }:{params:any}) {
+export async function generateMetadata({ params }:{params:Promise<any>}) {
+    const { locale } = await params
     return {
-        title: "Vlamaz | "+ metadatas[params.locale as string]
+        title: "Vlamaz | "+ metadatas[locale as string]
     }
 }
 
 const Background = async ({
-    params: {locale}
-  }:{params: {locale:any}}) => {
+    params
+  }:{params: Promise<{locale:any}>}) => {
+    const {locale} = await params
     const {t, resources} = await initTranslations(locale, i18nNamespaces)
   
     return (

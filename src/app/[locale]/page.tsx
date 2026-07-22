@@ -14,8 +14,9 @@ import TranslationsProvider from '@/providers/TranslationsProvider'
 const i18nNamespaces = ['home', 'navbar','misc'];
 
 const Home = async ({
-  params: {locale}
-}:{params: {locale:any}}) => {
+  params
+}:{params: Promise<{locale:any}>}) => {
+  const {locale} = await params
   const {t, resources} = await initTranslations(locale, i18nNamespaces)
 
   return (

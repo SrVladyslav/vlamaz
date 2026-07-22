@@ -1,13 +1,20 @@
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    turbopack: {
+        root: __dirname,
+    },
     images: {
-        // unoptimized: true,
+        unoptimized: true,
         remotePatterns: [
           {
             protocol: 'https',

@@ -11,7 +11,7 @@ const BiographySection =()=>{
     return (
         <div
             id="background-biography" 
-            className='relative w-full flex justify-center px-5 bg-[var(--background-3)] 
+            className='relative w-full flex justify-center px-5 bg-[var(--gray-4)]
                 py-20
         '>
             <div className='relative gap-10 w-full max-w-screen-xl duration-100
@@ -49,7 +49,7 @@ const BiographySection =()=>{
                         {/* <p className='tracking-wider text-[var(--foreground-4)]'>{t("bio-6",{ns:"background"})}</p> */}
                         {/* <p className='tracking-wider text-[var(--foreground-4)]'>{t("bio-7",{ns:"background"})}</p> */}
                         <p className='tracking-wider text-[var(--foreground-4)]'>{t("bio-8",{ns:"background"})}</p>
-                        <p className='tracking-wider text-[var(--foreground-4)]'>
+                        <div className='tracking-wider text-[var(--foreground-4)]'>
                             {t("bio-9",{ns:"background"})}
                             <div className='pl-5 pt-3'>
                                 <div className='relative tracking-wider flex flex-row gap-5'><FaArrowRight className='icon-mini mt-[3px]'/><span>
@@ -62,7 +62,7 @@ const BiographySection =()=>{
                                     {t("bio-12",{ns:"background"})}
                                 </span></div>
                             </div>
-                        </p>
+                        </div>
                     </motion.div>
                 </LazyMotion>
             </div>

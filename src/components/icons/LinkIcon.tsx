@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { FaLink } from "react-icons/fa6";
-import { Link } from '@nextui-org/react';
+import { Link } from '@heroui/react';
 
 const LinkIcon =({
     href, isExternal, white

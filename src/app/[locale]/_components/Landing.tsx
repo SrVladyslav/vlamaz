@@ -1,8 +1,8 @@
 'use client'
 
 import React from 'react'
-import { Button, Link } from '@nextui-org/react';
-import {CTA_BUTTON_PROPS, BUTTON_PROPS} from '@/config/styles'
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 import Image from 'next/image';
 import VioletLabel from '@/app/[locale]/_components/Label';
 
@@ -116,14 +116,16 @@ const Landing =()=>{
                                 transition={{ duration: 0.25, delay: 1.5}}
                                 className='relative w-full flex justify-center'
                             >
-                                <Button 
-                                    as={Link}
-                                    href='/contact'
-                                    {...CTA_BUTTON_PROPS}
+                                <Button
+                                    asChild
+                                    variant="solid"
+                                    size="lg"
                                     className='text-white bg-[var(--btn-cta)] tracking-wider font-bold
-                                        data-[hover=true]:text-[var(--black)]
+                                        hover:text-[var(--black)]
                                     '
-                                >{t('meeting',{ns:'home'})}</Button>
+                                >
+                                    <Link href='/contact'>{t('meeting',{ns:'home'})}</Link>
+                                </Button>
                             </motion.div>
                         </LazyMotion>
                         <LazyMotion features={domAnimation}>
@@ -134,13 +136,14 @@ const Landing =()=>{
                                 transition={{ duration: 0.25, delay: 1.25}}
                                 className='relative w-full flex justify-center'
                             >
-                                <Button 
-                                    scrollSmooth
-                                    href={'/background#background'}
-                                    as={Link}
-                                    {...BUTTON_PROPS}
-                                    className='text-white bg-[var(--btn-cta-2)] tracking-wider font-bold data-[hover=true]:text-[var(--yellow)]'
-                                >{t("my-projects", {ns:"home"})}</Button>
+                                <Button
+                                    asChild
+                                    variant="solid"
+                                    size="lg"
+                                    className='text-white bg-[var(--btn-cta-2)] tracking-wider font-bold hover:text-[var(--yellow)]'
+                                >
+                                    <Link href='/background#background'>{t("my-projects", {ns:"home"})}</Link>
+                                </Button>
                             </motion.div>
                         </LazyMotion>
                     </div>

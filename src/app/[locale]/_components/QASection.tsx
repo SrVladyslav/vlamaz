@@ -1,7 +1,8 @@
 'use client'
 
 import React, {useState} from 'react'
-import {Input, Button} from "@nextui-org/react";
+import {Input} from "@heroui/react";
+import { Button } from "@/components/ui/button";
 import { BiSolidSend } from "react-icons/bi";
 import { IoSend } from "react-icons/io5";
 import { MdDeleteForever } from "react-icons/md";
@@ -70,10 +71,9 @@ const QASection =()=>{
                         endContent={
                             <div className='relative flex flex-row items-center gap-2'>
                                 <Button
-                                    radius='full'
                                     size='md'
                                     className='relative p-0 min-w-0 min-h-0 bg-transparent'
-                                    onPress={()=>{
+                                    onClick={()=>{
                                         clearChat()
                                         toast.success('Chat history cleared')
                                     }}
@@ -82,10 +82,9 @@ const QASection =()=>{
                                     hover:fill-[var(--red)]
                                 '/></Button>
                                 <Button
-                                    radius='full'
                                     size='md'
                                     className='relative p-0 min-w-0 min-h-0 bg-transparent'
-                                    onPress={()=>ask(inMsg)}
+                                    onClick={()=>ask(inMsg)}
                                 ><IoSend className='icon duration-200
                                     fill-[var(--foreground-5)]
                                     hover:fill-[var(--yellow)]

@@ -4,8 +4,7 @@ import React, { useState, useCallback, useLayoutEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
 import { useAllowScrollWithBackup } from '@/hooks/useAllowScrollWithBackup'
 import { IoClose } from "react-icons/io5";
-import { Button } from '@nextui-org/react';
-import {BUTTON_PROPS} from '@/config/styles'
+import { Button } from '@/components/ui/button';
 
 const useMediaQuery = (width:number) => {
     const [targetReached, setTargetReached] = useState(false);
@@ -25,6 +24,7 @@ const useMediaQuery = (width:number) => {
         }
         // Check on mount (callback is not called until a change occurs)
         if (media.matches) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional initial sync check
             setTargetReached(true);
         }
 
@@ -239,13 +239,13 @@ const Popup = ({
                         {endContent &&
                             <div className='relative w-full pt-5 gap-3 px-5 sm:px-10 flex justify-center'>
                                 {isCloseBtnDefault&&
-                                    <Button 
-                                        {...BUTTON_PROPS}
-                                        className='text-[var(--foreground-4)] font-medium bg-[var(--background-2)] 
-                                            data-[hover=true]:bg-[var(--background-2)] w-full sm:w-fit
-                                            data-[hover=true]:text-[var(--foreground-2)]'
-                                        onPress={handleClose}    
-                                        fullWidth
+                                    <Button
+                                        variant="solid"
+                                        size="lg"
+                                        className='text-[var(--foreground-4)] font-medium bg-[var(--background-2)]
+                                            hover:bg-[var(--background-2)] w-full sm:w-fit
+                                            hover:text-[var(--foreground-2)]'
+                                        onClick={handleClose}
                                     >
                                         {isCloseBtnDefaultText? isCloseBtnDefaultText: 'Cerrar'}
                                     </Button>

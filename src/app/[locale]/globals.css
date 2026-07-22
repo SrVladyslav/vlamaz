@@ -1,6 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../../tailwind.config.ts";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+
+  --max-width-readable25: 25ch;
+  --max-width-readable40: 40ch;
+  --max-width-readable50: 50ch;
+  --max-width-readable65: 65ch;
+  --max-width-readable75: 75ch;
+  --max-width-readable100: 100ch;
+}
 
 :root {
   /* color-scheme: dark; */
@@ -13,6 +26,7 @@
   --gray: #aeaeb3;
   --gray-2: #fafafa;
   --gray-3: #f2f2f2;
+  --gray-4: #f2f2f2;
   --black: #131313;
   /*--foreground-3: #575757; /*696969; gray*/
   --background: white;
@@ -43,6 +57,7 @@
   --foreground-6: #F9AD05;
   --black: #131313;
   --gray-3: #1F1F21;
+  --gray-4: #27272A;
   --background: #1F1F21;
   --background-2: #131313; /*Backgrounnd buttons*/
   --background-3: #131313; /*Backgrounnd buttons*/
