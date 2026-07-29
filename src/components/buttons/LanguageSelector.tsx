@@ -79,7 +79,7 @@ const LanguageSelector =()=>{
                     '>
                         <div className='relative h-[24px] w-[24px] flex items-center justify-center
                             rounded-full overflow-hidden'>
-                            <img alt='EN' src={langInfo[currentLocale].url}
+                            <Image alt='EN' src={langInfo[currentLocale].url} width={32} height={32}
                                 className='absolute h-[32px] w-[32px] min-w-[32px] min-h-[32px] top-[-4px] left-[-4px]'
                             />
                         </div>
@@ -91,7 +91,7 @@ const LanguageSelector =()=>{
                     <div className='relative w-full flex flex-row items-center gap-3'>
                         <div className='relative h-[24px] w-[24px] flex items-center justify-center
                             rounded-full overflow-hidden'>
-                            <img alt='EN' src={'/icons/lang/english.svg'}
+                            <Image alt='EN' src={'/icons/lang/english.svg'} width={32} height={32}
                                 className='absolute h-[32px] w-[32px] min-w-[32px] min-h-[32px] top-[-4px] left-[-4px]'
                             />
                         </div>
@@ -102,7 +102,7 @@ const LanguageSelector =()=>{
                     <div className='relative w-full flex flex-row items-center gap-3'>
                     <div className='relative h-[24px] w-[24px] flex items-center justify-center
                             rounded-full overflow-hidden'>
-                            <img alt='EN' src={'/icons/lang/spanish.svg'}
+                            <Image alt='EN' src={'/icons/lang/spanish.svg'} width={32} height={32}
                                 className='absolute h-[32px] w-[32px] min-w-[32px] min-h-[32px] top-[-4px] left-[-4px]'
                             />
                         </div>
@@ -113,7 +113,7 @@ const LanguageSelector =()=>{
                     <div className='relative w-full flex flex-row items-center gap-3'>
                         <div className='relative h-[24px] w-[24px] flex items-center justify-center
                             rounded-full overflow-hidden'>
-                            <img alt='EN' src={'/icons/lang/ukrainian.svg'}
+                            <Image alt='EN' src={'/icons/lang/ukrainian.svg'} width={32} height={32}
                                 className='absolute h-[32px] w-[32px] min-w-[32px] min-h-[32px] top-[-4px] left-[-4px]'
                             />
                         </div>
@@ -124,7 +124,7 @@ const LanguageSelector =()=>{
                     <div className='relative w-full flex flex-row items-center gap-3'>
                         <div className='relative h-[24px] w-[24px] flex items-center justify-center
                             rounded-full overflow-hidden'>
-                            <img alt='EN' src={'/icons/lang/arabic.svg'}
+                            <Image alt='EN' src={'/icons/lang/arabic.svg'} width={32} height={32}
                                 className='absolute h-[32px] w-[32px] min-w-[32px] min-h-[32px] top-[-4px] left-[-4px]'
                             />
                         </div>
@@ -135,7 +135,7 @@ const LanguageSelector =()=>{
                     <div className='relative w-full flex flex-row items-center gap-3'>
                         <div className='relative h-[24px] w-[24px] flex items-center justify-center
                             rounded-full overflow-hidden'>
-                            <img alt='EN' src={'/icons/lang/russian.svg'}
+                            <Image alt='EN' src={'/icons/lang/russian.svg'} width={32} height={32}
                                 className='absolute h-[32px] w-[32px] min-w-[32px] min-h-[32px] top-[-4px] left-[-4px]'
                             />
                         </div>

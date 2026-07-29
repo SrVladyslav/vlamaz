@@ -1,0 +1,26 @@
+{
+    "home": {
+        "title": "Vladyslav Mazurkevych | AI & Full-Stack Software Engineer",
+        "description": "Computer Engineer specialized in AI, NLP and Data Science. Full-stack developer and founder building production ML pipelines, RAG systems and web apps. Book a meeting with Vlad."
+    },
+    "background": {
+        "title": "Background & Experience | Vladyslav Mazurkevych",
+        "description": "Computer Engineering graduate (Universitat Politècnica de València) specialized in AI/NLP. Experience at Datamaran, Plug And Play, and as founder of Grifenix and Essenfy, accelerated by Lanzadera."
+    },
+    "blog": {
+        "title": "Blog | Vladyslav Mazurkevych",
+        "description": "Articles on Machine Learning, NLP, full-stack engineering and startup lessons from Vladyslav Mazurkevych. New posts coming soon."
+    },
+    "contact": {
+        "title": "Contact | Book a Meeting with Vladyslav Mazurkevych",
+        "description": "Get in touch to book a meeting, discuss hiring, or request mentoring on AI, Machine Learning or full-stack development for your startup or company."
+    },
+    "cookies": {
+        "title": "Cookie Policy | Vlamaz",
+        "description": "Cookie Policy for vlamaz.com — what cookies are used, why, and how to manage your preferences in compliance with EU and Spanish law."
+    },
+    "privacy": {
+        "title": "Privacy Policy | Vlamaz",
+        "description": "Privacy Policy for vlamaz.com and learn.vlamaz.com — how personal data is collected, used and protected in compliance with GDPR and LOPD GDD."
+    }
+}

@@ -1,12 +1,12 @@
 'use client'
 
-import { useState } from "react"
+import { useCallback, useState } from "react"
 
 export const useAllowScrollWithBackup = (initialState:boolean=true, initialScroll:any=0)=>{
     const [isScrollable, setIsScrollable] = useState(initialState)
     const [windowScroll, setWindowScroll] = useState(initialScroll)
 
-    const deactivateScroll =() =>{
+    const deactivateScroll = useCallback(() =>{
         try{
             let toScroll: number = parseInt(window.scrollY.toString(), 10)
             if(!!initialScroll){
@@ -24,9 +24,9 @@ export const useAllowScrollWithBackup = (initialState:boolean=true, initialScrol
         
             setIsScrollable(true)
         }catch(e){}
-    }
-    
-    const activateScroll =() =>{
+    }, [initialScroll])
+
+    const activateScroll = useCallback(() =>{
         try{
             setIsScrollable(false)
             document.body.classList.remove("no-bg-scroll")
@@ -36,7 +36,7 @@ export const useAllowScrollWithBackup = (initialState:boolean=true, initialScrol
                 behavior: "instant"
             });
         }catch(e){}
-    }
+    }, [windowScroll])
 
     return {isScrollable, activateScroll, deactivateScroll}
 }

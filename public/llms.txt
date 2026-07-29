@@ -1,0 +1,21 @@
+# Vlamaz — Vladyslav Mazurkevych
+
+> Personal site of Vladyslav Mazurkevych, a Computer Engineer specialized in
+> AI, NLP and Data Science, and a full-stack software engineer and startup
+> founder. Book a meeting, review his background, or get in touch.
+
+## Pages
+
+- [Home](https://vlamaz.com/): Overview of Vlad's skills in Full-Stack Development, Data Science and Entrepreneurship.
+- [Background](https://vlamaz.com/background): Education (Universitat Politècnica de València, Computer Engineering, AI/NLP specialization), work history (Datamaran, Plug And Play), and founded companies (Grifenix, Essenfy), plus the Lanzadera acceleration program.
+- [Contact](https://vlamaz.com/contact): Book a meeting, request hiring, or a mentoring session on AI/ML or full-stack development.
+- [Blog](https://vlamaz.com/blog): Articles on Machine Learning, NLP and startups (in progress).
+
+## Policies
+
+- [Privacy Policy](https://vlamaz.com/privacy)
+- [Cookie Policy](https://vlamaz.com/cookies)
+
+## More
+
+- [Full background details](https://vlamaz.com/llms-full.txt): Extended biography and career timeline in plain text.

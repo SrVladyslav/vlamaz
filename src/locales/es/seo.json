@@ -1,0 +1,26 @@
+{
+    "home": {
+        "title": "Vladyslav Mazurkevych | Ingeniero de Software IA & Full-Stack",
+        "description": "Ingeniero Informático especializado en IA, PLN y Ciencia de Datos. Desarrollador full-stack y fundador de startups con experiencia en pipelines de ML, sistemas RAG y aplicaciones web. Reserva una reunión con Vlad."
+    },
+    "background": {
+        "title": "Trayectoria y Experiencia | Vladyslav Mazurkevych",
+        "description": "Graduado en Ingeniería Informática (Universitat Politècnica de València) especializado en IA/PLN. Experiencia en Datamaran, Plug And Play, y como fundador de Grifenix y Essenfy, aceleradas por Lanzadera."
+    },
+    "blog": {
+        "title": "Blog | Vladyslav Mazurkevych",
+        "description": "Artículos sobre Machine Learning, PLN, desarrollo full-stack y lecciones de emprendimiento de Vladyslav Mazurkevych. Muy pronto nuevas publicaciones."
+    },
+    "contact": {
+        "title": "Contacto | Reserva una reunión con Vladyslav Mazurkevych",
+        "description": "Ponte en contacto para reservar una reunión, hablar sobre una contratación o solicitar mentoría en IA, Machine Learning o desarrollo full-stack para tu startup o empresa."
+    },
+    "cookies": {
+        "title": "Política de Cookies | Vlamaz",
+        "description": "Política de Cookies de vlamaz.com: qué cookies se utilizan, con qué finalidad y cómo gestionar tus preferencias conforme a la normativa española y europea."
+    },
+    "privacy": {
+        "title": "Política de Privacidad | Vlamaz",
+        "description": "Política de Privacidad de vlamaz.com y learn.vlamaz.com: cómo se recopilan, utilizan y protegen los datos personales conforme al RGPD y la LOPD GDD."
+    }
+}

@@ -118,7 +118,7 @@ const Popup = ({
         if(!!isOpen){
             deactivateScroll()
         }
-    },[isOpen])    
+    },[isOpen, deactivateScroll])
 
     return (
         <AnimatePresence

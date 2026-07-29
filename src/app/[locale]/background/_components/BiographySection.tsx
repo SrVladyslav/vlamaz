@@ -29,7 +29,7 @@ const BiographySection =()=>{
                             text-[var(--foreground-5)] text-4xl md:text-5xl font-medium
                         '>
                             <div className='flex flex-row gap-2 items-center'>
-                                <h3>{t("about-t-1",{ns:"background"})}</h3><FaArrowRight className='hidden sm:block icon pt-1'/>
+                                <h2>{t("about-t-1",{ns:"background"})}</h2><FaArrowRight className='hidden sm:block icon pt-1'/>
                             </div>
                         </div>
                     </motion.div>

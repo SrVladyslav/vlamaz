@@ -31,7 +31,8 @@ const Landing =()=>{
                     >
                         <Image alt="Landing Vlad"
                             src={'/images/landing-lg.webp'}
-                            fill 
+                            fill
+                            priority
                             sizes="(max-width: 768px) 720px, (max-width: 320px) 280px, 100vw"
                             className='absolute object-contain z-[3]
                                 drop-shadow-[0_35px_35px_rgba(249,173,5,0.1)]
@@ -70,32 +71,32 @@ const Landing =()=>{
                             <VioletLabel/>
                         </motion.div>
                     </LazyMotion>
-                    <div className='relative'>
+                    <h1 className='relative'>
                         <LazyMotion features={domAnimation}>
-                            <motion.h1 
+                            <motion.span
                                 initial={{opacity: 0, y:30}}
                                 whileInView={{opacity: 1, y:0}}
                                 viewport={{ once: true, amount: 0.3 }}
                                 transition={{ duration: 0.75, delay: 0.25}}
-                                className='text-6xl md:text-7xl lg:text-8xl font-extrabold duration-100
+                                className='block text-6xl md:text-7xl lg:text-8xl font-extrabold duration-100
                                 text-center md:text-left text-[var(--foreground-5)]'
                             >
                                 {t('title-1',{ns:'home'})}
-                            </motion.h1>
+                            </motion.span>
                         </LazyMotion>
                         <LazyMotion features={domAnimation}>
-                            <motion.h1 
+                            <motion.span
                                 initial={{opacity: 0, y:30}}
                                 whileInView={{opacity: 1, y:0}}
                                 viewport={{ once: true, amount: 0.3 }}
                                 transition={{ duration: 0.75, delay: 0.5}}
-                                className='text-6xl md:text-7xl lg:text-8xl font-extrabold duration-100
+                                className='block text-6xl md:text-7xl lg:text-8xl font-extrabold duration-100
                                 text-center md:text-left text-[var(--yellow)]'
                             >
                                 {t('title-2',{ns:'home'})}<span className='text-[var(--foreground-5)]'>!</span>
-                            </motion.h1>
+                            </motion.span>
                         </LazyMotion>
-                    </div>
+                    </h1>
                     <LazyMotion features={domAnimation}>
                         <motion.h2 
                             initial={{opacity: 0, y:30}}

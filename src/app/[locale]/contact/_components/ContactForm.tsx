@@ -16,10 +16,10 @@ import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { sendEmailToVlad } from "@/actions/emailVladAction";
 
-import { useForm, Controller } from "react-hook-form";
+import { useForm, Controller, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import { z } from "zod";
+import { contactSchema } from "@/schemas/contactSchema";
 
 const ContactForm = () => {
   const { t } = useTranslation();
@@ -55,19 +55,10 @@ const ContactForm = () => {
   const [subjectType, setSubjectType]: any = useState(null);
   const [isLoadingBtn, setIsLoadingBtn] = useState(false);
 
-  const contactSchema = z.object({
-    name: z.string().min(3),
-    email: z.email().min(1),
-    service_type: z.string(),
-    project_type: z.string().optional(),
-    mentoring_type: z.string().optional(),
-    description: z.string().max(500, { message: "Max 500 Ch." }).optional(),
-    budget: z.string().optional(),
-  });
-  const { register, control, handleSubmit, formState, reset, watch } = useForm({
+  const { register, control, handleSubmit, formState, reset } = useForm({
     resolver: zodResolver(contactSchema),
   });
-  const serviceTypeWatch = watch("service_type");
+  const serviceTypeWatch = useWatch({ control, name: "service_type" });
   const { errors } = formState;
   const labelByValue = (array: any, val: any) => {
     return array.find((v: any) => v.value === val)?.label || "-";

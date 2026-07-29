@@ -1,0 +1,107 @@
+# Vlamaz — Vladyslav Mazurkevych (Full Background)
+
+> Extended reference for LLMs and crawlers. Canonical source: https://vlamaz.com/background
+
+## Biography
+
+My full name is Vladyslav Mazurkevych. I was born in Ukraine and graduated in
+Computer Engineering from the Universitat Politècnica de València, with a
+specialization in artificial intelligence. The area where I am most trained
+and experienced is Natural Language Processing (NLP) and Data Analysis, but
+this does not diminish my interest in other areas of AI.
+
+During my time at university, I enjoyed working on personal projects, which
+led me to participate in various student groups as a web developer, where I
+learned several technologies. For two years I was part of the Google
+Developer Student Clubs (GDSC) as a core team member and later as Lead,
+delivering talks on generative AI and organizing events with colleagues.
+Through GDSC peers I became interested in Blockchain and had my first
+startup attempt based on that technology.
+
+Subsequently, I took part in an acceleration and incubation program at
+Lanzadera, where I acquired business skills including team management,
+business strategy, and problem-solving.
+
+Through these ventures I forged a hybrid profile: a full-stack computer
+scientist specialized in Machine Learning, with skills in business,
+management, marketing, and sales.
+
+Key lessons learned along the way:
+- When you need a team for your startup, hire the best you can afford.
+  Otherwise, keep going on your own until you can.
+- Giving too much freedom to a team costs you dearly — be humane, but not
+  overly friendly.
+- Nothing is free in this world, especially in business.
+
+## Career timeline
+
+**Google DSC UPV — Core Team / Lead**
+Google Developer Student Clubs (GDSC) is a university club program created
+by Google Developers and driven by students, running projects, workshops,
+and talks about Google technologies. Gave an "Introduction to Machine
+Learning" talk and a "Transfer Learning with Keras" workshop to ~50
+attendees each; led a team of 5 organizing a talk series with CEOs/CTOs from
+Telefónica, Google, IBM, Uniswap, Mercadona, and others.
+
+**Jr. Data Scientist — Datamaran**
+Datamaran is an AI platform that helps business leaders navigate the
+complex ESG landscape by turning large volumes of information into
+actionable insights. Improved an AI model via text preprocessing and
+feature engineering; researched new TOC extraction techniques; helped with
+test coverage for a company project.
+
+**Founder — Grifenix**
+Grifenix started as a no-code smart contract builder on Ethereum, then
+pivoted to a blockchain-based interlinked loyalty network platform aimed at
+improving local commerce. Developed personalized, user-owned ERC-721 smart
+contracts (mainly for goods traceability) on Ethereum (Polygon and Gnosis)
+with Solidity; managed a team of 2 under Agile using ClickUp; co-developed
+backend and frontend from scratch with Django REST, VueJS, and AWS.
+
+**Lanzadera acceleration program**
+Lanzadera is a startup accelerator and incubator driven by its resident
+startups, mentors, project directors, partners, and large corporations,
+fully privately funded and promoted by Juan Roig (President of Mercadona).
+Trained in Mercadona's "Total Quality Model", company management, and how
+to build a solid startup; networked with people across many industries.
+
+**Founder — Essenfy**
+Essenfy, accelerated at Lanzadera, was an app/platform to reduce food waste
+in medium-sized businesses, prioritizing the health and experience of
+vulnerable consumers. It ended due to lack of cash. Developed backend and
+frontend from scratch with Django REST, Next.js, and AWS; researched a
+custom food recipe generator with PyTorch (Transformer model); managed a
+team of 2 under Agile-Lean with ClickUp; handled cold sales and marketing.
+
+**Freelance Developer**
+Worked as a freelance backend engineer across projects ranging from
+ML-oriented startups to small businesses. Developed a RAG-based system for
+Ukrainian legal texts achieving ~92% answer accuracy on evaluated official
+legal articles, using Litestar, LanceDB, Neo4j, and OpenAI. Built an AI
+pipeline with GPT-3.5 and Whisper to process audio calls and extract
+structured knowledge from conversations. Implemented full-stack features
+for multiple web applications using Next.js and TypeScript.
+
+**Backend Engineer — Plug And Play**
+Plug and Play is a global innovation platform connecting startups,
+corporations, investors, universities, and governments to accelerate
+technological innovation. Built an internal LLM-powered, scraping-based
+tool to gather up-to-date startup information, reducing the team's
+form-filling and prospecting time. Extended and refactored Django data
+models for new data science workflows, including database migrations.
+Implemented asynchronous integrations with the Salesforce, Crunchbase, and
+Eventbrite APIs, improving processing speed 4x with HTTPX,
+simple-salesforce, Python coroutines, and Redis-backed Celery task queues —
+supporting a critical workflow for the company's Silicon Valley Summit.
+Added unit test coverage and new features to the internal Django REST
+Framework API; integrated and maintained SendGrid email workflows;
+implemented Celery Beat scheduled jobs; managed backend Docker image
+dependency updates and security patches.
+
+## Links
+
+- Website: https://vlamaz.com
+- Background page: https://vlamaz.com/background
+- Contact: https://vlamaz.com/contact
+- GitHub: https://github.com/SrVladyslav
+- LinkedIn: https://www.linkedin.com/in/vladyslav-mazurkevych/

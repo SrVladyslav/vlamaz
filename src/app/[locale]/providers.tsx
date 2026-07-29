@@ -3,7 +3,7 @@
 
 import {HeroUIProvider} from '@heroui/react'
 import {ThemeProvider as NextThemesProvider} from "next-themes";
-import {useState, useEffect} from 'react'
+import {useEffect} from 'react'
 import { Toaster } from 'sonner'
 
 let scriptTagWarningPatched = false
@@ -24,18 +24,10 @@ function suppressNextThemesScriptTagWarning() {
 }
 
 export function Providers({children}: { children: React.ReactNode }) {
-    const [mounted, setMounted] = useState(false)
-
     useEffect(()=>{
         suppressNextThemesScriptTagWarning()
-        // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional hydration-safe mount flag
-        setMounted(true)
     },[])
 
-    if (!mounted) {
-        return null
-    }
-  
     return (
       <NextThemesProvider
         defaultTheme = 'dark'

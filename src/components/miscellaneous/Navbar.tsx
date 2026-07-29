@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import ToggleTheme from "@/components/buttons/ToggleTheme";
 import LanguageSelector from "@/components/buttons/LanguageSelector";
 import { useRouter, usePathname } from "next/navigation";
@@ -133,31 +134,31 @@ const Navbar = () => {
                     </Button> */}
           {/* h-[32px] w-fit min-h-[32px] min-w-[32px]  */}
           <Button
-            className="relative 
-                            h-[40px] w-fit min-h-[40px] min-w-[40px] 
+            asChild
+            className="relative
+                            h-[40px] w-fit min-h-[40px] min-w-[40px]
                             flex p-0 pr-2 pl-0.5 rounded-full gap-1
                             items-center justify-center
                             border-[0px] border-[var(--background-2)]
                         "
             variant="light"
-            onClick={() => {
-              router.push("/");
-            }}
           >
-            {/* h-[32px] w-[32px] min-h-[32px] min-w-[32px] */}
-            <div
-              className="relative 
-                            relative h-[40px] w-[40px] min-h-[40px] min-w-[40px]  
-                            rounded-full pt-[2px]"
-            >
-              <Image
-                alt="Logo"
-                src={"/icons/logo.webp"}
-                fill
-                className="absolute w-full h-full object-fit"
-              />
-            </div>
-            <span className="secondary-font relative">Vlamaz</span>
+            <Link href="/">
+              {/* h-[32px] w-[32px] min-h-[32px] min-w-[32px] */}
+              <div
+                className="relative
+                              relative h-[40px] w-[40px] min-h-[40px] min-w-[40px]
+                              rounded-full pt-[2px]"
+              >
+                <Image
+                  alt="Logo"
+                  src={"/icons/logo.webp"}
+                  fill
+                  className="absolute w-full h-full object-fit"
+                />
+              </div>
+              <span className="secondary-font relative">Vlamaz</span>
+            </Link>
           </Button>
 
           {/* Links */}
@@ -165,6 +166,7 @@ const Navbar = () => {
             {links?.map((link, key) => {
               return (
                 <Button
+                  asChild
                   variant="light"
                   key={key}
                   className={`hover:text-[var(--foreground-2)] font-medium
@@ -176,14 +178,10 @@ const Navbar = () => {
                                           "text-[var(--foreground-3)] bg-transparent"
                                     }
                                 `}
-                  onClick={() => {
-                    activateScroll();
-                    router.push(link?.path);
-                  }}
-                  // >{t('about',{ns: 'navbar'})}</Button>
-                  // >{link?.text}</Button>
                 >
-                  {t(link?.text)}
+                  <Link href={link?.path} onClick={() => activateScroll()}>
+                    {t(link?.text)}
+                  </Link>
                 </Button>
               );
             })}
@@ -210,6 +208,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* Active sidebar */}
+      <LazyMotion features={domAnimation}>
       <AnimatePresence>
         {activeSidebar && (
           <motion.div
@@ -300,6 +299,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      </LazyMotion>
     </div>
   );
 };

@@ -4,30 +4,37 @@ import "./globals.css";
 import {Providers} from "./providers";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+// SEO
+import JsonLd from "@/components/seo/JsonLd";
+import { buildPersonSchema, buildWebsiteSchema } from "@/lib/seo/jsonld";
+import { SITE_URL } from "@/lib/seo/routes";
+
 const rubik = Rubik({
   subsets: ['latin','latin-ext'],
-  // display: 'swap',
+  display: 'swap',
   variable: '--font-rubik',
 })
 
 const greatVibes = Great_Vibes({
   subsets: ['latin'],
   weight: '400',
-  // display: 'swap',
+  display: 'swap',
   variable: "--font-great-vibes",
 })
 
 export const metadata: Metadata = {
-  title: "Vlamaz | Home",
-  description: "Welcome to my personal website, here you can find all the useful information about me and book a meeting if necessary.",
+  metadataBase: new URL(SITE_URL),
 };
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
   return (
-    <html lang="en" suppressHydrationWarning
+    <html lang={locale} dir={locale === "ar-AE" ? "rtl" : "ltr"} suppressHydrationWarning
       className={`${rubik.className} ${greatVibes.variable}`}
     >
       <head>
@@ -38,6 +45,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/logo.webp"/>
         <link rel="icon" type="image/webp" sizes="any" href="/logo.webp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <JsonLd schema={[buildPersonSchema(locale), buildWebsiteSchema(locale)]} />
       </head>
       <body>
         <Providers>

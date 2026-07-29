@@ -5,13 +5,20 @@ import dynamic from 'next/dynamic'
 const LetsTalk = dynamic(() => import('@/components/sections/LetsTalk'), { ssr: true })
 const Knowledge = dynamic(() => import('@/app/[locale]/_components/Knowledge'), { ssr: true })
 // const LearnVlamaz = dynamic(() => import('@/app/[locale]/_components/LearnVlamaz'), { ssr: true })
-// const QASection = dynamic(() => import('@/app/[locale]/_components/QASection'), { ssr: true })
 const Footer = dynamic(() => import('@/components/miscellaneous/Footer'), { ssr: true })
 
 // Translations
 import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/providers/TranslationsProvider'
 const i18nNamespaces = ['home', 'navbar','misc'];
+
+// SEO
+import { buildMetadata } from '@/lib/seo/metadata'
+
+export async function generateMetadata({ params }:{params:Promise<{locale:any}>}) {
+    const { locale } = await params
+    return buildMetadata(locale, 'home')
+}
 
 const Home = async ({
   params
@@ -30,7 +37,6 @@ const Home = async ({
           <Landing/>
           <Knowledge/>
           {/* <LearnVlamaz/> */}
-          {/* <QASection/> */}
           <LetsTalk/>
           <Footer/>
         </div>

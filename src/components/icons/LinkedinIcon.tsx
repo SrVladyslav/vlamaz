@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { FaLinkedin } from "react-icons/fa";
-import { Link } from '@heroui/react';
+import Link from 'next/link';
 
 const LinkedinIcon =({
     href, isExternal, white
@@ -13,7 +13,9 @@ const LinkedinIcon =({
 })=>{
     return <div>
         <Link className='relative flex items-center'
-            href={href} isExternal={isExternal}
+            href={href}
+            target={isExternal ? '_blank' : undefined}
+            rel={isExternal ? 'noopener noreferrer' : undefined}
         >
             <FaLinkedin className={`icon
                 ${white? "fill-[var(--foreground-5)]":"fill-[var(--foreground-2)]"}

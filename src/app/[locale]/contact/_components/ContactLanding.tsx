@@ -21,7 +21,7 @@ const ContactLanding =()=>{
                 text-center md:text-right
             '>
                 <div className='relative max-w-readable40'>
-                    <h2 className='relative text-[var(--foreground-5)] text-4xl md:text-5xl font-medium'>{t('title-1','contact')}<span className='text-[var(--yellow)]'>{t('title-2','contact')}</span>{t('title-3','contact')}<span className='text-[var(--yellow)]'>{t('title-4','contact')}</span>{t('title-5','contact')}<span className='text-[var(--yellow)]'>{t('title-6','contact')}</span>{t('title-7','contact')}</h2>
+                    <h1 className='relative text-[var(--foreground-5)] text-4xl md:text-5xl font-medium'>{t('title-1','contact')}<span className='text-[var(--yellow)]'>{t('title-2','contact')}</span>{t('title-3','contact')}<span className='text-[var(--yellow)]'>{t('title-4','contact')}</span>{t('title-5','contact')}<span className='text-[var(--yellow)]'>{t('title-6','contact')}</span>{t('title-7','contact')}</h1>
                 </div>
                 <p className='max-w-readable40 relative tracking-wider text-[var(--foreground-4)]'>{t('description','contact')}</p>
                 <div className='relative flex flex-row gap-3 justify-center md:justify-end'>

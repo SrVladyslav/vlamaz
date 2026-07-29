@@ -2,8 +2,13 @@
 
 import React from "react";
 import { LazyMotion, domAnimation, m as motion } from "framer-motion";
-import PointsBackground from "@/components/miscellaneous/PointsBackground";
+import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
+
+const PointsBackground = dynamic(
+  () => import("@/components/miscellaneous/PointsBackground"),
+  { ssr: false }
+);
 
 import { SiPytorch } from "react-icons/si";
 import { TbCode } from "react-icons/tb";

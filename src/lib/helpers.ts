@@ -1,3 +1,13 @@
+export const escapeHtml = function (str?: string): string {
+    if (!str) return ''
+    return str
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;')
+}
+
 export const scrollToHash = function (element_id: string) {
     const element = document.getElementById(element_id)
     element?.scrollIntoView({ 

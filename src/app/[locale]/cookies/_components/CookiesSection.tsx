@@ -29,7 +29,7 @@ const CookiesSection =()=>{
                         text-[var(--foreground-5)] text-4xl md:text-5xl font-medium
                     '>
                         <div className='flex flex-row gap-2 items-center'>
-                            <h3>{t('title', {ns:'cookies'})}</h3><FaArrowRight className='hidden sm:block icon pt-1'/>
+                            <h1>{t('title', {ns:'cookies'})}</h1><FaArrowRight className='hidden sm:block icon pt-1 text-[var(--foreground-4)]'/>
                         </div>
                     </div>
                 </motion.div>
@@ -56,7 +56,7 @@ const CookiesSection =()=>{
                             {t('t-3', {ns:'cookies'})}
                         </h2>
                         <div className='relative flex flex-row gap-3 items-start pl-5'>
-                            <FaArrowRight className='icon-mini mt-[3px]'/>
+                            <FaArrowRight className='icon-mini mt-[3px] text-[var(--foreground-4)]'/>
                             <span className='tracking-wider text-[var(--foreground-4)]'>
                                 {t('p-3', {ns:'cookies'})}
                             </span>
@@ -67,7 +67,7 @@ const CookiesSection =()=>{
                             {t('t-5', {ns:'cookies'})}
                         </h2>
                         <div className='relative flex flex-row gap-3 items-start pl-5'>
-                            <FaArrowRight className='icon-mini mt-[3px]'/>
+                            <FaArrowRight className='icon-mini mt-[3px] text-[var(--foreground-4)]'/>
                             <Link href='https://support.google.com/chrome/answer/95647?hl=es' isExternal>
                                 <span className='tracking-wider text-[var(--foreground-4)]'>
                                     Google Chrome
@@ -75,7 +75,7 @@ const CookiesSection =()=>{
                             </Link>
                         </div>
                         <div className='relative flex flex-row gap-3 items-start pl-5'>
-                            <FaArrowRight className='icon-mini mt-[3px]'/>
+                            <FaArrowRight className='icon-mini mt-[3px] text-[var(--foreground-4)]'/>
                             <Link href='http://support.apple.com/kb/HT1677?viewlocale=es_ES' isExternal>
                                 <span className='tracking-wider text-[var(--foreground-4)]'>
                                     Safari
@@ -83,7 +83,7 @@ const CookiesSection =()=>{
                             </Link>
                         </div>
                         <div className='relative flex flex-row gap-3 items-start pl-5'>
-                            <FaArrowRight className='icon-mini mt-[3px]'/>
+                            <FaArrowRight className='icon-mini mt-[3px] text-[var(--foreground-4)]'/>
                             <Link href='http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we' isExternal>
                                 <span className='tracking-wider text-[var(--foreground-4)]'>
                                     Firefox
@@ -91,7 +91,7 @@ const CookiesSection =()=>{
                             </Link>
                         </div>
                         <div className='relative flex flex-row gap-3 items-start pl-5'>
-                            <FaArrowRight className='icon-mini mt-[3px]'/>
+                            <FaArrowRight className='icon-mini mt-[3px] text-[var(--foreground-4)]'/>
                             <Link href='https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09' isExternal>
                                 <span className='tracking-wider text-[var(--foreground-4)]'>
                                     Microsoft Chromium Edge

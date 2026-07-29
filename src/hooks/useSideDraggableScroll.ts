@@ -5,7 +5,7 @@
 //     applyRubberBandEffect: true,
 // });
 
-import { MutableRefObject, useEffect, useLayoutEffect, useRef} from "react";
+import { MutableRefObject, useCallback, useEffect, useLayoutEffect, useRef} from "react";
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
@@ -86,16 +86,16 @@ export function useSideDraggableScroll(
                 }
             );
         }
-    }, [isMounted]);
+    }, [isMounted, ref]);
 
-    const runScroll = () => {
+    const runScroll = useCallback(() => {
         const dx = internalState.current.scrollSpeedX * timing;
         const offsetX = ref.current.scrollLeft + dx;
-        ref.current.scrollLeft = offsetX;  
+        ref.current.scrollLeft = offsetX;
         internalState.current.lastScrollX = offsetX;
-    };
+    }, [ref, timing]);
 
-    const rubberBandCallback = (e: MouseEvent) => {
+    const rubberBandCallback = useCallback((e: MouseEvent) => {
         const dx = e.clientX - internalState.current.initialMouseX;
         const { clientWidth, clientHeight } = ref.current;
         let displacementX = 0;
@@ -112,24 +112,24 @@ export function useSideDraggableScroll(
         (ref.current.childNodes as NodeListOf<HTMLOptionElement>).forEach(
             (child: HTMLElement) => {
                 child.style.transform = `translate3d(${displacementX}px, 0px, 0px)`;  
-                child.style.transition = "transform 0ms";  
+                child.style.transition = "transform 0ms";
             }
         );
-    };
+    }, [ref]);
 
-    const recoverChildStyle = () => {
+    const recoverChildStyle = useCallback(() => {
         (ref.current.childNodes as NodeListOf<HTMLOptionElement>).forEach(
             (child: HTMLElement, i) => {
-                child.style.transform = transformStyleOfChildElements.current[i];  
-                child.style.transition = transitionStyleOfChildElements.current[i];  
+                child.style.transform = transformStyleOfChildElements.current[i];
+                child.style.transition = transitionStyleOfChildElements.current[i];
             }
         );
-    };
+    }, [ref]);
 
     const rubberBandAnimationTimer = useRef<NodeJS.Timeout | undefined>(undefined);
     const keepMovingX = useRef<NodeJS.Timer | any>(undefined);
 
-    const callbackMomentum = () => {
+    const callbackMomentum = useCallback(() => {
         const minimumSpeedToTriggerMomentum = 0.05;
 
         keepMovingX.current = setInterval(() => {
@@ -170,35 +170,35 @@ export function useSideDraggableScroll(
                 transitionDurationInMilliseconds
             );
         }
-    };
+    }, [applyRubberBandEffect, decayRate, ref, recoverChildStyle, runScroll, timing]);
 
-    const preventClick = (e: Event) => {
+    const preventClick = useCallback((e: Event) => {
         e.preventDefault();
         e.stopImmediatePropagation();
         // e.stopPropagation();
-    };
+    }, []);
 
-    const getIsMousePressActive = (buttonsCode: number) => {
+    const getIsMousePressActive = useCallback((buttonsCode: number) => {
         return (
             (activeMouseButton === "Left" && buttonsCode === 1) ||
             (activeMouseButton === "Middle" && buttonsCode === 4) ||
             (activeMouseButton === "Right" && buttonsCode === 2)
         );
-    };
+    }, [activeMouseButton]);
 
-    const onMouseDown = (e: React.MouseEvent<HTMLElement>) => {
+    const onMouseDown = useCallback((e: React.MouseEvent<HTMLElement>) => {
         const isMouseActive = getIsMousePressActive(e.buttons);
         mouseClicked.current = true // to delete
         if (!isMouseActive) {
             return;
         }
-    
+
         internalState.current.isMouseDown = true;
         internalState.current.lastMouseX = e.clientX;
         internalState.current.initialMouseX = e.clientX;
-    };
+    }, [getIsMousePressActive]);
 
-    const onMouseUp = (e: MouseEvent) => {
+    const onMouseUp = useCallback((e: MouseEvent) => {
         mouseClicked.current = false // to delete
 
         const isDragging = internalState.current.isDraggingX;
@@ -232,9 +232,9 @@ export function useSideDraggableScroll(
         if (isDraggingConfirmed) {
             callbackMomentum();
         }
-    };
+    }, [ref, safeDisplacement, preventClick, callbackMomentum]);
 
-    const onMouseMove = (e: MouseEvent) => {
+    const onMouseMove = useCallback((e: MouseEvent) => {
         if (!internalState.current.isMouseDown) {
             return;
         }
@@ -263,11 +263,11 @@ export function useSideDraggableScroll(
         }
     
         runScroll();
-    };
+    }, [ref, timing, applyRubberBandEffect, rubberBandCallback, runScroll]);
 
-    const handleResize = () => {
+    const handleResize = useCallback(() => {
         maxHorizontalScroll.current = ref.current.scrollWidth - ref.current.clientWidth;
-    };
+    }, [ref]);
 
     // A brora
     const isPressed =()=>{
@@ -288,7 +288,7 @@ export function useSideDraggableScroll(
             clearInterval(keepMovingX.current);
             clearTimeout(rubberBandAnimationTimer.current);
         };
-    }, [isMounted]);
+    }, [isMounted, handleResize, onMouseMove, onMouseUp]);
 
     return {
         events: {
