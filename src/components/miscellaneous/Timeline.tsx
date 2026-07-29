@@ -33,11 +33,10 @@ const BodyContent = ({ dots }: { dots: any }) => {
 const Card = ({ item, delay }: { item: any; delay?: number }) => {
   const { openFullModal } = useModalStore();
   const openModal = (title: string, moreInfo: any) => {
-    console.log("hola");
     openFullModal(
       title, // title
-      <BodyContent dots={moreInfo} />, // End Content
-      () => <div>Hola</div>, // children
+      <BodyContent dots={moreInfo} />, // children
+      <></>, // End Content
     );
   };
   const { t } = useTranslation();

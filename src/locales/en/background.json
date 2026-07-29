@@ -61,6 +61,24 @@
     "more-info-4-4":"Managed cold sales and marketing.",
 
 
+    "timeline-7-t":"Freelance Developer",
+    "timeline-7-d":"I worked as a freelancer for different projects as a backend engineer, from ML oriented startups to small businesses.",
+    "more-info-7-1":"Developed a RAG-based system for Ukrainian legal texts, achieved ~92% answer accuracy on evaluated official legal articles using Litestar, LanceDB, Neo4j, OpenAI.",
+    "more-info-7-2":"Built an AI pipeline using GPT-3.5 and Whisper to process audio calls and extract structured knowledge from conversations.",
+    "more-info-7-3":"Implemented full-stack features for multiple web applications using Next.js and Typescript.",
+    
+    
+    "timeline-8-t":"Backend Engineer at Plug And Play",
+    "timeline-8-d":"Plug and Play is a global innovation platform that connects startups, corporations, investors, universities and goverments to accelerate technological innovation and create new business opportunities.",
+    "more-info-8-1":"Built an internal LLM-powered and scraping-based tool to gather relevant up-to-date startup information, reducing the team's form-filling and prospecting time.",
+    "more-info-8-2":"Extended and refactored Django data models to support new data science workflows, updating relationships and implementing the required database migrations.",
+    "more-info-8-3":"Implemented asynchronous integrations with the Salesforce, Crunchbase and Eventbrite APIs for internal data transfers, improving processing speed by 4x using HTTPX, simple-salesforce, Python coroutines and Redis-backed Celery task queues. This optimization supported a critical workflow for the company's main Silicon Valley Summit.",
+    "more-info-8-4":"Added unit test coverage, maintained and developed new features for the internal Django REST Framework API, supporting operational workflows used by internal teams.",
+    "more-info-8-5":"Integrated and maintained SendGrid email workflows and templates.",
+    "more-info-8-6":"Implemented Celery Beat cron jobs and email automation scripts for new DRF features.",
+    "more-info-8-7":"Managed backend Docker image packets dependency updates, security patches and version monitoring to reduce operational risk.",
+
+
     "timeline-5-tr":"Present",
     "timeline-5-t":"Soon 🤭",
     "timeline-5-d":"In continuous learning on Data Science, Sales and Marketing."

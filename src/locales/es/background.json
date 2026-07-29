@@ -63,6 +63,24 @@
     "more-info-4-4":"Gestioné ventas en frío y marketing.",
 
 
+    "timeline-7-t":"Desarrollador Freelance",
+    "timeline-7-d":"Trabajé como freelance en distintos proyectos como ingeniero backend, desde startups orientadas al Machine Learning hasta pequeños negocios.",
+    "more-info-7-1":"Desarrollé un sistema basado en RAG para textos legales ucranianos, logrando ~92% de precisión en respuestas sobre artículos legales oficiales evaluados usando Litestar, LanceDB, Neo4j y OpenAI.",
+    "more-info-7-2":"Construí un pipeline de IA usando GPT-3.5 y Whisper para procesar llamadas de audio y extraer conocimiento estructurado de las conversaciones.",
+    "more-info-7-3":"Implementé funcionalidades full-stack para múltiples aplicaciones web usando Next.js y Typescript.",
+
+
+    "timeline-8-t":"Backend Engineer en Plug And Play",
+    "timeline-8-d":"Plug and Play es una plataforma global de innovación que conecta startups, corporaciones, inversores, universidades y gobiernos para acelerar la innovación tecnológica y crear nuevas oportunidades de negocio.",
+    "more-info-8-1":"Construí una herramienta interna basada en LLM y scraping para recopilar información relevante y actualizada de startups, reduciendo el tiempo del equipo dedicado a rellenar formularios y prospección.",
+    "more-info-8-2":"Extendí y refactoricé modelos de datos de Django para soportar nuevos flujos de trabajo de ciencia de datos, actualizando relaciones e implementando las migraciones de base de datos necesarias.",
+    "more-info-8-3":"Implementé integraciones asíncronas con las APIs de Salesforce, Crunchbase y Eventbrite para transferencias internas de datos, mejorando la velocidad de procesamiento 4 veces usando HTTPX, simple-salesforce, corrutinas de Python y colas de tareas Celery respaldadas por Redis. Esta optimización dio soporte a un flujo de trabajo crítico para el Silicon Valley Summit principal de la empresa.",
+    "more-info-8-4":"Añadí cobertura de pruebas unitarias, mantuve y desarrollé nuevas funcionalidades para la API interna de Django REST Framework, dando soporte a flujos de trabajo operativos usados por equipos internos.",
+    "more-info-8-5":"Integré y mantuve flujos de trabajo y plantillas de correo de SendGrid.",
+    "more-info-8-6":"Implementé tareas programadas con Celery Beat y scripts de automatización de correo para nuevas funcionalidades de DRF.",
+    "more-info-8-7":"Gestioné las actualizaciones de dependencias de los paquetes de imágenes Docker del backend, parches de seguridad y monitorización de versiones para reducir el riesgo operativo.",
+
+
     "timeline-5-tr":"Presente",
     "timeline-5-t":"Pronto 🤭",
     "timeline-5-d":"En continuo aprendizaje sobre Ciencia de Datos, Ventas y Marketing."

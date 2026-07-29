@@ -4,8 +4,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: React.ReactNode;
   required?: boolean;
   error?: boolean;
@@ -83,8 +82,9 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
             onBlur={handleBlur}
             onChange={handleChange}
             className={cn(
-              "w-full min-h-[100px] resize-y rounded-2xl border-2 border-transparent bg-[var(--gray-4)] px-6 py-4 pt-6 text-sm font-medium text-[var(--foreground)] transition-all placeholder:text-[var(--foreground-3)] focus:outline-none focus:border-[var(--yellow)]/70 focus:ring-1 focus:ring-[var(--yellow)]/70 disabled:cursor-not-allowed disabled:opacity-50",
-              error && "border-[var(--red)] focus:border-[var(--red)] focus:ring-[var(--red)]",
+              "w-full min-h-[100px] resize-y rounded-2xl border-1 border-transparent bg-[var(--gray-4)] px-6 py-4 pt-6 text-sm font-medium text-[var(--foreground)] transition-all placeholder:text-[var(--foreground-3)] focus:outline-none focus:border-[var(--yellow)]/70 focus:ring-1 focus:ring-[var(--yellow)]/70 disabled:cursor-not-allowed disabled:opacity-50",
+              error &&
+                "border-[var(--red)] focus:border-[var(--red)] focus:ring-[var(--red)]",
             )}
             {...props}
           />

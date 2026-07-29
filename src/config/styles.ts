@@ -1,5 +1,5 @@
 export const SWITCH_PROPS: any = {
   classNames: {
-    wrapper: "mr-0 bg-[var(--background-2)] w h-7.5",
+    wrapper: "mr-0 bg-[var(--background-2)] w h-7.5 group-data-[selected=true]:bg-[var(--yellow)]",
   },
 };

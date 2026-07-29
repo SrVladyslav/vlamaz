@@ -25,6 +25,14 @@ const LanguageSelector =()=>{
             title:"Українська",
             url:"/icons/lang/ukrainian.svg"
         },
+        'ar-AE':{
+            title:"العربية",
+            url:"/icons/lang/arabic.svg"
+        },
+        ru:{
+            title:"Русский",
+            url:"/icons/lang/russian.svg"
+        },
     }
     const { i18n } = useTranslation();
     const currentLocale = i18n.language;
@@ -110,6 +118,28 @@ const LanguageSelector =()=>{
                             />
                         </div>
                         <span>Українська</span>
+                    </div>
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => handleLangChange('ar-AE')}>
+                    <div className='relative w-full flex flex-row items-center gap-3'>
+                        <div className='relative h-[24px] w-[24px] flex items-center justify-center
+                            rounded-full overflow-hidden'>
+                            <img alt='EN' src={'/icons/lang/arabic.svg'}
+                                className='absolute h-[32px] w-[32px] min-w-[32px] min-h-[32px] top-[-4px] left-[-4px]'
+                            />
+                        </div>
+                        <span>العربية</span>
+                    </div>
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => handleLangChange('ru')}>
+                    <div className='relative w-full flex flex-row items-center gap-3'>
+                        <div className='relative h-[24px] w-[24px] flex items-center justify-center
+                            rounded-full overflow-hidden'>
+                            <img alt='EN' src={'/icons/lang/russian.svg'}
+                                className='absolute h-[32px] w-[32px] min-w-[32px] min-h-[32px] top-[-4px] left-[-4px]'
+                            />
+                        </div>
+                        <span>Русский</span>
                     </div>
                 </DropdownMenuItem>
             </DropdownMenuContent>
