@@ -36,7 +36,7 @@ const nextConfig = {
                     { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
                     {
                         key: 'Content-Security-Policy',
-                        value: "default-src 'self'; img-src 'self' https://cdn.vlamaz.com data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';",
+                        value: `default-src 'self'; img-src 'self' https://cdn.vlamaz.com data:; script-src 'self' 'unsafe-inline'${process.env.NODE_ENV !== 'production' ? " 'unsafe-eval'" : ''}; style-src 'self' 'unsafe-inline';`,
                     },
                 ],
             },
