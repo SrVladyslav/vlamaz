@@ -23,6 +23,14 @@ const langInfo: Record<Locale, { title: string; url: string }> = {
 // regardless of which locale (if any) it's currently prefixed with
 const localesPattern = new RegExp(`^/(${i18nConfig.locales.join('|')})(?=/|$)`);
 
+// plain helper (not a component/hook) — the React Compiler's purity rules
+// only apply inside components/hooks, so a global write like this must
+// live outside one to avoid a false-positive react-hooks/immutability error
+function setLocaleCookie(locale: Locale) {
+    const maxAge = 30 * 24 * 60 * 60; // 30 days, matches i18nConfig.cookieOptions
+    document.cookie = `NEXT_LOCALE=${locale};max-age=${maxAge};path=/;SameSite=Lax`;
+}
+
 const LanguageSelector = () => {
     const { i18n } = useTranslation();
     const router = useRouter();
@@ -39,8 +47,7 @@ const LanguageSelector = () => {
 
         // set the cookie next-i18n-router reads on the server; path/sameSite/maxAge
         // must match i18nConfig.cookieOptions so client and server never disagree
-        const maxAge = 30 * 24 * 60 * 60; // 30 days
-        document.cookie = `NEXT_LOCALE=${newLocale};max-age=${maxAge};path=/;SameSite=Lax`;
+        setLocaleCookie(newLocale);
 
         const basePath = currentPathname.replace(localesPattern, '') || '/';
 
