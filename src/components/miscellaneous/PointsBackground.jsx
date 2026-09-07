@@ -49,8 +49,8 @@ export const Particles = ({size,color, deltaX, deltaY}) => {
 
 const PointsBackground = ({size=0.007,deltaX=30, deltaY=25,color}) => {
     return (
-        <div className='w-full h-auto absolute inset-0 z-1'>
-            <Canvas camera={{position:[0,0,0],fov:30}}>
+        <div className='w-full h-auto absolute inset-0 z-1 pointer-events-none'>
+            <Canvas camera={{position:[0,0,0],fov:30}} style={{ pointerEvents: 'none' }}>
                 <ambientLight intensity={2} />
                 <directionalLight position={[2,1,1]}/>
                 {/* <Points /> */}

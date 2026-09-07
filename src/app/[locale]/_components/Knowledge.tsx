@@ -7,11 +7,10 @@ import { useTranslation } from "react-i18next";
 
 const PointsBackground = dynamic(
   () => import("@/components/miscellaneous/PointsBackground"),
-  { ssr: false }
+  { ssr: false },
 );
 
-import { SiPytorch } from "react-icons/si";
-import { TbCode } from "react-icons/tb";
+import { TbCode, TbBrain } from "react-icons/tb";
 import { FaArrowRight } from "react-icons/fa6";
 import { MdRocketLaunch } from "react-icons/md";
 
@@ -64,8 +63,7 @@ const Knowledge = () => {
                             font-medium max-w-readable50
                         "
               >
-                Python, Javascript, Typescript, C++, Solidity, Java, Salesforce
-                Integration.
+                Python, C++, TypeScript, JavaScript, SQL, Solidity.
               </p>
             </div>
             <div className="relative flex flex-col gap-3">
@@ -77,15 +75,16 @@ const Knowledge = () => {
                             font-medium max-w-readable50
                         "
               >
-                Git, AWS, Django REST, Next.js, Vue.js, Tailwind, MongoDB,
-                PostgreSQL, Redis, Elasticsearch, RabbitMQ, Celery, LLM-Tech
+                Django REST, Litestar, asyncio/HTTPX, Celery, PostgreSQL,
+                Elasticsearch, Redis, AWS (EC2/S3/RDS), Docker, Nginx, Gunicorn,
+                CI/CD, Neo4j
               </p>
             </div>
             <div className="relative flex justify-center h-full items-end">
               <Button
                 asChild
                 variant="light"
-                className="text-[var(--foreground)] font-medium bg-transparent group duration-75
+                className="cursor-pointer text-[var(--foreground)] font-medium bg-transparent group duration-75
                                 bg-none hover:bg-transparent mt-4
                                 hover:text-[var(--foreground-6)] tracking-wider
                                 border-[2px] border-none hover:border-[var(--foreground-2)]
@@ -123,7 +122,7 @@ const Knowledge = () => {
             />
             <div className="relative flex flex-col gap-3">
               <div className="relative w-full flex justify-center mb-2">
-                <SiPytorch className="icon-big fill-[var(--foreground-6)]" />
+                <TbBrain className="icon-big stroke-[var(--foreground-6)]" />
               </div>
               <h2 className="text-lg font-semibold text-[var(--foreground)]">
                 {t("b-title-1", { ns: "home" })}
@@ -157,22 +156,22 @@ const Knowledge = () => {
                             font-medium max-w-readable50
                         "
               >
-                Git, AWS, Jupyter Notebook, PyTorch, SciKit Learn, Pandas,
-                Pillow, Plotly.
+                LangChain, OpenAI API, LanceDB, Neo4j, Redis, PostgreSQL,
+                Elasticsearch, Docker
               </p>
             </div>
             <div className="relative flex justify-center h-full items-end">
               <Button
                 asChild
                 variant="light"
-                className="text-[var(--foreground)] font-medium bg-transparent group duration-75
+                className=" text-[var(--foreground)] font-medium bg-transparent group duration-75
                                 bg-[var(--background)] hover:bg-[var(--background)] mt-4
                                 hover:text-[var(--foreground-6)] tracking-wider
                                 border-[1px] border-[var(--foreground-2)] hover:border-[var(--foreground-2)]
                             "
               >
-                <Link href="/contact">
-                  <div className="relative flex flex-row gap-2 items-center">
+                <Link href="/contact" className="cursor-pointer">
+                  <div className=" relative flex flex-row gap-2 items-center">
                     {/* <span>{t('misc',{ns:"background"})}</span> */}
                     <span>{t("hire-me", { ns: "misc" })}</span>
                     <FaArrowRight />
@@ -230,7 +229,8 @@ const Knowledge = () => {
                             font-medium max-w-readable50
                         "
               >
-                ClickUP, Notion, Figma, Google sheet.
+                Django REST, Next.js/React, Tailwind, AWS, Kafka,
+                Solidity/Polygon
               </p>
             </div>
             <div className="relative flex justify-center h-full items-end">

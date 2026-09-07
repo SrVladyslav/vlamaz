@@ -14,17 +14,17 @@ export function buildPersonSchema(locale: string) {
         name: 'Vladyslav Mazurkevych',
         alternateName: 'Vlad',
         url: localizedUrl(locale, 'home'),
-        jobTitle: 'Computer Engineer',
+        jobTitle: 'Backend Engineer',
         alumniOf: {
             '@type': 'CollegeOrUniversity',
             name: 'Universitat Politècnica de València',
         },
         knowsAbout: [
+            'Backend Engineering',
             'Artificial Intelligence',
-            'Natural Language Processing',
-            'Machine Learning',
-            'Data Science',
-            'Full-Stack Development',
+            'Large Language Models',
+            'Python',
+            'Cloud Infrastructure',
         ],
         sameAs: SOCIAL_LINKS,
     }

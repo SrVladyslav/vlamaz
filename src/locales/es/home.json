@@ -1,9 +1,9 @@
 {
-    "title-tag":"Ingeniero informático",
+    "title-tag":"Ingeniero Backend & IA",
     "title-1":"¡Hola,",
     "title-2":"soy Vlad",
     "subtitle-old":"Apasionado por el aprendizaje automático y el divertido mundo de las startups.",
-    "subtitle":"Apasionado por el Machine Learning, desarrollo Web y las Startups. ¿Coincide con lo que buscas?",
+    "subtitle":"Ingeniero backend especializado en sistemas con IA: APIs, pipelines de datos y aplicaciones LLM/RAG a escala. ¿Coincide con lo que buscas?",
     "meeting":"¿Hablamos?",
     "my-projects": "Mi trayectoria",
 
@@ -11,23 +11,23 @@
     "bot-2":"alguna pregunta",
     "bot-3":"¿Me podríoas ayudar con PyTorch?",
 
-    "a-title-1": "Desarrollador Full-Stack",
+    "a-title-1": "Ingeniería Backend",
     "a-desc-1-old": "Me gradué en Ciencias de la Computación especializado en CD/AA y me encanta programar cosas desde cero con un diseño limpio.",
     "a-title-2": "Lenguajes que hablo:",
     "a-title-3": "Tecnologías de desarrollo:",
-    "a-desc-1": "Experiencia creando varios proyectos web production-ready desde cero.",
-    
-    "b-title-1": "Ciencia de Datos",
+    "a-desc-1": "Más de 3 años creando sistemas backend en producción: APIs REST, pipelines asíncronos y infraestructura cloud.",
+
+    "b-title-1": "IA y Sistemas LLM",
     "b-desc-1-old": "Como científico de datos, estoy acostumbrado a trabajar con datos de texto e imágenes, desde su análisis hasta el entrenamiento de modelos.",
-    "b-desc-1": "Graduado en Informática (especialidad DS/ML). Trabajo con texto e imágenes.",
-    "b-title-2": "Cosas que más me gustan:",
-    "b-desc-2": "Análisis Exploratorio de Datos, Modelos Generativos",
+    "b-desc-1": "Diseño y despliego sistemas basados en LLM: pipelines RAG, flujos agénticos e integraciones agnósticas de modelo.",
+    "b-title-2": "Lo que he construido:",
+    "b-desc-2": "Sistema RAG para textos legales (~92% de precisión), servicio interno de enriquecimiento con LLM, framework de flujos LLM agnóstico de modelo.",
     "b-title-3": "Herramientas y bibliotecas:",
-    
-    "c-title-1": "Emprendimiento",
+
+    "c-title-1": "Experiencia como Fundador",
     "c-desc-1-old": "He iniciado dos startups, las cuales fueron aceleradas por Lanzadera, con ellas aprendí valiosas lecciones en el camino.",
-    "c-desc-1": "Valiosas lecciones aprendidas creando una startup acelerada por Lanzadera.",
-    "c-title-2": "Experiencias en las que puedo contribuir:",
-    "c-desc-2": "Marketing, Ventas en frío, Gestión, Metodología Lean/Agile.",
+    "c-desc-1": "Fundé y construí dos startups de principio a fin, de backend a frontend, aceleradas por Lanzadera.",
+    "c-title-2": "Lo que aprendí:",
+    "c-desc-2": "Propiedad de proyectos desde cero, ejecución full-stack y entrega bajo restricciones reales, además de marketing y ventas.",
     "c-title-3": "Herramientas:"
 }
