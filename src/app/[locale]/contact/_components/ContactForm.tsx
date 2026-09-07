@@ -115,8 +115,7 @@ const ContactForm = () => {
         variant={"filled"}
         label={t("name", { ns: "contact" })}
         className="col-span-2 sm:col-span-1"
-        // disabled={isLoadingBtn}
-        disabled={true}
+        disabled={isLoadingBtn}
         {...register("name")}
         error={!!errors.name}
         textError={errors.name?.message as string}
@@ -127,8 +126,7 @@ const ContactForm = () => {
           <Select
             value={field.value}
             onValueChange={field.onChange}
-            // disabled={isLoadingBtn}
-            disabled={true}
+            disabled={isLoadingBtn}
           >
             <SelectTrigger
               label={t("service_type", { ns: "contact" })}
@@ -158,8 +156,7 @@ const ContactForm = () => {
               <Select
                 value={field.value}
                 onValueChange={field.onChange}
-                // disabled={isLoadingBtn}
-                disabled={true}
+                disabled={isLoadingBtn}
               >
                 <SelectTrigger
                   label={t("project_type", { ns: "contact" })}
@@ -187,8 +184,7 @@ const ContactForm = () => {
             variant={"filled"}
             label={t("budget", { ns: "contact" })}
             className="col-span-2 sm:col-span-1"
-            // disabled={isLoadingBtn}
-            disabled={true}
+            disabled={isLoadingBtn}
             {...register("budget")}
             error={!!errors.budget}
             textError={errors.budget?.message as string}
@@ -198,8 +194,7 @@ const ContactForm = () => {
               <Select
                 value={field.value}
                 onValueChange={field.onChange}
-                // disabled={isLoadingBtn}
-                disabled={true}
+                disabled={isLoadingBtn}
               >
                 <SelectTrigger
                   label={t("mentoring_area", { ns: "contact" })}
@@ -253,8 +248,7 @@ const ContactForm = () => {
         variant={"filled"}
         label={t("email", { ns: "contact" })}
         className="col-span-2 sm:col-span-1 duration-100"
-        // disabled={isLoadingBtn}
-        disabled={true}
+        disabled={isLoadingBtn}
         {...register("email")}
         error={!!errors.email}
         textError={errors.email?.message as string}
@@ -263,8 +257,7 @@ const ContactForm = () => {
       <Textarea
         label={t("details", { ns: "contact" })}
         className="w-full col-span-2 duration-100"
-        // disabled={isLoadingBtn}
-        disabled={true}
+        disabled={isLoadingBtn}
         {...register("description")}
         error={!!errors.description}
         textError={errors.description?.message as string}
@@ -273,8 +266,7 @@ const ContactForm = () => {
         <Button
           variant="solid"
           size="lg"
-          // disabled={isLoadingBtn}
-          disabled={true}
+          disabled={isLoadingBtn}
           className="text-[var(--foreground)] font-medium bg-transparent
                     bg-[var(--btn-cta)] text-[white] w-full
                     hover:text-[var(--black)]"

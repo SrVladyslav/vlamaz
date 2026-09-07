@@ -41,23 +41,24 @@ const LanguageSelector =()=>{
 
     const handleLangChange = (newLocale:any) => {
         // set cookie for next-i18n-router
-        const days = 30;
-        const date = new Date();
-        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-        const expires = date.toUTCString();
-        document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
-    
-        // redirect to the new locale path
-        if (
-            currentLocale === i18nConfig.defaultLocale 
-        //   && !i18nConfig.prefixDefault
-        ) {
-            router.push('/' + newLocale + currentPathname);
-        } else {
-            router.push(
-                currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
-            );
-        }
+        const maxAge = 30 * 24 * 60 * 60; // 30 days
+        document.cookie = `NEXT_LOCALE=${newLocale};max-age=${maxAge};path=/;SameSite=Lax`;
+
+        // strip any existing locale prefix from the current path, regardless
+        // of what currentLocale reports, so the new path is always correct
+        const localesPattern = new RegExp(`^/(${i18nConfig.locales.join('|')})(?=/|$)`);
+        const basePath = currentPathname.replace(localesPattern, '') || '/';
+
+        // the default locale is not prefixed in the URL
+        const newPath = newLocale === i18nConfig.defaultLocale
+            ? basePath
+            : `/${newLocale}${basePath}`;
+
+        // update the client-side i18n instance immediately so the UI
+        // reflects the new language without waiting on navigation
+        i18n.changeLanguage(newLocale);
+
+        router.push(newPath);
         router.refresh();
     };
 
