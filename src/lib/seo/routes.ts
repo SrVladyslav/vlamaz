@@ -13,7 +13,7 @@ export const routes: Record<RouteKey, string> = {
     privacy: '/privacy',
 }
 
-export const locales: string[] = i18nConfig.locales
+export const locales: readonly string[] = i18nConfig.locales
 export const defaultLocale: string = i18nConfig.defaultLocale
 
 /**
