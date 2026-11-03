@@ -154,6 +154,7 @@ const Navbar = () => {
                   alt="Logo"
                   src={"/icons/logo.webp"}
                   fill
+                  sizes="40px"
                   className="absolute w-full h-full object-fit"
                 />
               </div>

@@ -86,6 +86,7 @@ const Card = ({ item, delay }: { item: any; delay?: number }) => {
                       alt={"Tech: " + icon}
                       src={icon}
                       fill
+                      sizes="21px"
                       className="relative h-full w-full object-contain 
                                         min-h-[21px] h-full min-w-[21px] w-full"
                     />
@@ -198,6 +199,7 @@ const Circle = ({ logo }: { logo: string | any }) => {
             alt={"Logo of work"}
             src={logo}
             fill
+            sizes="24px"
             className="relative object-contain h-full w-full
                     drop-shadow-[1px_3px_15px_var(--semitransparent-bg-3)]"
           />

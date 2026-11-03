@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPersonSchema, buildWebsiteSchema } from "@/lib/seo/jsonld";
 import { SITE_URL } from "@/lib/seo/routes";
+import i18nConfig from "../../../i18nConfig";
 
 const rubik = Rubik({
   subsets: ['latin','latin-ext'],
@@ -25,6 +26,15 @@ const greatVibes = Great_Vibes({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 };
+
+// Only the configured locales are valid values for [locale]. Dotted paths such as
+// /sw.js or /manifest.json bypass the i18n proxy and would otherwise be rendered
+// as a full page with locale "sw.js" instead of returning a 404.
+export const dynamicParams = false;
+export function generateStaticParams() {
+  return i18nConfig.locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({
   children,
   params,
