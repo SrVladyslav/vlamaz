@@ -1,7 +1,7 @@
 {
     "home": {
         "title": "Vladyslav Mazurkevych | Backend Engineer specialized in AI & LLM Systems",
-        "description": "Backend engineer with 3+ years building production Python systems — REST APIs, async pipelines, and LLM/RAG applications. Founder experience shipping full-stack products. Book a meeting with Vlad."
+        "description": "Backend engineer with 3+ years building production Python systems: REST APIs, async pipelines, and LLM/RAG applications. Founder experience shipping full-stack products. Book a meeting with Vlad."
     },
     "background": {
         "title": "Background & Experience | Vladyslav Mazurkevych",
@@ -17,10 +17,10 @@
     },
     "cookies": {
         "title": "Cookie Policy | Vlamaz",
-        "description": "Cookie Policy for vlamaz.com — what cookies are used, why, and how to manage your preferences in compliance with EU and Spanish law."
+        "description": "Cookie Policy for vlamaz.com: what cookies are used, why, and how to manage your preferences in compliance with EU and Spanish law."
     },
     "privacy": {
         "title": "Privacy Policy | Vlamaz",
-        "description": "Privacy Policy for vlamaz.com and learn.vlamaz.com — how personal data is collected, used and protected in compliance with GDPR and LOPD GDD."
+        "description": "Privacy Policy for vlamaz.com and learn.vlamaz.com: how personal data is collected, used and protected in compliance with GDPR and LOPD GDD."
     }
 }

@@ -3,7 +3,8 @@
     "title-1":"Hello,",
     "title-2":"I'm Vlad",
     "subtitle-old":"Passionate about machine learning and the exciting world of startups.",
-    "subtitle":"Backend engineer building AI-powered systems — APIs, data pipelines, and LLM/RAG applications at scale. Does this align with what you're looking for?",
+    "subtitle-old-2":"Backend & AI Engineer building AI-powered systems: APIs, data pipelines and LLM/RAG applications at scale. Does this align with what you're looking for?",
+    "subtitle":"Reliable APIs, data pipelines, custom ML models and LLM/RAG systems with a focus on accuracy. Does this align with what you're looking for?",
     "meeting":"Book a meeting",
     "my-projects": "My background",
 
@@ -13,13 +14,13 @@
 
     "a-title-1":"Backend Engineering",
     "a-desc-1-old":"I'm graduated in CS specialized in DS/ML and I love to code things from scratch with clean design.",
-    "a-desc-1":"3+ years shipping production backend systems — REST APIs, async task pipelines, and cloud infrastructure.",
+    "a-desc-1":"3+ years shipping production backend systems: REST APIs, async task pipelines, and cloud infrastructure.",
     "a-title-2":"Languages I speak:",
     "a-title-3":"Dev technologies:",
 
     "b-title-1": "AI & LLM Systems",
     "b-desc-1-old": "As a data scientist, I am used to work with text and image data, from its analysis to model training.",
-    "b-desc-1":"I design and ship LLM-powered systems — RAG pipelines, agentic workflows, and model-agnostic integrations.",
+    "b-desc-1":"I design and ship LLM-powered systems: RAG pipelines, agentic workflows, and model-agnostic integrations.",
     "b-title-2": "What I've built:",
     "b-desc-2":"RAG system for legal text (~92% accuracy), internal LLM enrichment service, model-agnostic LLM workflow framework.",
     "b-title-3": "Tools & libraries:",
@@ -28,6 +29,6 @@
     "c-desc-1-old": "I started two startups accelerated by Lanzadera, taking many powerful lessons along the way.",
     "c-desc-1":"Founded and built two startups end-to-end, from backend to frontend, accelerated by Lanzadera.",
     "c-title-2": "What that taught me:",
-    "c-desc-2":"0-to-1 ownership, full-stack execution, and shipping under real constraints — plus the marketing/sales chops to make it land.",
+    "c-desc-2":"0-to-1 ownership, full-stack execution, and shipping under real constraints: plus the marketing/sales chops to make it land.",
     "c-title-3": "Tools:"
 }

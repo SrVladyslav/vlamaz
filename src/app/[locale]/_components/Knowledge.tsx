@@ -63,7 +63,7 @@ const Knowledge = () => {
                             font-medium max-w-readable50
                         "
               >
-                Python, C++, TypeScript, JavaScript, SQL, Solidity.
+                Python, Modern C++, TypeScript, JavaScript, SQL, Solidity.
               </p>
             </div>
             <div className="relative flex flex-col gap-3">

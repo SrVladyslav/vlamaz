@@ -12,7 +12,7 @@ import i18nConfig from './../../../i18nConfig';
 type Locale = typeof i18nConfig.locales[number];
 
 const langInfo: Record<Locale, { title: string; url: string }> = {
-    en: { title: "English", url: "/icons/lang/english.svg" },
+    en: { title: "English", url: "/icons/lang/american.svg" },
     es: { title: "Español", url: "/icons/lang/spanish.svg" },
     ua: { title: "Українська", url: "/icons/lang/ukrainian.svg" },
     'ar-AE': { title: "العربية", url: "/icons/lang/arabic.svg" },
