@@ -13,11 +13,9 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: github-pages
+  group: ci-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -53,26 +51,5 @@ jobs:
       - name: Run tests
         run: pnpm test
 
-      - name: Build static site
+      - name: Build
         run: pnpm build
-
-      - name: Upload GitHub Pages artifact
-        if: github.event_name == 'push'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
-
-  deploy:
-    name: Deploy GitHub Pages
-    if: github.event_name == 'push'
-    needs: build
-    runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
