@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": "26.x",
+    "pnpm": ">=10"
+  },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -26,6 +31,7 @@
     "@react-three/fiber": "^9.8.2",
     "@supabase/supabase-js": "^2.118.0",
     "@types/three": "^0.185.4",
+    "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -52,7 +58,7 @@
   "devDependencies": {
     "@heroui/theme": "^2.4.26",
     "@tailwindcss/postcss": "4.3.3",
-    "@types/node": "^20.19.43",
+    "@types/node": "^26.0.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "eslint": "^9.39.5",
